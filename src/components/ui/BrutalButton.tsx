@@ -3,13 +3,13 @@ import { motion, type HTMLMotionProps } from "motion/react";
 
 type BrutalButtonProps = HTMLMotionProps<"a"> & {
   children: ReactNode;
-  tone?: "coral" | "mint";
+  tone?: "cobalt" | "sky";
 };
 
 export function BrutalButton({
   children,
   className = "",
-  tone = "coral",
+  tone = "cobalt",
   ...props
 }: BrutalButtonProps) {
   return (

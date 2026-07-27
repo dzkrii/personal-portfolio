@@ -9,14 +9,18 @@ function App() {
     <MotionConfig reducedMotion="user">
       <div className="site-shell">
         <header className="site-header">
-          <a className="brand" href="#top" aria-label="KyuraDev, kembali ke atas">
-            <img src="/logo-kyuradev.png" alt="KyuraDev" />
+          <a
+            className="brand"
+            href="#top"
+            aria-label="Fatahul Ahmad Dzikri, kembali ke atas"
+          >
+            <img src="/logo-fatahul.svg" alt="Fatahul Ahmad Dzikri" />
           </a>
 
           <nav aria-label="Navigasi utama">
             <a href="#foundation">Fondasi</a>
-            <a className="nav-cta" href="mailto:hello@kyuradev.dev">
-              Say hello!
+            <a className="nav-cta" href="#foundation">
+              Lihat karya
             </a>
           </nav>
         </header>
@@ -35,16 +39,16 @@ function App() {
 
             <motion.h1 variants={riseIn}>
               Membuat web yang
-              <span className="highlight highlight--coral"> berani</span>,
+              <span className="highlight highlight--cobalt"> berani</span>,
               <br />
               cepat, dan
-              <span className="highlight highlight--mint"> berkarakter.</span>
+              <span className="highlight highlight--sky"> berkarakter.</span>
             </motion.h1>
 
             <motion.p className="hero-copy" variants={riseIn}>
-              Halo, saya Kyura — creative developer di balik{" "}
-              <strong>{siteConfig.name}</strong>. Ini adalah fondasi baru untuk
-              portofolio neo-brutalist saya.
+              Halo, saya <strong>{siteConfig.name}</strong> — creative developer
+              yang memadukan desain, kode, dan motion untuk membuat pengalaman
+              web yang jelas sekaligus berkarakter.
             </motion.p>
 
             <motion.div className="hero-actions" variants={riseIn}>
@@ -74,30 +78,33 @@ function App() {
               <h2>Brand system siap dipakai.</h2>
             </div>
 
-            <div className="swatches" aria-label="Palet warna KyuraDev">
+            <div
+              className="swatches"
+              aria-label="Palet warna personal Fatahul Ahmad Dzikri"
+            >
               <div className="swatch swatch--ink">
                 <span>Ink</span>
                 <code>#353540</code>
               </div>
-              <div className="swatch swatch--coral">
-                <span>Dev Coral</span>
-                <code>#FF3340</code>
+              <div className="swatch swatch--cobalt">
+                <span>Cobalt</span>
+                <code>#2563EB</code>
               </div>
-              <div className="swatch swatch--mint">
-                <span>Kyura Mint</span>
-                <code>#14C99A</code>
+              <div className="swatch swatch--sky">
+                <span>Soft Sky</span>
+                <code>#BFD7FF</code>
               </div>
               <div className="swatch swatch--paper">
                 <span>Warm Paper</span>
-                <code>#F6F1E7</code>
+                <code>#FAFAF7</code>
               </div>
             </div>
           </section>
         </main>
 
         <footer>
-          <span>© {new Date().getFullYear()} KyuraDev</span>
-          <span>Build bold. Stay curious.</span>
+          <span>© {new Date().getFullYear()} {siteConfig.name}</span>
+          <span>Designing clearly. Building thoughtfully.</span>
         </footer>
       </div>
     </MotionConfig>

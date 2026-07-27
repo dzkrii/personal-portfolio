@@ -1,7 +1,5 @@
 export const siteConfig = {
-  name: "KyuraDev",
+  name: "Fatahul Ahmad Dzikri",
   role: "Creative Developer",
-  email: "hello@kyuradev.dev",
   navigation: ["Tentang", "Proyek", "Keahlian", "Kontak"],
 } as const;
-

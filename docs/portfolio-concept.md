@@ -1,8 +1,8 @@
-# Konsep Portfolio KyuraDev
+# Konsep Portofolio Personal Fatahul Ahmad Dzikri
 
 ## Ringkasan
 
-KyuraDev adalah portfolio personal seorang creative developer yang ditujukan
+Portofolio Fatahul Ahmad Dzikri adalah situs personal seorang creative developer yang ditujukan
 terutama untuk calon klien. Website harus menampilkan karakter kreatif yang kuat
 sekaligus membangun kepercayaan melalui karya web nyata. Pendekatannya bersifat
 personal dan informatif, bukan landing page penjualan dengan CTA agresif.
@@ -34,8 +34,12 @@ tersedia.
 
 ## Arah Visual dan Pengalaman
 
-- Mempertahankan gaya neo-brutalist dan identitas visual yang sudah dibangun:
-  Space Grotesk, coral, mint, warm paper, garis tegas, dan hard shadow.
+- Mempertahankan karakter neo-brutalist melalui Space Grotesk, garis tegas, dan
+  hard shadow, tanpa membawa identitas brand produk sebelumnya.
+- Menggunakan palet personal yang netral dan fokus pada karya: Ink `#18181B`,
+  Cobalt `#2563EB`, Soft Sky `#BFD7FF`, dan Warm Paper `#FAFAF7`.
+- Memakai Cobalt sebagai aksen tindakan utama dan Soft Sky sebagai aksen
+  pendukung; warna netral menjadi dasar agar visual proyek tetap menonjol.
 - Menggunakan light mode saja pada versi awal.
 - Memakai foto asli untuk memberi sisi personal dan meningkatkan kepercayaan.
 - Mengutamakan hierarki yang jelas, kontras yang mudah dibaca, navigasi keyboard,
