@@ -77,7 +77,11 @@ hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 - Siapkan foto personal teroptimasi, CV PDF, email, GitHub, dan LinkedIn.
 - **Hasil:** seluruh konten mentah tersedia dan proyek memiliki materi yang cukup.
 
-### 2. Tetapkan Fondasi Aplikasi
+### 2. Tetapkan Fondasi Aplikasi [SELESAI]
+
+> Selesai pada 27 Juli 2026. Routing bilingual, redirect awal, halaman 404,
+> language switcher yang mempertahankan halaman aktif, data terpusat, metadata
+> dasar, favicon, serta placeholder media responsif telah tersedia.
 
 - Tambahkan routing untuk `/id` dan `/en`, redirect `/` ke `/id`, halaman 404,
   serta pengalih bahasa yang mempertahankan halaman aktif.
