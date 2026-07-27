@@ -39,10 +39,10 @@ function App() {
 
             <motion.h1 variants={riseIn}>
               Membuat web yang
-              <span className="highlight highlight--cobalt"> berani</span>,
+              <span className="highlight highlight--moss"> berani</span>,
               <br />
               cepat, dan
-              <span className="highlight highlight--sky"> berkarakter.</span>
+              <span className="highlight highlight--moss-soft"> berkarakter.</span>
             </motion.h1>
 
             <motion.p className="hero-copy" variants={riseIn}>
@@ -84,19 +84,19 @@ function App() {
             >
               <div className="swatch swatch--ink">
                 <span>Ink</span>
-                <code>#353540</code>
+                <code>#191A17</code>
               </div>
-              <div className="swatch swatch--cobalt">
-                <span>Cobalt</span>
-                <code>#2563EB</code>
+              <div className="swatch swatch--moss">
+                <span>Electric Moss</span>
+                <code>#B7E43A</code>
               </div>
-              <div className="swatch swatch--sky">
-                <span>Soft Sky</span>
-                <code>#BFD7FF</code>
+              <div className="swatch swatch--moss-soft">
+                <span>Moss Soft</span>
+                <code>#DDF2A4</code>
               </div>
               <div className="swatch swatch--paper">
-                <span>Warm Paper</span>
-                <code>#FAFAF7</code>
+                <span>Paper</span>
+                <code>#F3F3EC</code>
               </div>
             </div>
           </section>

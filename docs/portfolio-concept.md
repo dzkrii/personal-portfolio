@@ -36,9 +36,9 @@ tersedia.
 
 - Mempertahankan karakter neo-brutalist melalui Space Grotesk, garis tegas, dan
   hard shadow, tanpa membawa identitas brand produk sebelumnya.
-- Menggunakan palet personal yang netral dan fokus pada karya: Ink `#18181B`,
-  Cobalt `#2563EB`, Soft Sky `#BFD7FF`, dan Warm Paper `#FAFAF7`.
-- Memakai Cobalt sebagai aksen tindakan utama dan Soft Sky sebagai aksen
+- Menggunakan palet Electric Moss yang ekspresif namun tetap fokus pada karya:
+  Ink `#191A17`, Electric Moss `#B7E43A`, Moss Soft `#DDF2A4`, dan Paper `#F3F3EC`.
+- Memakai Electric Moss sebagai aksen tindakan utama dan Moss Soft sebagai tint
   pendukung; warna netral menjadi dasar agar visual proyek tetap menonjol.
 - Menggunakan light mode saja pada versi awal.
 - Memakai foto asli untuk memberi sisi personal dan meningkatkan kepercayaan.
