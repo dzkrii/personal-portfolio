@@ -90,7 +90,13 @@ hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 - Tetapkan metadata dasar, favicon, struktur URL, dan aturan gambar.
 - **Hasil:** semua rute dapat dibuka dengan konten placeholder tanpa error.
 
-### 3. Bangun Design System
+### 3. Bangun Design System [SELESAI]
+
+> Selesai pada 27 Juli 2026. Token warna, tipografi, spacing, border, hard
+> shadow, breakpoint, motion, dan layer telah dirapikan. Layout, header, footer,
+> tombol, judul section, kartu proyek, language switcher, dan media kini menjadi
+> komponen bersama dengan state interaksi, loading, fallback, fokus, serta
+> reduced motion yang konsisten.
 
 - Rapikan token warna, tipografi, spacing, border, hard shadow, dan breakpoint.
 - Buat komponen bersama: layout, header, footer, tombol, judul section, kartu
