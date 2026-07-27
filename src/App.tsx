@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { MotionConfig } from "motion/react";
+import { useEffect, useState } from "react";
+import { ArrowDownToLine, ArrowUpRight, FileText } from "lucide-react";
+import { motion, MotionConfig } from "motion/react";
 import { Link } from "./components/Link";
 import { ProjectCard } from "./components/ProjectCard";
 import { SiteLayout } from "./components/SiteLayout";
@@ -8,6 +8,7 @@ import { BrutalButton } from "./components/ui/BrutalButton";
 import { MediaFrame } from "./components/ui/MediaFrame";
 import { SectionHeading } from "./components/ui/SectionHeading";
 import {
+  certificates,
   experiences,
   messages,
   navigation,
@@ -52,54 +53,79 @@ function PageIntro({ title, description }: { title: string; description: string 
   );
 }
 
-function HomePage({ locale }: { locale: Locale }) {
-  const featured = projects.slice(0, 3);
+function navLabel(key: (typeof navigation)[number]["key"], locale: Locale) {
+  return navigation.find((item) => item.key === key)?.label[locale] ?? key;
+}
+
+function RoleRotator({ locale }: { locale: Locale }) {
+  const roles = locale === "id"
+    ? ["Software Developer", "Creative Developer", "Problem Solver"]
+    : ["Software Developer", "Creative Developer", "Problem Solver"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setIndex((value) => (value + 1) % roles.length), 2600);
+    return () => window.clearInterval(timer);
+  }, [roles.length]);
+
   return (
-    <>
-      <section className="hero">
-        <div>
-          <SectionHeading as="h1" eyebrow={siteConfig.role[locale]}>
-            {locale === "id"
-              ? "Membangun produk digital yang jelas dan berkarakter."
-              : "Building digital products with clarity and character."}
-          </SectionHeading>
-          <p className="hero-copy">{profile.intro[locale]}</p>
-          <BrutalButton href={pathFor(locale, "projects")}>
-            {locale === "id" ? "Lihat proyek" : "View projects"}
+    <span className="role-rotator" aria-live="polite">
+      <motion.span
+        key={roles[index]}
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: "-100%", opacity: 0 }}
+      >
+        {roles[index]}
+      </motion.span>
+    </span>
+  );
+}
+
+function HomePage({ locale }: { locale: Locale }) {
+  return (
+    <section className="hero hero--intro">
+      <motion.div
+        className="hero__content"
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <p className="hero-kicker">{locale === "id" ? "Halo, saya" : "Hi, I am"}</p>
+        <h1>Fatahul<br />Ahmad Dzikri.</h1>
+        <p className="hero-role">
+          {locale === "id" ? "Saya seorang " : "I am a "}<RoleRotator locale={locale} />
+        </p>
+        <p className="hero-copy">{profile.intro[locale]}</p>
+        <div className="hero-actions">
+          <BrutalButton href={pathFor(locale, "cv")}>
+            {locale === "id" ? "Lihat CV" : "View CV"}
+            <FileText aria-hidden="true" />
+          </BrutalButton>
+          <BrutalButton href={pathFor(locale, "about")} tone="secondary">
+            {locale === "id" ? "Tentang saya" : "About me"}
             <ArrowUpRight aria-hidden="true" />
           </BrutalButton>
         </div>
-        <PortraitPlaceholder locale={locale} />
-      </section>
-      <section className="home-intro">
-        <SectionHeading>
-          {locale === "id" ? "Dari kebutuhan nyata menuju produk yang mudah digunakan." : "From real needs to products people can use."}
-        </SectionHeading>
-        <p>{profile.bio[locale]}</p>
-      </section>
-      <section className="featured-projects">
-        <SectionHeading description={locale === "id" ? "Pilihan pekerjaan yang menunjukkan cara saya menyusun informasi, alur, dan antarmuka." : "Selected work showing how I structure information, workflows, and interfaces."}>
-          {locale === "id" ? "Proyek unggulan" : "Featured projects"}
-        </SectionHeading>
-        <div className="project-list">
-          {featured.map((project) => <ProjectCard key={project.slug} locale={locale} project={project} />)}
-        </div>
-      </section>
-      <section className="capabilities">
-        <SectionHeading>{locale === "id" ? "Keahlian inti" : "Core capabilities"}</SectionHeading>
-        <div className="capability-grid">
-          {Object.entries(skills).slice(0, 4).map(([group, items]) => (
-            <div key={group}><h3>{group}</h3><p>{items.join(", ")}</p></div>
-          ))}
-        </div>
-      </section>
-      <section className="contact-cta">
-        <SectionHeading description={locale === "id" ? "Ceritakan kebutuhan Anda melalui email. Saya akan membalas dengan langkah berikutnya yang jelas." : "Share what you need by email. I will reply with a clear next step."}>
-          {locale === "id" ? "Punya proyek yang perlu dirapikan?" : "Have a project that needs clarity?"}
-        </SectionHeading>
-        <BrutalButton href={pathFor(locale, "contact")}>{navigation[3].label[locale]}<ArrowUpRight aria-hidden="true" /></BrutalButton>
-      </section>
-    </>
+      </motion.div>
+      <motion.div
+        className="hero-illustration"
+        initial={{ opacity: 0, scale: 0.92, rotate: 2 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        whileHover={{ y: -5, rotate: 1 }}
+        transition={{ duration: 0.65, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <img
+          src="/fatahul-hero-illustration.png"
+          width="1003"
+          height="1568"
+          alt={locale === "id"
+            ? "Ilustrasi neo-brutalist Fatahul Ahmad Dzikri"
+            : "Neo-brutalist illustration of Fatahul Ahmad Dzikri"}
+        />
+        <span aria-hidden="true">01 / Fatahul</span>
+      </motion.div>
+    </section>
   );
 }
 
@@ -107,14 +133,14 @@ function ProjectsPage({ locale }: { locale: Locale }) {
   return (
     <>
       <PageIntro
-        title={navigation[1].label[locale]}
+        title={navLabel("projects", locale)}
         description={
           locale === "id"
             ? "Tiga proyek terpilih sebagai fondasi studi kasus."
             : "Three selected projects forming the foundation for the case studies."
         }
       />
-      <section className="project-list" aria-label={navigation[1].label[locale]}>
+      <section className="project-list" aria-label={navLabel("projects", locale)}>
         {projects.map((project) => (
           <ProjectCard key={project.slug} locale={locale} project={project} />
         ))}
@@ -168,7 +194,7 @@ function ProjectPage({
 function AboutPage({ locale }: { locale: Locale }) {
   return (
     <>
-      <PageIntro title={navigation[2].label[locale]} description={profile.bio[locale]} />
+      <PageIntro title={navLabel("about", locale)} description={profile.bio[locale]} />
       <div className="about-grid">
         <PortraitPlaceholder locale={locale} />
         <section>
@@ -200,11 +226,128 @@ function AboutPage({ locale }: { locale: Locale }) {
   );
 }
 
+function EmptyState({
+  locale,
+  type,
+}: {
+  locale: Locale;
+  type: "certificates" | "cv";
+}) {
+  const isCertificates = type === "certificates";
+  return (
+    <section className="empty-state" aria-live="polite">
+      <div className="empty-state__index">{isCertificates ? "00" : "PDF"}</div>
+      <div>
+        <p className="eyebrow">{locale === "id" ? "Siap diisi" : "Ready for content"}</p>
+        <h2>
+          {isCertificates
+            ? locale === "id" ? "Belum ada sertifikat ditampilkan." : "No certificates displayed yet."
+            : locale === "id" ? "CV sedang disiapkan." : "The CV is being prepared."}
+        </h2>
+        <p>
+          {isCertificates
+            ? locale === "id"
+              ? "Struktur data dan galeri sudah tersedia. Sertifikat akan muncul di sini setelah judul, penerbit, tanggal, gambar, dan tautan kredensial ditambahkan."
+              : "The data structure and gallery are ready. Certificates will appear here once the title, issuer, date, image, and credential link are added."
+            : locale === "id"
+              ? "Area pratinjau dan tombol unduh akan aktif setelah PDF final ditambahkan."
+              : "The preview area and download button will activate after the final PDF is added."}
+        </p>
+        {!isCertificates && (
+          <BrutalButton aria-disabled="true" href="" tabIndex={-1}>
+            {locale === "id" ? "Unduh CV" : "Download CV"}
+            <ArrowDownToLine aria-hidden="true" />
+          </BrutalButton>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function CertificatesPage({ locale }: { locale: Locale }) {
+  return (
+    <>
+      <PageIntro
+        title={navLabel("certificates", locale)}
+        description={locale === "id"
+          ? "Catatan pembelajaran, pelatihan, dan kredensial yang mendukung pekerjaan saya."
+          : "A record of learning, training, and credentials supporting my work."}
+      />
+      {certificates.length === 0 ? (
+        <EmptyState locale={locale} type="certificates" />
+      ) : (
+        <section className="certificate-grid" aria-label={navLabel("certificates", locale)}>
+          {certificates.map((certificate) => (
+            <article className="certificate-card" key={`${certificate.issuer}-${certificate.title.en}`}>
+              <div className="certificate-card__visual">
+                {certificate.image ? (
+                  <img src={certificate.image} alt="" />
+                ) : (
+                  <span aria-hidden="true">CERT.</span>
+                )}
+              </div>
+              <div>
+                <p className="certificate-card__meta">
+                  {certificate.issuer} · {certificate.issuedAt[locale]}
+                </p>
+                <h2>{certificate.title[locale]}</h2>
+                {certificate.credentialUrl ? (
+                  <a
+                    className="text-link"
+                    href={certificate.credentialUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {locale === "id" ? "Lihat kredensial" : "View credential"}
+                    <ArrowUpRight aria-hidden="true" />
+                  </a>
+                ) : null}
+              </div>
+            </article>
+          ))}
+        </section>
+      )}
+    </>
+  );
+}
+
+function CvPage({ locale }: { locale: Locale }) {
+  const resumeSrc = siteConfig.media.resume.src;
+  return (
+    <>
+      <PageIntro
+        title={navLabel("cv", locale)}
+        description={locale === "id"
+          ? "Ringkasan pengalaman, keahlian, dan perjalanan profesional saya."
+          : "A concise overview of my experience, skills, and professional journey."}
+      />
+      {resumeSrc ? (
+        <section className="cv-viewer">
+          <div className="cv-viewer__toolbar">
+            <p>{locale === "id" ? "Dokumen CV" : "CV document"}</p>
+            <a className="brutal-button brutal-button--primary" href={resumeSrc} download>
+              {locale === "id" ? "Unduh CV" : "Download CV"}
+              <ArrowDownToLine aria-hidden="true" />
+            </a>
+          </div>
+          <iframe
+            className="cv-viewer__frame"
+            src={`${resumeSrc}#toolbar=0`}
+            title={locale === "id" ? "Pratinjau CV Fatahul Ahmad Dzikri" : "Fatahul Ahmad Dzikri CV preview"}
+          />
+        </section>
+      ) : (
+        <EmptyState locale={locale} type="cv" />
+      )}
+    </>
+  );
+}
+
 function ContactPage({ locale }: { locale: Locale }) {
   return (
     <>
       <PageIntro
-        title={navigation[3].label[locale]}
+        title={navLabel("contact", locale)}
         description={
           locale === "id"
             ? "Punya proyek atau ide yang perlu dibicarakan? Kirim pesan melalui kanal berikut."
@@ -250,6 +393,8 @@ function App() {
   else if (route.page === "project") {
     page = <ProjectPage locale={locale} slug={route.slug} exists={route.projectExists} />;
   } else if (route.page === "about") page = <AboutPage locale={locale} />;
+  else if (route.page === "certificates") page = <CertificatesPage locale={locale} />;
+  else if (route.page === "cv") page = <CvPage locale={locale} />;
   else if (route.page === "contact") page = <ContactPage locale={locale} />;
   else page = <NotFoundPage locale={locale} />;
 
