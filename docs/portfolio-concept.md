@@ -104,7 +104,12 @@ hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 - Tentukan state hover, focus, active, loading, dan reduced motion.
 - **Hasil:** komponen dasar konsisten, responsif, dan dapat diakses.
 
-### 4. Bangun Halaman
+### 4. Bangun Halaman [SELESAI]
+
+> Selesai pada 27 Juli 2026. Beranda, daftar proyek, detail studi kasus, Tentang,
+> Kontak, dan 404 telah disusun lengkap untuk desktop dan mobile dalam Bahasa
+> Indonesia dan Inggris. Materi yang memang belum final tetap ditandai jelas
+> untuk diganti pada roadmap 05.
 
 - Kerjakan Beranda lebih dahulu, kemudian Proyek, Detail Proyek, Tentang,
   Kontak, dan 404.

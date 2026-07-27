@@ -68,6 +68,27 @@ export const profile = {
         en: "Interfaces and code should be easy to understand, maintain, and extend.",
       },
     },
+    {
+      title: { id: "Desain dan development menyatu", en: "Design and development work together" },
+      description: {
+        id: "Tampilan yang baik perlu didukung struktur, performa, dan perilaku yang sama baiknya.",
+        en: "A strong interface needs equally strong structure, performance, and behavior behind it.",
+      },
+    },
+    {
+      title: { id: "Bangun untuk penggunaan nyata", en: "Build for real use" },
+      description: {
+        id: "Solusi dinilai dari kemampuannya membantu pekerjaan sehari-hari, bukan hanya tampilannya.",
+        en: "A solution is judged by how well it supports everyday work, not only by how it looks.",
+      },
+    },
+    {
+      title: { id: "Uji dan perbaiki", en: "Test and improve" },
+      description: {
+        id: "Umpan balik dan perubahan kebutuhan menjadi bagian alami dari proses.",
+        en: "Feedback and changing requirements are a natural part of the process.",
+      },
+    },
   ],
 } as const;
 
@@ -109,6 +130,19 @@ export const projects = [
       id: "Pusat informasi publik dengan hierarki konten yang jelas dan tampilan responsif.",
       en: "A public information hub with clear content hierarchy and responsive layouts.",
     },
+    role: { id: "Developer tunggal", en: "Sole developer" },
+    context: {
+      id: "Universitas Battuta membutuhkan website profil sebagai pusat informasi publik mengenai institusi, program, dan aktivitas universitas.",
+      en: "Universitas Battuta needed a profile website that could serve as a public information hub for the institution, its programs, and university activities.",
+    },
+    contribution: {
+      id: "Menangani pengembangan secara mandiri, dari menerjemahkan kebutuhan konten menjadi struktur halaman hingga implementasi antarmuka dan fitur website.",
+      en: "Independently handled development, from turning content requirements into a page structure to implementing the interface and website features.",
+    },
+    solution: {
+      id: "Menyusun website informatif dengan hierarki konten yang jelas, navigasi yang mudah dipahami, dan tampilan responsif untuk berbagai perangkat.",
+      en: "Built an informative website with clear content hierarchy, straightforward navigation, and responsive layouts across devices.",
+    },
   },
   {
     slug: "universitas-battuta-academic-system",
@@ -118,6 +152,19 @@ export const projects = [
       id: "Sistem terpusat untuk membantu pengelolaan proses akademik universitas.",
       en: "A centralized system supporting the university's academic workflows.",
     },
+    role: { id: "Developer tunggal", en: "Sole developer" },
+    context: {
+      id: "Aktivitas akademik membutuhkan sistem terpusat untuk membantu pengelolaan informasi dan proses yang digunakan oleh lingkungan universitas.",
+      en: "Academic operations required a centralized system to support the information and workflows used across the university.",
+    },
+    contribution: {
+      id: "Bertanggung jawab secara mandiri atas proses pengembangan, termasuk memahami alur kerja, menyusun struktur sistem, dan mengimplementasikan fitur.",
+      en: "Independently led development, including understanding workflows, structuring the system, and implementing its features.",
+    },
+    solution: {
+      id: "Mengembangkan sistem informasi berbasis web yang menyatukan proses akademik dalam antarmuka yang lebih terstruktur dan mudah digunakan.",
+      en: "Developed a web-based information system that brings academic workflows into a more structured and usable interface.",
+    },
   },
   {
     slug: "pro-asta-profile",
@@ -126,6 +173,19 @@ export const projects = [
     summary: {
       id: "Website profil yang memprioritaskan kejelasan informasi dan konsistensi visual.",
       en: "A profile website prioritizing information clarity and visual consistency.",
+    },
+    role: { id: "Developer tunggal", en: "Sole developer" },
+    context: {
+      id: "Pro.Asta membutuhkan website profil untuk memperkenalkan identitas, informasi, dan penawarannya melalui kanal digital yang profesional.",
+      en: "Pro.Asta needed a profile website to present its identity, information, and offering through a professional digital channel.",
+    },
+    contribution: {
+      id: "Menangani pengembangan website secara mandiri, termasuk penyusunan struktur halaman dan implementasi pengalaman responsif.",
+      en: "Independently developed the website, including defining the page structure and implementing the responsive experience.",
+    },
+    solution: {
+      id: "Membangun website profil yang memprioritaskan kejelasan informasi, konsistensi visual, dan kemudahan akses pada desktop maupun mobile.",
+      en: "Built a profile website prioritizing clear information, visual consistency, and accessibility across desktop and mobile devices.",
     },
   },
 ] as const;
@@ -140,6 +200,7 @@ export const messages = {
     imagePlaceholder: "Visual sedang disiapkan",
     viewProject: "Buka proyek",
     backToProjects: "Kembali ke proyek",
+    materialPending: "Materi final sedang disiapkan untuk tahap integrasi konten.",
     notFoundTitle: "Halaman tidak ditemukan",
     notFoundBody: "Alamat ini tidak tersedia. Gunakan navigasi untuk kembali ke halaman yang benar.",
   },
@@ -152,6 +213,7 @@ export const messages = {
     imagePlaceholder: "Visual in preparation",
     viewProject: "Open project",
     backToProjects: "Back to projects",
+    materialPending: "Final material is being prepared for the content integration stage.",
     notFoundTitle: "Page not found",
     notFoundBody: "This address is unavailable. Use the navigation to return to the right page.",
   },
