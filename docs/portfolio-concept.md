@@ -10,7 +10,7 @@ personal dan informatif, bukan landing page penjualan dengan CTA agresif.
 ## Tujuan dan Prinsip Konten
 
 - Menjadikan proyek sebagai bukti utama kemampuan desain dan development.
-- Menjelaskan peran, pemikiran, solusi, dan hasil—bukan hanya menampilkan galeri.
+- Menjelaskan peran, pemikiran, solusi, dan hasil, bukan hanya menampilkan galeri.
 - Menggunakan bahasa yang mudah dipahami calon klien tanpa menghilangkan detail
   teknis yang relevan.
 - Menampilkan CTA kontak secara wajar setelah pengunjung memahami profil dan
@@ -21,8 +21,8 @@ personal dan informatif, bukan landing page penjualan dengan CTA agresif.
 
 | Halaman | Isi dan tujuan |
 | --- | --- |
-| **Beranda** `/{locale}` | Hero dan foto personal, perkenalan singkat, 2–3 proyek unggulan, keahlian inti, serta ajakan kontak ringan. |
-| **Proyek** `/{locale}/projects` | Daftar 3–4 proyek web terkurasi yang menunjukkan variasi kemampuan dan kualitas hasil. |
+| **Beranda** `/{locale}` | Hero dan foto personal, perkenalan singkat, 2-3 proyek unggulan, keahlian inti, serta ajakan kontak ringan. |
+| **Proyek** `/{locale}/projects` | Daftar 3-4 proyek web terkurasi yang menunjukkan variasi kemampuan dan kualitas hasil. |
 | **Detail Proyek** `/{locale}/projects/{slug}` | Konteks atau masalah, peran, solusi, stack, visual, hasil, serta tautan demo atau repository bila tersedia. |
 | **Tentang** `/{locale}/about` | Profil, prinsip kerja, pengalaman, keahlian, foto personal, dan tautan unduh CV. |
 | **Kontak** `/{locale}/contact` | Pesan singkat, alamat email, serta tautan GitHub dan LinkedIn tanpa formulir. |
@@ -51,7 +51,7 @@ tersedia.
 
 Versi awal tidak mencakup blog/lab, halaman layanan terperinci, testimoni, form
 kontak, dark mode, maupun CMS. Konten dikelola langsung di aplikasi React.
-Materi 3–4 proyek, foto personal, CV PDF, alamat email, dan tautan sosial harus
+Materi 3-4 proyek, foto personal, CV PDF, alamat email, dan tautan sosial harus
 disiapkan sebelum implementasi konten final.
 
 Fondasi teknis tetap menggunakan React, TypeScript, Vite, Tailwind CSS, dan
@@ -63,10 +63,16 @@ setara serta menjadikan proyek sebagai fokus utama website.
 Kerjakan tahap berikut secara berurutan. Sebuah tahap dianggap selesai setelah
 hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 
-### 1. Siapkan Materi
+### 1. Siapkan Materi [SELESAI]
+
+> Selesai pada 27 Juli 2026. Copy dua bahasa, pengalaman, keahlian, tiga proyek,
+> kontak, serta daftar aset placeholder tersedia di
+> [`docs/content-inventory.md`](content-inventory.md). Foto, CV, screenshot,
+> tautan proyek, stack final, dan hasil terukur akan diganti atau dikonfirmasi
+> pada tahap integrasi konten final.
 
 - Tulis profil, prinsip kerja, pengalaman, dan daftar keahlian dalam dua bahasa.
-- Pilih 3–4 proyek; kumpulkan konteks, peran, solusi, stack, hasil, screenshot,
+- Pilih 3-4 proyek; kumpulkan konteks, peran, solusi, stack, hasil, screenshot,
   serta tautan demo atau repository.
 - Siapkan foto personal teroptimasi, CV PDF, email, GitHub, dan LinkedIn.
 - **Hasil:** seluruh konten mentah tersedia dan proyek memiliki materi yang cukup.
@@ -92,7 +98,7 @@ hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 
 - Kerjakan Beranda lebih dahulu, kemudian Proyek, Detail Proyek, Tentang,
   Kontak, dan 404.
-- Isi Beranda dengan 2–3 proyek unggulan; semua proyek tetap tersedia pada
+- Isi Beranda dengan 2-3 proyek unggulan; semua proyek tetap tersedia pada
   halaman Proyek.
 - Pastikan setiap detail proyek menjelaskan masalah, kontribusi, solusi, dan
   hasil sebelum menampilkan stack atau tautan eksternal.
@@ -103,7 +109,7 @@ hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 - Ganti placeholder dengan copy, gambar proyek, foto, CV, dan tautan sebenarnya.
 - Optimalkan gambar dan gunakan ukuran/aspect ratio yang stabil agar layout
   tidak bergeser saat media dimuat.
-- Periksa kesetaraan makna, navigasi, dan slug antara bahasa Indonesia–Inggris.
+- Periksa kesetaraan makna, navigasi, dan slug antara bahasa Indonesia-Inggris.
 - **Hasil:** tidak ada placeholder, tautan kosong, atau materi yang belum final.
 
 ### 6. Quality Assurance
@@ -126,7 +132,7 @@ hasil akhirnya tersedia dan dapat diperiksa sebelum melanjutkan.
 
 ## Definition of Done
 
-Portfolio selesai ketika semua halaman tersedia dalam dua bahasa, 3–4 studi
+Portfolio selesai ketika semua halaman tersedia dalam dua bahasa, 3-4 studi
 kasus menggunakan konten final, navigasi dan kontak berfungsi, CV dapat diunduh,
 tampilan responsif serta aksesibel, production build lulus, dan website telah
 diverifikasi pada domain production.
