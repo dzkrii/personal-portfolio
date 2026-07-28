@@ -170,28 +170,59 @@ p {
   border-bottom: var(--border-strong);
 }
 
-.brand {
+.github-badge {
   display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
   flex: 0 0 auto;
-  padding: var(--space-1) var(--space-2);
-  border: var(--border-thin);
+  min-height: 3.25rem;
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-strong);
   background: var(--color-surface);
   box-shadow: var(--shadow-control);
-  transition: transform var(--motion-fast) var(--ease-out);
+  transform: translateY(-3px) rotate(-1.5deg);
+  transition: transform var(--motion-fast) var(--ease-out), box-shadow var(--motion-fast) var(--ease-out), background-color var(--motion-fast) ease;
 }
 
-.brand:hover {
-  transform: translate(-1px, -1px);
+.github-badge:hover {
+  background: var(--color-moss);
+  box-shadow: 4px 4px 0 var(--color-ink);
+  transform: translate(-2px, -5px) rotate(0deg);
 }
 
-.brand:active {
-  transform: translate(2px, 2px);
+.github-badge:active {
+  box-shadow: var(--shadow-none);
+  transform: translate(2px, 1px);
 }
 
-.brand img {
-  width: 9.375rem;
-  height: 2.5rem;
-  object-fit: contain;
+.github-badge__mark {
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
+  border: var(--border-thin);
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.github-badge__copy {
+  display: grid;
+  gap: 0.1rem;
+  line-height: 1;
+}
+
+.github-badge__copy strong {
+  font-size: 1.15rem;
+  letter-spacing: -0.04em;
+}
+
+.github-badge__copy small {
+  color: #5c6257;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -1081,8 +1112,19 @@ p {
 }
 
 @media (max-width: 30rem) {
-  .brand img {
-    width: 7.375rem;
+  .github-badge {
+    gap: var(--space-2);
+    min-height: 2.9rem;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .github-badge__mark {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+
+  .github-badge__copy strong {
+    font-size: 1rem;
   }
 
   .contact-links a {
