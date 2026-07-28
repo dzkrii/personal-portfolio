@@ -64,8 +64,18 @@ export const certificates: Certificate[] = [];
 
 export const profile = {
   intro: {
-    id: "Saya membangun produk web dan mobile yang jelas, terstruktur, dan nyaman digunakan.",
-    en: "I build web and mobile products that are clear, structured, and easy to use.",
+    id: "Saya membangun produk web dan mobile yang jelas, terstruktur, dan nyaman digunakan. Dengan latar belakang administrasi, saya terbiasa melihat teknologi sebagai alat untuk merapikan proses kerja nyata dan mendukung kebutuhan digital di Universitas Battuta.",
+    en: "I build web and mobile products that are clear, structured, and easy to use. With a background in administration, I see technology as a practical tool for improving real workflows and supporting digital needs at Universitas Battuta.",
+  },
+  about: {
+    id: [
+      "Saya adalah mahasiswa Program Studi Informatika di Universitas Battuta yang memiliki ketertarikan pada pengembangan produk digital dan pemecahan masalah melalui teknologi.",
+      "Saya memiliki pengalaman membangun beberapa project menggunakan Next.js dan Laravel untuk pengembangan aplikasi berbasis web, serta Flutter untuk pengembangan aplikasi mobile.",
+    ],
+    en: [
+      "I am an Informatics student at Universitas Battuta with an interest in building digital products and solving problems through technology.",
+      "I have experience building projects with Next.js and Laravel for web applications, as well as Flutter for mobile development.",
+    ],
   },
   bio: {
     id: "Latar belakang administrasi membantu saya melihat teknologi sebagai alat untuk merapikan proses kerja nyata. Saat ini saya mengembangkan solusi digital di Universitas Battuta.",
@@ -131,13 +141,24 @@ export const experiences = [
   },
 ] as const;
 
-export const skills = {
-  Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-  Backend: ["Laravel", "PHP", "REST API"],
-  Mobile: ["Flutter", "Dart"],
-  Data: ["MySQL", "PostgreSQL"],
-  Design: ["Figma", "Responsive design", "Prototyping"],
-} as const;
+export const technologies = [
+  { name: "JavaScript", mark: "JS", slug: "javascript" },
+  { name: "TypeScript", mark: "TS", slug: "typescript" },
+  { name: "PHP", mark: "PHP", slug: "php" },
+  { name: "Golang", mark: "GO", slug: "go" },
+  { name: "Kotlin", mark: "K", slug: "kotlin" },
+  { name: "React", mark: "R", slug: "react" },
+  { name: "Next.js", mark: "N", slug: "nextdotjs" },
+  { name: "Laravel", mark: "L", slug: "laravel" },
+  { name: "Express", mark: "ex", slug: "express" },
+  { name: "AdonisJS", mark: "A", slug: "adonisjs" },
+  { name: "Flutter", mark: "F", slug: "flutter" },
+  { name: "Dart", mark: "D", slug: "dart" },
+  { name: "MySQL", mark: "SQL", slug: "mysql" },
+  { name: "PostgreSQL", mark: "PG", slug: "postgresql" },
+  { name: "Tailwind CSS", mark: "TW", slug: "tailwindcss" },
+  { name: "Figma", mark: "F", slug: "figma" },
+] as const;
 
 export const projects = [
   {
@@ -256,7 +277,7 @@ export const pageMeta: Record<PageKey | "project" | "notFound", { title: Localiz
   },
   about: {
     title: { id: "Tentang | Fatahul Ahmad Dzikri", en: "About | Fatahul Ahmad Dzikri" },
-    description: { id: "Profil, pengalaman, prinsip kerja, dan keahlian Fatahul Ahmad Dzikri.", en: "Profile, experience, working principles, and skills of Fatahul Ahmad Dzikri." },
+    description: { id: "Deskripsi singkat, pengalaman, dan teknologi yang digunakan Fatahul Ahmad Dzikri.", en: "A short introduction, experience, and technologies used by Fatahul Ahmad Dzikri." },
   },
   cv: {
     title: { id: "CV | Fatahul Ahmad Dzikri", en: "CV | Fatahul Ahmad Dzikri" },

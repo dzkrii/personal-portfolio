@@ -5,6 +5,7 @@ type SectionHeadingProps = {
   children: ReactNode;
   description?: string;
   eyebrow?: string;
+  id?: string;
 };
 
 export function SectionHeading({
@@ -12,11 +13,12 @@ export function SectionHeading({
   children,
   description,
   eyebrow,
+  id,
 }: SectionHeadingProps) {
   return (
     <header className="section-heading">
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <Heading>{children}</Heading>
+      <Heading id={id}>{children}</Heading>
       {description ? <p className="section-heading__description">{description}</p> : null}
     </header>
   );

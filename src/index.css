@@ -145,6 +145,10 @@ p {
   margin-inline: auto;
 }
 
+.about-page {
+  padding-inline: clamp(var(--space-3), 3vw, var(--space-10));
+}
+
 .skip-link {
   position: fixed;
   top: var(--space-3);
@@ -675,42 +679,189 @@ p {
   margin-block: var(--space-12) var(--space-20);
 }
 
-.about-grid {
+.about-profile {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.35fr);
-  gap: clamp(3.125rem, 9vw, 7.5rem);
-  padding-block: 5.625rem;
+  grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(3.125rem, 10vw, 9rem);
+  align-items: center;
+  padding-block: clamp(4rem, 9vw, 7rem);
+  border-bottom: var(--border-strong);
+}
+
+.about-profile__portrait {
+  position: relative;
+  width: min(100%, 28rem);
+  justify-self: center;
+}
+
+.about-profile__copy {
+  max-width: 48rem;
+}
+
+.about-profile__copy p {
+  max-width: 60ch;
+  margin-bottom: 0;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.5;
+}
+
+.about-profile__copy p + p {
+  margin-top: var(--space-5);
+}
+
+.about-experience {
+  padding-block: var(--space-24);
+  border-top: var(--border-strong);
+}
+
+.experience-timeline {
+  position: relative;
+  display: grid;
+  gap: 0;
+  max-width: 72rem;
+  margin: var(--space-16) auto 0;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: var(--border-width-strong);
+  background: var(--color-ink);
+  transform: translateX(-50%);
 }
 
 .experience {
-  padding-block: 1.625rem;
-  border-bottom: var(--border-thin);
-}
-
-.skill-groups {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.125rem;
+  grid-template-columns: 1fr 5rem 1fr;
+  min-height: 15rem;
 }
 
-.principle-list {
-  margin-top: var(--space-12);
-  counter-reset: principle;
+.experience__content {
+  grid-column: 1;
+  align-self: center;
+  padding: var(--space-8);
+  border: var(--border-strong);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
 }
 
-.principle-list article {
-  counter-increment: principle;
+.experience:nth-child(even) .experience__content {
+  grid-column: 3;
+}
+
+.experience__marker {
+  z-index: 1;
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
   display: grid;
-  grid-template-columns: minmax(14rem, 0.75fr) minmax(0, 1.25fr);
-  gap: var(--space-8);
-  padding-block: var(--space-8);
-  border-bottom: var(--border-thin);
+  width: 3.5rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: var(--border-strong);
+  background: var(--color-moss);
+  box-shadow: 3px 3px 0 var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 850;
 }
 
-.principle-list h3::before {
-  content: counter(principle, decimal-leading-zero) " ";
-  margin-right: var(--space-3);
+.experience:nth-child(even) .experience__marker {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.experience__content p {
+  max-width: 46ch;
+  margin-bottom: 0;
+}
+
+.experience__content h3 {
+  margin-bottom: var(--space-2);
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+.experience__period,
+.experience__company {
+  font-weight: 800;
+}
+
+.experience__period {
+  margin-bottom: var(--space-5) !important;
   color: var(--focus-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience__company {
+  margin-bottom: var(--space-5) !important;
+}
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-12);
+}
+
+.technology-card {
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-4) var(--space-5);
+  border: var(--border-strong);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform var(--motion-base) var(--ease-out), background-color var(--motion-fast) ease, box-shadow var(--motion-base) var(--ease-out);
+}
+
+.technology-card:hover {
+  background: var(--color-moss-soft);
+  box-shadow: 9px 9px 0 var(--color-ink);
+  transform: translate(-2px, -2px);
+}
+
+.technology-card:active {
+  box-shadow: 2px 2px 0 var(--color-ink);
+  transform: translate(2px, 2px);
+}
+
+.technology-card__icon {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  display: grid;
+  place-items: center;
+  color: var(--color-ink);
+  font-size: 1.35rem;
+  font-weight: 850;
+  letter-spacing: -0.07em;
+}
+
+.technology-card__icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.technology-card__icon img.is-loaded + span {
+  display: none;
+}
+
+.technology-card h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  text-wrap: balance;
 }
 
 .contact-note {
@@ -823,13 +974,6 @@ p {
   border: var(--border-strong);
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
-}
-
-.skill-groups > div {
-  padding: 1.375rem;
-  border: var(--border-strong);
-  background: var(--color-surface);
-  box-shadow: 5px 5px 0 var(--color-ink);
 }
 
 .contact-links {
@@ -952,6 +1096,10 @@ p {
     gap: var(--space-3);
     font-size: 0.9rem;
   }
+
+  .technology-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 56rem) {
@@ -1058,7 +1206,7 @@ p {
 
   .project-card,
   .certificate-card,
-  .about-grid,
+  .about-profile,
   .home-intro,
   .contact-cta,
   .case-study article,
@@ -1096,8 +1244,31 @@ p {
     padding-block: 3.25rem;
   }
 
-  .skill-groups {
-    grid-template-columns: 1fr;
+  .technology-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-timeline::before {
+    left: 1.625rem;
+  }
+
+  .experience {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    min-height: auto;
+    padding-bottom: var(--space-8);
+  }
+
+  .experience__content,
+  .experience:nth-child(even) .experience__content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .experience__marker,
+  .experience:nth-child(even) .experience__marker {
+    grid-column: 1;
+    grid-row: 1;
+    width: 3.25rem;
   }
 
   .site-footer {
