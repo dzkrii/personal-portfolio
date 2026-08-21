@@ -13,6 +13,10 @@ export const siteConfig = {
   social: {
     github: "https://github.com/dzkrii",
     linkedin: "https://www.linkedin.com/in/fatahul-ahmad-dzikri/",
+    instagram: "https://www.instagram.com/dzkrii_12",
+    telegram: "https://t.me/dzkkrii",
+    youtube: "https://www.youtube.com/@kyuradev",
+    tiktok: "https://www.tiktok.com/@kyuradev",
   },
   media: {
     portrait: {
