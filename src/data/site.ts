@@ -64,8 +64,8 @@ export const certificates: Certificate[] = [];
 
 export const profile = {
   intro: {
-    id: "Saya membangun produk web dan mobile yang jelas, terstruktur, dan nyaman digunakan. Dengan latar belakang administrasi, saya terbiasa melihat teknologi sebagai alat untuk merapikan proses kerja nyata dan mendukung kebutuhan digital di Universitas Battuta.",
-    en: "I build web and mobile products that are clear, structured, and easy to use. With a background in administration, I see technology as a practical tool for improving real workflows and supporting digital needs at Universitas Battuta.",
+    id: "Saya membangun produk web dan mobile yang terstruktur, jelas, dan nyaman digunakan untuk mempermudah alur kerja nyata.",
+    en: "I build clear, structured, and user-friendly web and mobile products to improve real workflows.",
   },
   about: {
     id: [
