@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { List, X } from "lucide-react";
 import { messages, navigation, siteConfig } from "../data/site";
 import { pathFor, type Route } from "../router";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Link } from "./Link";
 
 export function SiteHeader({ route }: { route: Route }) {
   const [open, setOpen] = useState(false);
-  const locale = route.locale;
+  const locale = "en" as const;
 
   useEffect(() => setOpen(false), [route]);
 
@@ -46,12 +45,12 @@ export function SiteHeader({ route }: { route: Route }) {
       <nav
         id="primary-navigation"
         className={open ? "nav nav--open" : "nav"}
-        aria-label={locale === "id" ? "Navigasi utama" : "Primary navigation"}
+        aria-label={"Primary navigation"}
       >
         {navigation.map((item) => (
           <Link
             key={item.key}
-            href={pathFor(locale, item.key)}
+            href={pathFor(item.key)}
             aria-current={
               route.page === item.key ||
               (item.key === "projects" && route.page === "project" && route.projectExists)
@@ -62,7 +61,6 @@ export function SiteHeader({ route }: { route: Route }) {
             {item.label[locale]}
           </Link>
         ))}
-        <LanguageSwitcher route={route} locale={locale} />
       </nav>
     </header>
   );

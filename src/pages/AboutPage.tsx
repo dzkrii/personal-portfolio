@@ -8,8 +8,8 @@ import {
 
 export function AboutPage({ locale }: { locale: Locale }) {
   const copy = {
-    experienceTitle: locale === "id" ? "Pengalaman saya" : "My experience",
-    skillsTitle: locale === "id" ? "Teknologi yang saya gunakan." : "Technology I use.",
+    experienceTitle: "My experience",
+    skillsTitle: "Technology I use.",
   };
 
   return (
@@ -20,7 +20,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             src="/fatahul-hero-illustration.png"
             width="1003"
             height="1568"
-            alt={locale === "id" ? "Ilustrasi neo-brutalist Fatahul Ahmad Dzikri" : "Neo-brutalist illustration of Fatahul Ahmad Dzikri"}
+            alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"}
           />
           <span aria-hidden="true">01 / Fatahul</span>
         </div>

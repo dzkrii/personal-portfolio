@@ -15,10 +15,10 @@ function RoleRotator() {
 export function HomePage({ locale }: { locale: Locale }) {
   return <section className="hero hero--intro">
     <motion.div className="hero__content" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}>
-      <p className="hero-kicker">{locale === "id" ? "Halo, saya" : "Hi, I am"}</p><h1>Fatahul<br />Ahmad Dzikri.</h1>
-      <p className="hero-role">{locale === "id" ? "Saya seorang " : "I am a "}<RoleRotator /></p><p className="hero-copy">{profile.intro[locale]}</p>
-      <div className="hero-actions"><BrutalButton href={pathFor(locale, "cv")}>{locale === "id" ? "Lihat CV" : "View CV"}<FileText aria-hidden="true" /></BrutalButton><BrutalButton href={pathFor(locale, "about")} tone="secondary">{locale === "id" ? "Tentang saya" : "About me"}<ArrowUpRight aria-hidden="true" /></BrutalButton></div>
+      <p className="hero-kicker">{"Hi, I am"}</p><h1>Fatahul<br />Ahmad Dzikri.</h1>
+      <p className="hero-role">{"I am a "}<RoleRotator /></p><p className="hero-copy">{profile.intro[locale]}</p>
+      <div className="hero-actions"><BrutalButton href={pathFor("cv")}>{"View CV"}<FileText aria-hidden="true" /></BrutalButton><BrutalButton href={pathFor("about")} tone="secondary">{"About me"}<ArrowUpRight aria-hidden="true" /></BrutalButton></div>
     </motion.div>
-    <motion.div className="hero-illustration" initial={{ opacity: 0, scale: 0.92, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} whileHover={{ y: -5, rotate: 1 }} transition={{ duration: 0.65, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}><img src="/fatahul-hero-illustration.png" width="1003" height="1568" alt={locale === "id" ? "Ilustrasi neo-brutalist Fatahul Ahmad Dzikri" : "Neo-brutalist illustration of Fatahul Ahmad Dzikri"} /><span aria-hidden="true">01 / Fatahul</span></motion.div>
+    <motion.div className="hero-illustration" initial={{ opacity: 0, scale: 0.92, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} whileHover={{ y: -5, rotate: 1 }} transition={{ duration: 0.65, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}><img src="/fatahul-hero-illustration.png" width="1003" height="1568" alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"} /><span aria-hidden="true">01 / Fatahul</span></motion.div>
   </section>;
 }

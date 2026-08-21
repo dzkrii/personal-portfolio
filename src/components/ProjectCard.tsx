@@ -18,7 +18,7 @@ export function ProjectCard({ locale, project }: { locale: Locale; project: Proj
         <p className="project-category">{project.category[locale]}</p>
         <h2>{project.title[locale]}</h2>
         <p>{project.summary[locale]}</p>
-        <Link className="text-link" href={pathFor(locale, "projects", project.slug)}>
+        <Link className="text-link" href={pathFor("projects", project.slug)}>
           {messages[locale].viewProject}
           <ArrowUpRight aria-hidden="true" />
         </Link>

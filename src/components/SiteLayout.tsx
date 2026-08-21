@@ -5,7 +5,7 @@ import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 
 export function SiteLayout({ children, route }: { children: ReactNode; route: Route }) {
-  const locale = route.locale;
+  const locale = "en" as const;
 
   return (
     <>

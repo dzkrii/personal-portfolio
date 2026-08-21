@@ -9,9 +9,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         <strong>{siteConfig.name}</strong>
         <span>{siteConfig.role[locale]}</span>
       </p>
-      <nav aria-label={locale === "id" ? "Navigasi footer" : "Footer navigation"}>
+      <nav aria-label={"Footer navigation"}>
         {navigation.slice(1).map((item) => (
-          <Link key={item.key} href={pathFor(locale, item.key)}>
+          <Link key={item.key} href={pathFor(item.key)}>
             {item.label[locale]}
           </Link>
         ))}

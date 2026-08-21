@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { MotionConfig } from "motion/react";
 import { SiteLayout } from "./components/SiteLayout";
-import { pageMeta, type Locale } from "./data/site";
+import { pageMeta } from "./data/site";
 import { useRoute, type Route } from "./router";
 import { AboutPage } from "./pages/AboutPage";
 import { CertificatesPage } from "./pages/CertificatesPage";
@@ -15,16 +15,16 @@ function usePageMetadata(route: Route) {
   useEffect(() => {
     const key = route.page === "project" && !route.projectExists ? "notFound" : route.page;
     const meta = pageMeta[key];
-    document.documentElement.lang = route.locale;
-    document.title = meta.title[route.locale];
-    document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description[route.locale]);
+    document.documentElement.lang = "en";
+    document.title = meta.title.en;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description.en);
   }, [route]);
 }
 
 function App() {
   const route = useRoute();
   usePageMetadata(route);
-  const locale: Locale = route.locale;
+  const locale = "en" as const;
   let page;
 
   if (route.page === "home") page = <HomePage locale={locale} />;
