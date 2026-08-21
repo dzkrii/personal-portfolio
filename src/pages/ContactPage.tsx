@@ -1,16 +1,17 @@
 import { ArrowUpRight } from "lucide-react";
 import { siteConfig, type Locale } from "../data/site";
-import { navLabel, PageIntro } from "./PagePrimitives";
+import { navLabel } from "./PagePrimitives";
 
 export function ContactPage({ locale }: { locale: Locale }) {
+  const title = navLabel("contact", locale);
+
   return (
-    <>
-      <PageIntro
-        title={navLabel("contact", locale)}
-        description={
-          "Have a project or idea worth discussing? Send a message through one of these channels."
-        }
-      />
+    <div className="contact-page">
+      <header className="contact-header">
+        <div className="section-badge-title">
+          <h1 className="section-badge-title__text">{title}</h1>
+        </div>
+      </header>
       <div className="contact-links">
         <a href={`mailto:${siteConfig.email}`}>
           {siteConfig.email}
@@ -30,6 +31,6 @@ export function ContactPage({ locale }: { locale: Locale }) {
           "No form and no automated reply. Your email goes directly to my inbox."
         }
       </p>
-    </>
+    </div>
   );
 }

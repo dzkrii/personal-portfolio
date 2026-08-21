@@ -3,27 +3,28 @@ import { ProjectCard } from "../components/ProjectCard";
 import { MediaFrame } from "../components/ui/MediaFrame";
 import { messages, projects, siteConfig, type Locale } from "../data/site";
 import { pathFor } from "../router";
-import { navLabel, PageIntro } from "./PagePrimitives";
+import { navLabel } from "./PagePrimitives";
 import { NotFoundPage } from "./NotFoundPage";
 
 export function ProjectsPage({ locale }: { locale: Locale }) {
+  const title = navLabel("projects", locale);
+
   return (
-    <>
-      <PageIntro
-        title={navLabel("projects", locale)}
-        description={
-          "Three selected projects forming the foundation for the case studies."
-        }
-      />
+    <div className="projects-page">
+      <header className="projects-header">
+        <div className="section-badge-title">
+          <h1 className="section-badge-title__text">{title}</h1>
+        </div>
+      </header>
       <section
         className="project-list"
-        aria-label={navLabel("projects", locale)}
+        aria-label={title}
       >
         {projects.map((project) => (
           <ProjectCard key={project.slug} locale={locale} project={project} />
         ))}
       </section>
-    </>
+    </div>
   );
 }
 
@@ -39,11 +40,12 @@ export function ProjectPage({
   const project = projects.find((item) => item.slug === slug);
   if (!exists || !project) return <NotFoundPage locale={locale} />;
   return (
-    <>
-      <PageIntro
-        title={project.title[locale]}
-        description={project.summary[locale]}
-      />
+    <div className="project-detail-page">
+      <header className="project-detail-header">
+        <div className="section-badge-title">
+          <h1 className="section-badge-title__text">{project.title[locale]}</h1>
+        </div>
+      </header>
       <div className="project-facts">
         <p>
           <strong>{"Category"}</strong>
@@ -78,6 +80,6 @@ export function ProjectPage({
       <Link className="text-link back-link" href={pathFor("projects")}>
         {messages[locale].backToProjects}
       </Link>
-    </>
+    </div>
   );
 }

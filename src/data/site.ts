@@ -328,7 +328,10 @@ export const pageMeta: Record<
     },
   },
   cv: {
-    title: { id: "CV | Fatahul Ahmad Dzikri", en: "CV | Fatahul Ahmad Dzikri" },
+    title: {
+      id: "Curriculum Vitae | Fatahul Ahmad Dzikri",
+      en: "Curriculum Vitae | Fatahul Ahmad Dzikri",
+    },
     description: {
       id: "Curriculum vitae Fatahul Ahmad Dzikri.",
       en: "Curriculum vitae of Fatahul Ahmad Dzikri.",

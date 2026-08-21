@@ -145,7 +145,12 @@ p {
   margin-inline: auto;
 }
 
-.about-page {
+.about-page,
+.certificates-page,
+.projects-page,
+.project-detail-page,
+.cv-page,
+.contact-page {
   padding-inline: clamp(var(--space-3), 3vw, var(--space-10));
 }
 
@@ -684,7 +689,12 @@ p {
   margin-block: var(--space-12) var(--space-20);
 }
 
-.about-header {
+.about-header,
+.certificates-header,
+.projects-header,
+.project-detail-header,
+.cv-header,
+.contact-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -725,7 +735,7 @@ p {
 
 .section-badge-title__text {
   margin: 0;
-  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 850;
   letter-spacing: -0.035em;
   color: var(--color-ink);

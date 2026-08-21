@@ -1,17 +1,18 @@
 import { ArrowDownToLine } from "lucide-react";
 import { siteConfig, type Locale } from "../data/site";
-import { EmptyState, navLabel, PageIntro } from "./PagePrimitives";
+import { EmptyState } from "./PagePrimitives";
 
-export function CvPage({ locale }: { locale: Locale }) {
+export function CvPage({ locale: _locale }: { locale: Locale }) {
   const resumeSrc = siteConfig.media.resume.src;
+  const title = "Curriculum Vitae";
+
   return (
-    <>
-      <PageIntro
-        title={navLabel("cv", locale)}
-        description={
-          "A concise overview of my experience, skills, and professional journey."
-        }
-      />
+    <div className="cv-page">
+      <header className="cv-header">
+        <div className="section-badge-title">
+          <h1 className="section-badge-title__text">{title}</h1>
+        </div>
+      </header>
       {resumeSrc ? (
         <section className="cv-viewer">
           <div className="cv-viewer__toolbar">
@@ -34,6 +35,6 @@ export function CvPage({ locale }: { locale: Locale }) {
       ) : (
         <EmptyState type="cv" />
       )}
-    </>
+    </div>
   );
 }

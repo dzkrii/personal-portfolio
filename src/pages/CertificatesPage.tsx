@@ -1,22 +1,23 @@
 import { ArrowUpRight } from "lucide-react";
 import { certificates, type Locale } from "../data/site";
-import { EmptyState, navLabel, PageIntro } from "./PagePrimitives";
+import { EmptyState, navLabel } from "./PagePrimitives";
 
 export function CertificatesPage({ locale }: { locale: Locale }) {
+  const title = navLabel("certificates", locale);
+
   return (
-    <>
-      <PageIntro
-        title={navLabel("certificates", locale)}
-        description={
-          "A record of learning, training, and credentials supporting my work."
-        }
-      />
+    <div className="certificates-page">
+      <header className="certificates-header">
+        <div className="section-badge-title">
+          <h1 className="section-badge-title__text">{title}</h1>
+        </div>
+      </header>
       {certificates.length === 0 ? (
         <EmptyState type="certificates" />
       ) : (
         <section
           className="certificate-grid"
-          aria-label={navLabel("certificates", locale)}
+          aria-label={title}
         >
           {certificates.map((certificate) => (
             <article
@@ -51,6 +52,6 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
           ))}
         </section>
       )}
-    </>
+    </div>
   );
 }
