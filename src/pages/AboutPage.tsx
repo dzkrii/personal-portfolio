@@ -1,14 +1,23 @@
-import { SectionHeading } from "../components/ui/SectionHeading";
 import { experiences, profile, technologies, type Locale } from "../data/site";
 
 export function AboutPage({ locale }: { locale: Locale }) {
   const copy = {
-    experienceTitle: "My experience",
-    skillsTitle: "Technology I use.",
+    aboutTitle: "About me",
+    experienceTitle: locale === "id" ? "Pengalaman Saya" : "My Experience",
+    skillsTitle:
+      locale === "id"
+        ? "Teknologi yang Digunakan"
+        : "Technology I Use",
   };
 
   return (
     <div className="about-page">
+      <header className="about-header">
+        <div className="section-badge-title">
+          <h1 className="section-badge-title__text">{copy.aboutTitle}</h1>
+        </div>
+      </header>
+
       <section className="about-profile" aria-labelledby="about-profile-title">
         <div className="about-profile__portrait hero-illustration">
           <img
@@ -29,9 +38,13 @@ export function AboutPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="about-experience" aria-labelledby="experience-title">
-        <SectionHeading as="h2" id="experience-title">
-          {copy.experienceTitle}
-        </SectionHeading>
+        <div className="section-badge-title-wrapper">
+          <div className="section-badge-title">
+            <h2 className="section-badge-title__text" id="experience-title">
+              {copy.experienceTitle}
+            </h2>
+          </div>
+        </div>
         <div className="experience-timeline">
           {experiences.map((item, index) => (
             <article
@@ -53,9 +66,13 @@ export function AboutPage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="skills-section" aria-labelledby="skills-title">
-        <SectionHeading as="h2" id="skills-title">
-          {copy.skillsTitle}
-        </SectionHeading>
+        <div className="section-badge-title-wrapper">
+          <div className="section-badge-title">
+            <h2 className="section-badge-title__text" id="skills-title">
+              {copy.skillsTitle}
+            </h2>
+          </div>
+        </div>
         <div className="technology-grid">
           {technologies.map((technology) => (
             <article className="technology-card" key={technology.name}>

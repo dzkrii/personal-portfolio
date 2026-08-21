@@ -148,21 +148,20 @@ export const experiences = [
 ] as const;
 
 export const technologies = [
-  { name: "JavaScript", mark: "JS", slug: "javascript" },
   { name: "TypeScript", mark: "TS", slug: "typescript" },
-  { name: "PHP", mark: "PHP", slug: "php" },
-  { name: "Golang", mark: "GO", slug: "go" },
-  { name: "Kotlin", mark: "K", slug: "kotlin" },
+  { name: "JavaScript", mark: "JS", slug: "javascript" },
   { name: "React", mark: "R", slug: "react" },
   { name: "Next.js", mark: "N", slug: "nextdotjs" },
+  { name: "Tailwind CSS", mark: "TW", slug: "tailwindcss" },
+  { name: "PHP", mark: "PHP", slug: "php" },
   { name: "Laravel", mark: "L", slug: "laravel" },
+  { name: "NestJS", mark: "Nest", slug: "nestjs" },
   { name: "Express", mark: "ex", slug: "express" },
-  { name: "AdonisJS", mark: "A", slug: "adonisjs" },
   { name: "Flutter", mark: "F", slug: "flutter" },
   { name: "Dart", mark: "D", slug: "dart" },
-  { name: "MySQL", mark: "SQL", slug: "mysql" },
   { name: "PostgreSQL", mark: "PG", slug: "postgresql" },
-  { name: "Tailwind CSS", mark: "TW", slug: "tailwindcss" },
+  { name: "MySQL", mark: "SQL", slug: "mysql" },
+  { name: "Git", mark: "Git", slug: "git" },
   { name: "Figma", mark: "F", slug: "figma" },
 ] as const;
 
