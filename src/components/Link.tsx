@@ -1,7 +1,11 @@
 import type { AnchorHTMLAttributes, MouseEvent } from "react";
 import { navigate } from "../router";
 
-export function Link({ href = "", onClick, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
+export function Link({
+  href = "",
+  onClick,
+  ...props
+}: AnchorHTMLAttributes<HTMLAnchorElement>) {
   function handleClick(event: MouseEvent<HTMLAnchorElement>) {
     onClick?.(event);
     if (
@@ -12,7 +16,8 @@ export function Link({ href = "", onClick, ...props }: AnchorHTMLAttributes<HTML
       event.shiftKey ||
       event.altKey ||
       !href.startsWith("/")
-    ) return;
+    )
+      return;
 
     event.preventDefault();
     navigate(href);

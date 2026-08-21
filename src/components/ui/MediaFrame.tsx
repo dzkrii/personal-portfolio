@@ -35,7 +35,9 @@ export function MediaFrame({
           className={status === "ready" ? "is-ready" : ""}
         />
       ) : null}
-      {status === "loading" ? <span className="media-frame__skeleton" aria-hidden="true" /> : null}
+      {status === "loading" ? (
+        <span className="media-frame__skeleton" aria-hidden="true" />
+      ) : null}
       {status === "error" ? (
         <figcaption className="media-frame__fallback">
           <strong>{fallbackLabel}</strong>

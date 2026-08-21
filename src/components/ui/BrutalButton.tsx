@@ -25,7 +25,8 @@ export function BrutalButton({
       event.shiftKey ||
       event.altKey ||
       !href.startsWith("/")
-    ) return;
+    )
+      return;
 
     event.preventDefault();
     navigate(href);

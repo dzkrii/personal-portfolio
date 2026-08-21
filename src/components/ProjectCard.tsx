@@ -6,7 +6,13 @@ import { MediaFrame } from "./ui/MediaFrame";
 
 type Project = (typeof projects)[number];
 
-export function ProjectCard({ locale, project }: { locale: Locale; project: Project }) {
+export function ProjectCard({
+  locale,
+  project,
+}: {
+  locale: Locale;
+  project: Project;
+}) {
   return (
     <article className="project-card">
       <MediaFrame

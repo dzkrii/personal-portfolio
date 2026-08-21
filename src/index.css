@@ -185,7 +185,10 @@ p {
   background: var(--color-surface);
   box-shadow: var(--shadow-control);
   transform: translateY(-3px) rotate(-1.5deg);
-  transition: transform var(--motion-fast) var(--ease-out), box-shadow var(--motion-fast) var(--ease-out), background-color var(--motion-fast) ease;
+  transition:
+    transform var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out),
+    background-color var(--motion-fast) ease;
 }
 
 .github-badge:hover {
@@ -510,7 +513,9 @@ p {
 }
 
 @keyframes skeleton-shimmer {
-  to { background-position-x: -200%; }
+  to {
+    background-position-x: -200%;
+  }
 }
 
 .placeholder-section,
@@ -820,7 +825,10 @@ p {
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
   text-align: center;
-  transition: transform var(--motion-base) var(--ease-out), background-color var(--motion-fast) ease, box-shadow var(--motion-base) var(--ease-out);
+  transition:
+    transform var(--motion-base) var(--ease-out),
+    background-color var(--motion-fast) ease,
+    box-shadow var(--motion-base) var(--ease-out);
 }
 
 .technology-card:hover {

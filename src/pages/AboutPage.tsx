@@ -1,10 +1,5 @@
 import { SectionHeading } from "../components/ui/SectionHeading";
-import {
-  experiences,
-  profile,
-  technologies,
-  type Locale,
-} from "../data/site";
+import { experiences, profile, technologies, type Locale } from "../data/site";
 
 export function AboutPage({ locale }: { locale: Locale }) {
   const copy = {
@@ -26,7 +21,9 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
         <div className="about-profile__copy">
           <div id="about-profile-title">
-            {profile.about[locale].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {profile.about[locale].map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -37,7 +34,10 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </SectionHeading>
         <div className="experience-timeline">
           {experiences.map((item, index) => (
-            <article className="experience" key={`${item.company}-${item.period.en}`}>
+            <article
+              className="experience"
+              key={`${item.company}-${item.period.en}`}
+            >
               <div className="experience__content">
                 <p className="experience__period">{item.period[locale]}</p>
                 <h3>{item.role[locale]}</h3>
@@ -63,8 +63,12 @@ export function AboutPage({ locale }: { locale: Locale }) {
                 <img
                   src={`https://cdn.simpleicons.org/${technology.slug}/191a17`}
                   alt=""
-                  onLoad={(event) => { event.currentTarget.classList.add("is-loaded"); }}
-                  onError={(event) => { event.currentTarget.hidden = true; }}
+                  onLoad={(event) => {
+                    event.currentTarget.classList.add("is-loaded");
+                  }}
+                  onError={(event) => {
+                    event.currentTarget.hidden = true;
+                  }}
                 />
                 <span>{technology.mark}</span>
               </div>

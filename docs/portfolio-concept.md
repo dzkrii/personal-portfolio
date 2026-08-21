@@ -19,13 +19,13 @@ personal dan informatif, bukan landing page penjualan dengan CTA agresif.
 
 ## Struktur Website
 
-| Halaman | Isi dan tujuan |
-| --- | --- |
-| **Beranda** `/{locale}` | Hero dan foto personal, perkenalan singkat, 2-3 proyek unggulan, keahlian inti, serta ajakan kontak ringan. |
-| **Proyek** `/{locale}/projects` | Daftar 3-4 proyek web terkurasi yang menunjukkan variasi kemampuan dan kualitas hasil. |
+| Halaman                                       | Isi dan tujuan                                                                                              |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Beranda** `/{locale}`                       | Hero dan foto personal, perkenalan singkat, 2-3 proyek unggulan, keahlian inti, serta ajakan kontak ringan. |
+| **Proyek** `/{locale}/projects`               | Daftar 3-4 proyek web terkurasi yang menunjukkan variasi kemampuan dan kualitas hasil.                      |
 | **Detail Proyek** `/{locale}/projects/{slug}` | Konteks atau masalah, peran, solusi, stack, visual, hasil, serta tautan demo atau repository bila tersedia. |
-| **Tentang** `/{locale}/about` | Profil, prinsip kerja, pengalaman, keahlian, foto personal, dan tautan unduh CV. |
-| **Kontak** `/{locale}/contact` | Pesan singkat, alamat email, serta tautan GitHub dan LinkedIn tanpa formulir. |
+| **Tentang** `/{locale}/about`                 | Profil, prinsip kerja, pengalaman, keahlian, foto personal, dan tautan unduh CV.                            |
+| **Kontak** `/{locale}/contact`                | Pesan singkat, alamat email, serta tautan GitHub dan LinkedIn tanpa formulir.                               |
 
 Navigasi utama terdiri dari **Beranda, Proyek, Tentang, Kontak**, dan pengalih
 bahasa. Bahasa menggunakan prefix `/id` dan `/en`; rute `/` diarahkan ke `/id`.

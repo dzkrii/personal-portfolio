@@ -13,7 +13,10 @@ export function pathFor(page: PageKey, slug?: string) {
 }
 
 export function parseRoute(pathname: string): Route {
-  const parts = pathname.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean);
+  const parts = pathname
+    .replace(/^\/+|\/+$/g, "")
+    .split("/")
+    .filter(Boolean);
 
   // Fallback to check if old locale URLs are visited
   if (parts.length > 0 && (parts[0] === "en" || parts[0] === "id")) {
@@ -44,7 +47,9 @@ export function navigate(href: string) {
 }
 
 export function useRoute() {
-  const [route, setRoute] = useState(() => parseRoute(window.location.pathname));
+  const [route, setRoute] = useState(() =>
+    parseRoute(window.location.pathname),
+  );
 
   useEffect(() => {
     const onPopState = () => setRoute(parseRoute(window.location.pathname));

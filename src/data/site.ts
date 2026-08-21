@@ -83,7 +83,10 @@ export const profile = {
   },
   principles: [
     {
-      title: { id: "Pahami sebelum membangun", en: "Understand before building" },
+      title: {
+        id: "Pahami sebelum membangun",
+        en: "Understand before building",
+      },
       description: {
         id: "Keputusan yang baik dimulai dari pemahaman pengguna, tujuan, dan proses.",
         en: "Good decisions begin with understanding the users, goals, and workflows.",
@@ -97,7 +100,10 @@ export const profile = {
       },
     },
     {
-      title: { id: "Desain dan development menyatu", en: "Design and development work together" },
+      title: {
+        id: "Desain dan development menyatu",
+        en: "Design and development work together",
+      },
       description: {
         id: "Tampilan yang baik perlu didukung struktur, performa, dan perilaku yang sama baiknya.",
         en: "A strong interface needs equally strong structure, performance, and behavior behind it.",
@@ -163,7 +169,10 @@ export const technologies = [
 export const projects = [
   {
     slug: "universitas-battuta-profile",
-    title: { id: "Website Profil Universitas Battuta", en: "Universitas Battuta Profile Website" },
+    title: {
+      id: "Website Profil Universitas Battuta",
+      en: "Universitas Battuta Profile Website",
+    },
     category: { id: "Profil institusi", en: "Institution profile" },
     summary: {
       id: "Pusat informasi publik dengan hierarki konten yang jelas dan tampilan responsif.",
@@ -185,7 +194,10 @@ export const projects = [
   },
   {
     slug: "universitas-battuta-academic-system",
-    title: { id: "Sistem Informasi Akademik", en: "Academic Information System" },
+    title: {
+      id: "Sistem Informasi Akademik",
+      en: "Academic Information System",
+    },
     category: { id: "Sistem informasi", en: "Information system" },
     summary: {
       id: "Sistem terpusat untuk membantu pengelolaan proses akademik universitas.",
@@ -239,9 +251,11 @@ export const messages = {
     imagePlaceholder: "Visual sedang disiapkan",
     viewProject: "Buka proyek",
     backToProjects: "Kembali ke proyek",
-    materialPending: "Materi final sedang disiapkan untuk tahap integrasi konten.",
+    materialPending:
+      "Materi final sedang disiapkan untuk tahap integrasi konten.",
     notFoundTitle: "Halaman tidak ditemukan",
-    notFoundBody: "Alamat ini tidak tersedia. Gunakan navigasi untuk kembali ke halaman yang benar.",
+    notFoundBody:
+      "Alamat ini tidak tersedia. Gunakan navigasi untuk kembali ke halaman yang benar.",
   },
   en: {
     skip: "Skip to content",
@@ -252,43 +266,90 @@ export const messages = {
     imagePlaceholder: "Visual in preparation",
     viewProject: "Open project",
     backToProjects: "Back to projects",
-    materialPending: "Final material is being prepared for the content integration stage.",
+    materialPending:
+      "Final material is being prepared for the content integration stage.",
     notFoundTitle: "Page not found",
-    notFoundBody: "This address is unavailable. Use the navigation to return to the right page.",
+    notFoundBody:
+      "This address is unavailable. Use the navigation to return to the right page.",
   },
 } as const;
 
-export const pageMeta: Record<PageKey | "project" | "notFound", { title: LocalizedText; description: LocalizedText }> = {
+export const pageMeta: Record<
+  PageKey | "project" | "notFound",
+  { title: LocalizedText; description: LocalizedText }
+> = {
   home: {
-    title: { id: "Fatahul Ahmad Dzikri | Creative Developer", en: "Fatahul Ahmad Dzikri | Creative Developer" },
-    description: { id: "Portfolio creative developer yang membangun pengalaman web jelas dan berkarakter.", en: "Creative developer portfolio building clear and distinctive web experiences." },
+    title: {
+      id: "Fatahul Ahmad Dzikri | Creative Developer",
+      en: "Fatahul Ahmad Dzikri | Creative Developer",
+    },
+    description: {
+      id: "Portfolio creative developer yang membangun pengalaman web jelas dan berkarakter.",
+      en: "Creative developer portfolio building clear and distinctive web experiences.",
+    },
   },
   projects: {
-    title: { id: "Proyek | Fatahul Ahmad Dzikri", en: "Projects | Fatahul Ahmad Dzikri" },
-    description: { id: "Pilihan proyek web dan sistem digital Fatahul Ahmad Dzikri.", en: "Selected web projects and digital systems by Fatahul Ahmad Dzikri." },
+    title: {
+      id: "Proyek | Fatahul Ahmad Dzikri",
+      en: "Projects | Fatahul Ahmad Dzikri",
+    },
+    description: {
+      id: "Pilihan proyek web dan sistem digital Fatahul Ahmad Dzikri.",
+      en: "Selected web projects and digital systems by Fatahul Ahmad Dzikri.",
+    },
   },
   certificates: {
-    title: { id: "Sertifikat | Fatahul Ahmad Dzikri", en: "Certificates | Fatahul Ahmad Dzikri" },
-    description: { id: "Sertifikat dan pembelajaran terpilih Fatahul Ahmad Dzikri.", en: "Selected certificates and learning milestones by Fatahul Ahmad Dzikri." },
+    title: {
+      id: "Sertifikat | Fatahul Ahmad Dzikri",
+      en: "Certificates | Fatahul Ahmad Dzikri",
+    },
+    description: {
+      id: "Sertifikat dan pembelajaran terpilih Fatahul Ahmad Dzikri.",
+      en: "Selected certificates and learning milestones by Fatahul Ahmad Dzikri.",
+    },
   },
   project: {
-    title: { id: "Detail Proyek | Fatahul Ahmad Dzikri", en: "Project Detail | Fatahul Ahmad Dzikri" },
-    description: { id: "Konteks, kontribusi, solusi, dan hasil proyek terpilih.", en: "Context, contribution, solution, and outcomes from a selected project." },
+    title: {
+      id: "Detail Proyek | Fatahul Ahmad Dzikri",
+      en: "Project Detail | Fatahul Ahmad Dzikri",
+    },
+    description: {
+      id: "Konteks, kontribusi, solusi, dan hasil proyek terpilih.",
+      en: "Context, contribution, solution, and outcomes from a selected project.",
+    },
   },
   about: {
-    title: { id: "Tentang | Fatahul Ahmad Dzikri", en: "About | Fatahul Ahmad Dzikri" },
-    description: { id: "Deskripsi singkat, pengalaman, dan teknologi yang digunakan Fatahul Ahmad Dzikri.", en: "A short introduction, experience, and technologies used by Fatahul Ahmad Dzikri." },
+    title: {
+      id: "Tentang | Fatahul Ahmad Dzikri",
+      en: "About | Fatahul Ahmad Dzikri",
+    },
+    description: {
+      id: "Deskripsi singkat, pengalaman, dan teknologi yang digunakan Fatahul Ahmad Dzikri.",
+      en: "A short introduction, experience, and technologies used by Fatahul Ahmad Dzikri.",
+    },
   },
   cv: {
     title: { id: "CV | Fatahul Ahmad Dzikri", en: "CV | Fatahul Ahmad Dzikri" },
-    description: { id: "Curriculum vitae Fatahul Ahmad Dzikri.", en: "Curriculum vitae of Fatahul Ahmad Dzikri." },
+    description: {
+      id: "Curriculum vitae Fatahul Ahmad Dzikri.",
+      en: "Curriculum vitae of Fatahul Ahmad Dzikri.",
+    },
   },
   contact: {
-    title: { id: "Kontak | Fatahul Ahmad Dzikri", en: "Contact | Fatahul Ahmad Dzikri" },
-    description: { id: "Hubungi Fatahul Ahmad Dzikri untuk membicarakan proyek digital.", en: "Contact Fatahul Ahmad Dzikri to discuss a digital project." },
+    title: {
+      id: "Kontak | Fatahul Ahmad Dzikri",
+      en: "Contact | Fatahul Ahmad Dzikri",
+    },
+    description: {
+      id: "Hubungi Fatahul Ahmad Dzikri untuk membicarakan proyek digital.",
+      en: "Contact Fatahul Ahmad Dzikri to discuss a digital project.",
+    },
   },
   notFound: {
     title: { id: "404 | Halaman Tidak Ditemukan", en: "404 | Page Not Found" },
-    description: { id: "Halaman yang diminta tidak tersedia.", en: "The requested page is unavailable." },
+    description: {
+      id: "Halaman yang diminta tidak tersedia.",
+      en: "The requested page is unavailable.",
+    },
   },
 };

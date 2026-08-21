@@ -6,15 +6,15 @@ dan Bahasa Inggris harus tetap setara.
 
 ## Identitas dan Kontak
 
-| Bidang | Nilai |
-| --- | --- |
-| Nama | Fatahul Ahmad Dzikri |
-| Peran | Creative Developer / Software Developer |
-| Email | fatahulahmaddzikri@gmail.com |
-| GitHub | https://github.com/dzkrii |
-| LinkedIn | https://www.linkedin.com/in/fatahul-ahmad-dzikri/ |
-| Foto personal | Placeholder sampai foto final tersedia |
-| CV | Placeholder sampai PDF final tersedia |
+| Bidang        | Nilai                                             |
+| ------------- | ------------------------------------------------- |
+| Nama          | Fatahul Ahmad Dzikri                              |
+| Peran         | Creative Developer / Software Developer           |
+| Email         | fatahulahmaddzikri@gmail.com                      |
+| GitHub        | https://github.com/dzkrii                         |
+| LinkedIn      | https://www.linkedin.com/in/fatahul-ahmad-dzikri/ |
+| Foto personal | Placeholder sampai foto final tersedia            |
+| CV            | Placeholder sampai PDF final tersedia             |
 
 ## Profil
 
@@ -111,14 +111,14 @@ nontechnical users.
 
 Keahlian ditampilkan sebagai kelompok agar daftar tetap mudah dipindai.
 
-| Kelompok | Item |
-| --- | --- |
+| Kelompok | Item                                                            |
+| -------- | --------------------------------------------------------------- |
 | Frontend | React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS |
-| Backend | Laravel, PHP, REST API |
-| Mobile | Flutter, Dart |
-| Data | MySQL, PostgreSQL |
-| Design | Figma, responsive design, prototyping |
-| Workflow | Git, GitHub, npm, Composer, Vite, debugging, API integration |
+| Backend  | Laravel, PHP, REST API                                          |
+| Mobile   | Flutter, Dart                                                   |
+| Data     | MySQL, PostgreSQL                                               |
+| Design   | Figma, responsive design, prototyping                           |
+| Workflow | Git, GitHub, npm, Composer, Vite, debugging, API integration    |
 
 ## Proyek Terpilih
 
@@ -225,15 +225,15 @@ visual consistency, and accessibility across desktop and mobile devices.
 
 ## Daftar Aset yang Akan Diganti
 
-| Aset | Status | Kebutuhan final |
-| --- | --- | --- |
-| Foto personal | Placeholder disetujui | WebP/AVIF, portrait minimal 1200 px |
-| CV | Placeholder disetujui | PDF final |
-| Screenshot Website Universitas Battuta | Placeholder disetujui | Desktop dan mobile |
-| Screenshot Sistem Informasi Akademik | Placeholder disetujui | Tampilan utama tanpa data sensitif |
-| Screenshot Website Pro.Asta | Placeholder disetujui | Desktop dan mobile |
-| Demo dan repository proyek | Placeholder disetujui | URL publik bila tersedia |
-| Stack dan hasil tiap proyek | Perlu konfirmasi | Teknologi final dan dampak yang dapat diverifikasi |
+| Aset                                   | Status                | Kebutuhan final                                    |
+| -------------------------------------- | --------------------- | -------------------------------------------------- |
+| Foto personal                          | Placeholder disetujui | WebP/AVIF, portrait minimal 1200 px                |
+| CV                                     | Placeholder disetujui | PDF final                                          |
+| Screenshot Website Universitas Battuta | Placeholder disetujui | Desktop dan mobile                                 |
+| Screenshot Sistem Informasi Akademik   | Placeholder disetujui | Tampilan utama tanpa data sensitif                 |
+| Screenshot Website Pro.Asta            | Placeholder disetujui | Desktop dan mobile                                 |
+| Demo dan repository proyek             | Placeholder disetujui | URL publik bila tersedia                           |
+| Stack dan hasil tiap proyek            | Perlu konfirmasi      | Teknologi final dan dampak yang dapat diverifikasi |
 
 ## Catatan Implementasi
 

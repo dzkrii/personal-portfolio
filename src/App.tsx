@@ -13,11 +13,16 @@ import { ProjectPage, ProjectsPage } from "./pages/ProjectsPage";
 
 function usePageMetadata(route: Route) {
   useEffect(() => {
-    const key = route.page === "project" && !route.projectExists ? "notFound" : route.page;
+    const key =
+      route.page === "project" && !route.projectExists
+        ? "notFound"
+        : route.page;
     const meta = pageMeta[key];
     document.documentElement.lang = "en";
     document.title = meta.title.en;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description.en);
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", meta.description.en);
   }, [route]);
 }
 
@@ -29,9 +34,17 @@ function App() {
 
   if (route.page === "home") page = <HomePage locale={locale} />;
   else if (route.page === "projects") page = <ProjectsPage locale={locale} />;
-  else if (route.page === "project") page = <ProjectPage locale={locale} slug={route.slug} exists={route.projectExists} />;
+  else if (route.page === "project")
+    page = (
+      <ProjectPage
+        locale={locale}
+        slug={route.slug}
+        exists={route.projectExists}
+      />
+    );
   else if (route.page === "about") page = <AboutPage locale={locale} />;
-  else if (route.page === "certificates") page = <CertificatesPage locale={locale} />;
+  else if (route.page === "certificates")
+    page = <CertificatesPage locale={locale} />;
   else if (route.page === "cv") page = <CvPage locale={locale} />;
   else if (route.page === "contact") page = <ContactPage locale={locale} />;
   else page = <NotFoundPage locale={locale} />;

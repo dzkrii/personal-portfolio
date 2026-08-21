@@ -53,7 +53,9 @@ export function SiteHeader({ route }: { route: Route }) {
             href={pathFor(item.key)}
             aria-current={
               route.page === item.key ||
-              (item.key === "projects" && route.page === "project" && route.projectExists)
+              (item.key === "projects" &&
+                route.page === "project" &&
+                route.projectExists)
                 ? "page"
                 : undefined
             }
