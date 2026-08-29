@@ -22,8 +22,8 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <div className="about-profile__portrait hero-illustration">
           <img
             src="/fatahul-hero-illustration-400.webp"
-            srcSet="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
-            sizes="(max-width: 640px) 320px, 400px"
+            srcSet="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-640.webp 640w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
+            sizes="(max-width: 47.99rem) min(100vw, 22.5rem), 400px"
             width="1003"
             height="1568"
             alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"}

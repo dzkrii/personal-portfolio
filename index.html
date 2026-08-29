@@ -19,22 +19,49 @@
     <link rel="icon" type="image/svg+xml" href="/logo-fatahul.svg?v=2" />
     <link
       rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/space-grotesk-latin-var.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
       as="image"
       href="/fatahul-hero-illustration-400.webp"
-      imagesrcset="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
-      imagesizes="(max-width: 640px) 320px, (max-width: 1024px) 450px, 500px"
+      imagesrcset="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-640.webp 640w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
+      imagesizes="(max-width: 47.99rem) min(100vw, 22.5rem), (max-width: 1024px) 28vw, 29rem"
       type="image/webp"
       fetchpriority="high"
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZGZFM88J7"></script>
+    <!-- Google tag (gtag.js). Loaded after the page is interactive so it never
+         competes with LCP resources; calls made before then queue in dataLayer. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-8ZGZFM88J7');
+
+      (function () {
+        var loaded = false;
+        function loadGtag() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8ZGZFM88J7';
+          document.head.appendChild(s);
+        }
+        function schedule() {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadGtag, { timeout: 3000 });
+          } else {
+            setTimeout(loadGtag, 2000);
+          }
+        }
+        if (document.readyState === 'complete') schedule();
+        else window.addEventListener('load', schedule, { once: true });
+      })();
     </script>
 
     <!-- Open Graph / Facebook / LinkedIn -->
