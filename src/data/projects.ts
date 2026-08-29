@@ -136,7 +136,7 @@ export const projects: Project[] = [
       en: "Universitas Battuta",
     },
     liveUrl: "https://siakad.battuta.ac.id",
-    image: "/projects/siakad-battuta-login.webp",
+    image: "/media/projects/siakad-battuta-login.webp",
     screenshots: [
       {
         id: "login",
@@ -148,7 +148,7 @@ export const projects: Project[] = [
           id: "Portal login terpadu satu pintu untuk Mahasiswa, Dosen, BAAK, dan Keuangan dengan tampilan modern dark mode dan identitas visual kampus.",
           en: "Unified single-entry login portal for Students, Faculty, Academic Staff, and Finance with a modern dark theme and campus visual branding.",
         },
-        image: "/projects/siakad-battuta-login.webp",
+        image: "/media/projects/siakad-battuta-login.webp",
         category: { id: "Portal Utama", en: "Main Portal" },
       },
       {
@@ -161,7 +161,7 @@ export const projects: Project[] = [
           id: "Pusat informasi akademik mahasiswa: kartu IPS & IPK kumulatif, monitoring beban SKS, pengumuman kampus, dan jadwal perkuliahan harian.",
           en: "Student academic hub: semester & cumulative GPA cards, credit load tracking, official announcements, and daily class timetables.",
         },
-        image: "/projects/siakad-battuta-dashboard.webp",
+        image: "/media/projects/siakad-battuta-dashboard.webp",
         category: { id: "Mahasiswa", en: "Student Hub" },
       },
       {
@@ -174,7 +174,7 @@ export const projects: Project[] = [
           id: "Pengisian rencana studi semester aktif serta arsip riwayat KRS per semester lengkap dengan status persetujuan Dosen PA dan rincian SKS.",
           en: "Active semester study plan enrollment and historical semester archive featuring academic advisor approval status and credit breakdowns.",
         },
-        image: "/projects/siakad-battuta-krs.webp",
+        image: "/media/projects/siakad-battuta-krs.webp",
         category: { id: "Rencana Studi", en: "KRS Enrollment" },
       },
       {
@@ -187,7 +187,7 @@ export const projects: Project[] = [
           id: "Manajemen tagihan pendidikan, verifikasi status beasiswa penuh (100% KIP-Kuliah), monitoring sisa pembayaran, dan status pelunasan biaya.",
           en: "Tuition management, 100% full scholarship verification (KIP-Kuliah), balance tracking, and official clearance status.",
         },
-        image: "/projects/siakad-battuta-tagihan.webp",
+        image: "/media/projects/siakad-battuta-tagihan.webp",
         category: { id: "Keuangan", en: "Finance & Aid" },
       },
     ],
@@ -567,7 +567,7 @@ export const projects: Project[] = [
       en: "Universitas Battuta",
     },
     liveUrl: "https://battuta.ac.id",
-    image: "/projects/battuta-profile-card.webp",
+    image: "/media/projects/battuta-profile-card.webp",
     screenshots: [
       {
         id: "beranda",
@@ -579,7 +579,7 @@ export const projects: Project[] = [
           id: "Desain visual modern dengan slider fasilitas gedung baru, navigasi terstruktur, pengumuman terkini, dan akses cepat pendaftaran PMB.",
           en: "Modern visual showcase featuring new campus facility slider, structured navigation, latest announcements, and fast-track admissions CTA.",
         },
-        image: "/projects/battuta-profile-card.webp",
+        image: "/media/projects/battuta-profile-card.webp",
         category: { id: "Beranda", en: "Homepage" },
       },
       {
@@ -592,7 +592,7 @@ export const projects: Project[] = [
           id: "Informasi 3 Fakultas dan 9 Program Studi berakreditasi 'Baik Sekali' serta pesan sambutan Ketua Yayasan mengenai ekosistem Kampus Berdampak.",
           en: "Directory of 3 Faculties and 9 Study Programs accredited 'Baik Sekali' alongside Chairman of the Foundation's address on impactful campus life.",
         },
-        image: "/projects/battuta-profile-fakultas.webp",
+        image: "/media/projects/battuta-profile-fakultas.webp",
         category: { id: "Fakultas & Prodi", en: "Faculties" },
       },
       {
@@ -605,7 +605,7 @@ export const projects: Project[] = [
           id: "Fitur interaktif pemutar audio Mars Universitas Battuta dengan sinkronisasi bait lirik real-time yang dapat diklik untuk melompat ke bagian lagu.",
           en: "Interactive custom audio player for Universitas Battuta's official anthem with clickable synchronized lyric stanza navigation.",
         },
-        image: "/projects/battuta-profile-mars.webp",
+        image: "/media/projects/battuta-profile-mars.webp",
         category: { id: "Musik Resmi", en: "Official Music" },
       },
       {
@@ -618,7 +618,7 @@ export const projects: Project[] = [
           id: "Pusat eksplorasi komunitas dan organisasi mahasiswa seperti Pro.asta, Robotic Club, Accounting Club, dan English Club dilengkapi tautan mandiri.",
           en: "Student club and organizational hub covering tech (Pro.asta), robotics, accounting, and language clubs with direct website access.",
         },
-        image: "/projects/battuta-profile-ukm.webp",
+        image: "/media/projects/battuta-profile-ukm.webp",
         category: { id: "Kemahasiswaan", en: "Student Affairs" },
       },
       {
@@ -631,7 +631,7 @@ export const projects: Project[] = [
           id: "Pemaparan arah strategis universitas menuju perguruan tinggi unggul berbasis entrepreneurship berdaya saing nasional dan internasional pada 2029.",
           en: "Institutional roadmap establishing the university as an entrepreneurship-driven higher education powerhouse by 2029.",
         },
-        image: "/projects/battuta-profile-visi-misi.webp",
+        image: "/media/projects/battuta-profile-visi-misi.webp",
         category: { id: "Profil Kampus", en: "Campus Profile" },
       },
     ],

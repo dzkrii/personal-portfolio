@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect } from "react";
 import { MotionConfig } from "motion/react";
 import { SiteLayout } from "./components/SiteLayout";
-import { pageMeta } from "./data/site";
+import { metaForRoute } from "./seo";
 import { useRoute, type Route } from "./router";
 import { HomePage } from "./pages/HomePage";
 
@@ -30,23 +30,42 @@ const NotFoundPage = lazy(() =>
   import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })),
 );
 
+function setMeta(selector: string, content: string) {
+  document.querySelector(selector)?.setAttribute("content", content);
+}
+
 function usePageMetadata(route: Route) {
   useEffect(() => {
-    const key =
-      route.page === "project" && !route.projectExists
-        ? "notFound"
-        : route.page;
-    const meta = pageMeta[key];
+    const meta = metaForRoute(route, "en");
+
     document.documentElement.lang = "en";
-    document.title = meta.title.en;
+    document.title = meta.title;
+    setMeta('meta[name="description"]', meta.description);
+
+    // Without this the canonical baked into index.html would declare every route
+    // a duplicate of the homepage, keeping the other pages out of the index.
     document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute("content", meta.description.en);
+      .querySelector('link[rel="canonical"]')
+      ?.setAttribute("href", meta.canonical);
+
+    setMeta(
+      'meta[name="robots"]',
+      meta.noindex
+        ? "noindex, follow"
+        : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    );
+
+    setMeta('meta[property="og:url"]', meta.canonical);
+    setMeta('meta[property="og:title"]', meta.title);
+    setMeta('meta[property="og:description"]', meta.description);
+    setMeta('meta[name="twitter:url"]', meta.canonical);
+    setMeta('meta[name="twitter:title"]', meta.title);
+    setMeta('meta[name="twitter:description"]', meta.description);
   }, [route]);
 }
 
-function App() {
-  const route = useRoute();
+function App({ initialPath }: { initialPath?: string }) {
+  const route = useRoute(initialPath);
   usePageMetadata(route);
   const locale = "en" as const;
   let page;

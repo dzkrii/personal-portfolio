@@ -52,9 +52,9 @@ export function navigate(href: string) {
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 
-export function useRoute() {
+export function useRoute(initialPath?: string) {
   const [route, setRoute] = useState(() =>
-    parseRoute(window.location.pathname),
+    parseRoute(initialPath ?? window.location.pathname),
   );
 
   useEffect(() => {
