@@ -68,10 +68,12 @@ export function HomePage({ locale }: { locale: Locale }) {
         transition={{ duration: 0.65, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
       >
         <img
-          src="/fatahul-hero-illustration.png"
+          src="/fatahul-hero-illustration.webp"
           width="1003"
           height="1568"
           alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"}
+          fetchPriority="high"
+          decoding="async"
         />
         <span aria-hidden="true">01 / Fatahul</span>
       </motion.div>

@@ -21,10 +21,12 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <section className="about-profile" aria-labelledby="about-profile-title">
         <div className="about-profile__portrait hero-illustration">
           <img
-            src="/fatahul-hero-illustration.png"
+            src="/fatahul-hero-illustration.webp"
             width="1003"
             height="1568"
             alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"}
+            loading="lazy"
+            decoding="async"
           />
           <span aria-hidden="true">01 / Fatahul</span>
         </div>
