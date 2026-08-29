@@ -26,11 +26,17 @@ export function parseRoute(pathname: string): Route {
   if (parts.length === 0) return { page: "home" };
   if (parts.length === 1) {
     const page = (Object.keys(routeSegments) as PageKey[]).find(
-      (key) => routeSegments[key].en === parts[0],
+      (key) =>
+        routeSegments[key].en === parts[0] ||
+        routeSegments[key].id === parts[0],
     );
     if (page) return { page };
   }
-  if (parts.length === 2 && parts[0] === routeSegments.projects.en) {
+  if (
+    parts.length === 2 &&
+    (parts[0] === routeSegments.projects.en ||
+      parts[0] === routeSegments.projects.id)
+  ) {
     return {
       page: "project",
       slug: parts[1],
