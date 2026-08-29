@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import {
   ArrowLeft,
   ArrowUpRight,
-  Clock,
+  ChevronLeft,
+  ChevronRight,
   ExternalLink,
   GraduationCap,
-  Layers,
+  Lock,
   Sparkles,
-  Users,
   X,
 } from "lucide-react";
 import { Link } from "../components/Link";
@@ -128,7 +128,7 @@ export function ProjectsPage({ locale }: { locale: Locale }) {
 }
 
 /* ==========================================================================
-   Project Detail Page Component (Case Study)
+   Project Detail Page Component (Visual Showcase & Feature Spotlights)
    ========================================================================== */
 
 export function ProjectPage({
@@ -145,17 +145,35 @@ export function ProjectPage({
   if (!exists || !project) return <NotFoundPage locale={locale} />;
 
   const t = messages[locale];
-  const [activeScreenshotIndex, setActiveScreenshotIndex] = useState<number | null>(null);
+  const [activeScreenIndex, setActiveScreenIndex] = useState<number>(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const activeScreenshot =
-    activeScreenshotIndex !== null && project.screenshots
-      ? project.screenshots[activeScreenshotIndex] ?? null
-      : null;
+  const screenshots = project.screenshots ?? [];
+  const currentScreenshot = screenshots[activeScreenIndex] ?? screenshots[0];
+  const activeLightboxScreen = lightboxIndex !== null ? screenshots[lightboxIndex] ?? null : null;
+
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = touchStart - touchEnd;
+    if (diff > 45) {
+      setActiveScreenIndex((prev) => (prev < screenshots.length - 1 ? prev + 1 : 0));
+    } else if (diff < -45) {
+      setActiveScreenIndex((prev) => (prev > 0 ? prev - 1 : screenshots.length - 1));
+    }
+    setTouchStart(null);
+  };
 
   useEffect(() => {
-    if (activeScreenshotIndex === null) return;
+    if (lightboxIndex === null) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActiveScreenshotIndex(null);
+      if (e.key === "Escape") setLightboxIndex(null);
     };
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -164,12 +182,12 @@ export function ProjectPage({
       document.body.style.overflow = originalOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeScreenshotIndex]);
+  }, [lightboxIndex]);
 
   return (
     <div className="project-detail-page">
-      {/* Top Back Navigation Strip */}
-      <nav className="project-detail-nav" aria-label="Project Breadcrumb">
+      {/* 1. Top Navigation Bar */}
+      <nav className="project-detail-nav" aria-label="Project Navigation">
         <Link className="project-back-btn" href={pathFor("projects")}>
           <ArrowLeft size={16} aria-hidden="true" />
           <span>{t.backToProjects}</span>
@@ -181,10 +199,10 @@ export function ProjectPage({
               target="_blank"
               rel="noreferrer"
               className="project-live-btn"
-              title={isId ? `Kunjungi ${project.liveUrl}` : `Visit ${project.liveUrl}`}
+              title={isId ? `Kunjungi ${project.liveUrl}` : `Launch ${project.liveUrl}`}
             >
               <ExternalLink size={14} aria-hidden="true" />
-              <span>{isId ? "Kunjungi Web Live" : "Visit Live Platform"}</span>
+              <span>{t.visitLive}</span>
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
           ) : null}
@@ -195,11 +213,11 @@ export function ProjectPage({
         </div>
       </nav>
 
-      {/* Hero Header Area */}
+      {/* 2. Hero Header */}
       <header className="project-detail-hero">
         <div className="project-detail-tagline-wrap">
           <span className="project-detail-eyebrow">
-            {project.type.toUpperCase()} ARCHITECTURE · {project.client[locale]}
+            {project.category[locale]} · {project.client[locale]}
           </span>
         </div>
         <h1 className="project-detail-main-title">
@@ -208,57 +226,181 @@ export function ProjectPage({
         <p className="project-detail-subtitle">
           {project.subtitle[locale]}
         </p>
+
+        {/* Impact Metrics Ribbon */}
+        <div className="project-metrics-ribbon" aria-label={t.keyMetrics}>
+          {project.metrics.map((metric, idx) => (
+            <div key={idx} className="metric-ribbon-item">
+              <strong className="metric-ribbon-value">{metric.value}</strong>
+              <span className="metric-ribbon-label">{metric.label[locale]}</span>
+            </div>
+          ))}
+        </div>
       </header>
 
-      {/* Executive Bento Spec Sheet */}
-      <section className="project-spec-bento" aria-label={t.projectDetails}>
-        <div className="spec-card">
-          <span className="spec-lbl">
-            <Users size={15} />
-            <span>{isId ? "Peran & Lingkup Kerja" : "Role & Scope"}</span>
-          </span>
-          <strong className="spec-val">{project.role[locale]}</strong>
-          <p className="spec-desc">
-            {isId
-              ? "UI/UX Design Figma, Frontend React & TanStack Router, Backend NestJS, Database PostgreSQL, & VPS Deployment."
-              : "UI/UX Design Figma, Frontend React & TanStack Router, Backend NestJS, Database PostgreSQL, & VPS Deployment."}
-          </p>
+      {/* 3. Interactive Multi-Screen Showcase Stage */}
+      {screenshots.length > 0 && currentScreenshot ? (
+        <section className="project-showcase-stage" aria-label={t.systemShowcase}>
+          {/* Active Screen Browser Window */}
+          <div className="browser-mockup-frame">
+            <div className="browser-mockup-topbar">
+              <div className="browser-mockup-dots" aria-hidden="true">
+                <span className="browser-dot browser-dot--red" />
+                <span className="browser-dot browser-dot--yellow" />
+                <span className="browser-dot browser-dot--green" />
+              </div>
+              <div className="browser-mockup-address">
+                <Lock size={12} className="address-lock-icon" aria-hidden="true" />
+                <span className="address-url">
+                  {(project.liveUrl
+                    ? project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+                    : `${project.slug}.app`)}
+                  /{currentScreenshot.id}
+                </span>
+              </div>
+              <div className="browser-mockup-counter">
+                <span className="live-badge-dot" aria-hidden="true" />
+                <span className="showcase-counter-text">
+                  0{activeScreenIndex + 1} / 0{screenshots.length}
+                </span>
+              </div>
+            </div>
+
+            <div className="browser-mockup-screen-wrap">
+              <div
+                className="browser-mockup-screen"
+                tabIndex={0}
+                role="button"
+                aria-label={`${currentScreenshot.title[locale]} - ${isId ? "Klik untuk memperbesar gambar" : "Click to zoom image"}`}
+                onClick={() => setLightboxIndex(activeScreenIndex)}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setLightboxIndex(activeScreenIndex);
+                  }
+                }}
+              >
+                <img
+                  key={currentScreenshot.image}
+                  src={currentScreenshot.image}
+                  alt={currentScreenshot.title[locale]}
+                  className="browser-mockup-img"
+                  loading="eager"
+                />
+                <div className="browser-mockup-hover-overlay">
+                  <div className="showcase-zoom-pill">
+                    <Sparkles size={16} aria-hidden="true" />
+                    <span>{isId ? "Perbesar Tangkapan Layar (HD)" : "Enlarge Fullscreen (HD)"}</span>
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Prev / Next Navigation Arrows */}
+              <button
+                type="button"
+                className="showcase-nav-arrow showcase-nav-arrow--prev"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveScreenIndex((prev) => (prev > 0 ? prev - 1 : screenshots.length - 1));
+                }}
+                aria-label={isId ? "Layar Sebelumnya" : "Previous Screen"}
+                title={isId ? "Layar Sebelumnya" : "Previous Screen"}
+              >
+                <ChevronLeft size={24} aria-hidden="true" />
+              </button>
+
+              <button
+                type="button"
+                className="showcase-nav-arrow showcase-nav-arrow--next"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveScreenIndex((prev) => (prev < screenshots.length - 1 ? prev + 1 : 0));
+                }}
+                aria-label={isId ? "Layar Berikutnya" : "Next Screen"}
+                title={isId ? "Layar Berikutnya" : "Next Screen"}
+              >
+                <ChevronRight size={24} aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="browser-mockup-footer">
+              <div className="showcase-caption-text">
+                <span className="caption-tag">0{activeScreenIndex + 1} · {currentScreenshot.category[locale]}</span>
+                <div>
+                  <strong className="caption-title">{currentScreenshot.title[locale]}</strong>
+                  <p className="caption-desc">{currentScreenshot.caption[locale]}</p>
+                </div>
+              </div>
+              <div className="showcase-footer-actions">
+                <button
+                  type="button"
+                  className="showcase-btn-zoom"
+                  onClick={() => setLightboxIndex(activeScreenIndex)}
+                >
+                  <span>{isId ? "Zoom HD" : "Zoom HD"}</span>
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </button>
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="showcase-direct-link"
+                  >
+                    <span>{isId ? "Buka Web Live" : "Open Live"}</span>
+                    <ExternalLink size={14} aria-hidden="true" />
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          </div>
+
+          {/* Visual Thumbnails Carousel Strip */}
+          <div className="showcase-thumbnails-strip" aria-label="Screenshots List">
+            {screenshots.map((s, idx) => {
+              const isActive = activeScreenIndex === idx;
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  className={`showcase-thumbnail-card ${isActive ? "showcase-thumbnail-card--active" : ""}`}
+                  onClick={() => setActiveScreenIndex(idx)}
+                  aria-selected={isActive}
+                  aria-label={`0${idx + 1}: ${s.title[locale]}`}
+                >
+                  <div className="thumbnail-img-box">
+                    <img src={s.image} alt={s.title[locale]} loading="lazy" />
+                    <span className="thumbnail-index-pill">0{idx + 1}</span>
+                  </div>
+                  <div className="thumbnail-card-info">
+                    <span className="thumbnail-card-title">{s.title[locale]}</span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
+
+      {/* 4. Technology Foundation Card */}
+      <section className="project-tech-card" aria-label={t.techStackBrief}>
+        <div className="tech-card-left">
+          <span className="detail-section-badge">TECH STACK // ARSITEKTUR</span>
+          <h3 className="tech-card-title">{t.techStackBrief}</h3>
+          <p className="tech-card-desc">{t.techStackBriefDesc}</p>
         </div>
 
-        <div className="spec-card">
-          <span className="spec-lbl">
-            <GraduationCap size={15} />
-            <span>{isId ? "Klien / Institusi" : "Client / Institution"}</span>
-          </span>
-          <strong className="spec-val">{project.client[locale]}</strong>
-          <p className="spec-desc">
-            {isId
-              ? "Implementasi sistem skala universitas untuk pengelolaan civitas akademika."
-              : "Enterprise university-scale system deployment for campus administration."}
-          </p>
-        </div>
-
-        <div className="spec-card">
-          <span className="spec-lbl">
-            <Clock size={15} />
-            <span>{isId ? "Periode & Status" : "Timeline & Status"}</span>
-          </span>
-          <strong className="spec-val">{project.period[locale]}</strong>
-          <p className="spec-desc">
-            {isId
-              ? "Aktif digunakan secara harian dalam operasional perkuliahan."
-              : "Actively utilized in daily campus academic operations."}
-          </p>
-        </div>
-
-        <div className="spec-card">
-          <span className="spec-lbl">
-            <Layers size={15} />
-            <span>{isId ? "Teknologi Kunci" : "Core Tech Stack"}</span>
-          </span>
-          <div className="spec-tech-pills">
+        <div className="tech-card-right">
+          <div className="tech-card-role">
+            <GraduationCap size={16} aria-hidden="true" />
+            <span>{project.role[locale]}</span>
+          </div>
+          <div className="tech-card-pills">
             {project.techStack.map((tech) => (
-              <span key={tech} className="tech-pill">
+              <span key={tech} className="tech-pill-tag">
                 {tech}
               </span>
             ))}
@@ -266,149 +408,7 @@ export function ProjectPage({
         </div>
       </section>
 
-      {/* Visual Screenshot Gallery & Showcase */}
-      {project.screenshots && project.screenshots.length > 0 ? (
-        <>
-          <div className="detail-section-title-wrap">
-            <span className="detail-section-badge">01 // VISUAL SHOWCASE & SCREENSHOTS</span>
-            <h2>{isId ? "Tangkapan Layar & Desain Antarmuka" : "System Screenshots & Interface"}</h2>
-            <p className="detail-section-desc">
-              {isId
-                ? "Tangkapan layar antarmuka produksi Sistem Informasi Akademik Universitas Battuta."
-                : "Production interface screenshots of Universitas Battuta Academic Information System."}
-            </p>
-          </div>
-
-          <section className="project-gallery-grid" aria-label="Project Screenshots Gallery">
-            {project.screenshots.map((item, idx) => (
-              <article key={item.id} className="project-gallery-card">
-                <div
-                  className="project-gallery-card__visual"
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`${item.title[locale]} - ${isId ? "Perbesar Gambar" : "Enlarge Image"}`}
-                  onClick={() => setActiveScreenshotIndex(idx)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setActiveScreenshotIndex(idx);
-                    }
-                  }}
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title[locale]}
-                    loading="lazy"
-                  />
-                  <div className="project-gallery-card__overlay">
-                    <span className="gallery-zoom-badge">
-                      <span>{isId ? "Perbesar Screenshot" : "Zoom Screenshot"}</span>
-                      <ArrowUpRight size={16} aria-hidden="true" />
-                    </span>
-                  </div>
-                </div>
-                <div className="project-gallery-card__content">
-                  <div className="project-gallery-card__meta">
-                    <span className="gallery-cat-badge">{item.category[locale]}</span>
-                    <span className="gallery-index-tag">0{idx + 1}</span>
-                  </div>
-                  <h3 className="project-gallery-card__title">{item.title[locale]}</h3>
-                  <p className="project-gallery-card__caption">{item.caption[locale]}</p>
-                </div>
-              </article>
-            ))}
-          </section>
-        </>
-      ) : null}
-
-      {/* Key Measurable Outcomes & Metrics */}
-      <div className="detail-section-title-wrap">
-        <span className="detail-section-badge">02 // IMPACT & METRICS</span>
-        <h2>{t.keyMetrics}</h2>
-        <p className="detail-section-desc">
-          {isId
-            ? "Hasil nyata dan efisiensi operasional yang dicapai setelah implementasi sistem."
-            : "Tangible outcomes and operational efficiency achieved upon system rollout."}
-        </p>
-      </div>
-
-      <section className="project-metrics-grid" aria-label={t.keyMetrics}>
-        {project.metrics.map((metric, idx) => (
-          <div key={idx} className="metric-box">
-            <div className="metric-box__header">
-              <strong className="metric-box__value">{metric.value}</strong>
-              <span className="metric-box__index">0{idx + 1}</span>
-            </div>
-            <h3 className="metric-box__label">{metric.label[locale]}</h3>
-            <p className="metric-box__desc">{metric.description[locale]}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* Problem & Context Section */}
-      <section className="project-narrative-section">
-        <div className="narrative-block">
-          <div className="narrative-heading">
-            <span className="detail-section-badge">03 // THE CHALLENGE</span>
-            <h2>{t.problemTitle}</h2>
-          </div>
-          <div className="narrative-content">
-            <p className="narrative-lead">{project.context[locale]}</p>
-          </div>
-        </div>
-
-        <div className="narrative-block">
-          <div className="narrative-heading">
-            <span className="detail-section-badge">04 // ENGINEERING SOLUTION</span>
-            <h2>{t.solutionTitle}</h2>
-          </div>
-          <div className="narrative-content">
-            <p className="narrative-lead">{project.solution[locale]}</p>
-            <div className="contribution-callout">
-              <strong>{isId ? "Peran & Kontribusi Arsitektur:" : "Architectural Contribution:"}</strong>
-              <p>{project.contribution[locale]}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Features Breakdown */}
-      <div className="detail-section-title-wrap">
-        <span className="detail-section-badge">05 // CORE CAPABILITIES</span>
-        <h2>{t.coreFeaturesTitle}</h2>
-      </div>
-
-      <section className="project-features-grid" aria-label={t.coreFeaturesTitle}>
-        {project.features.map((feature, idx) => (
-          <article key={feature.id} className="feature-card">
-            <div className="feature-card__number">
-              <span>0{idx + 1}</span>
-            </div>
-            <h3 className="feature-card__title">{feature.title[locale]}</h3>
-            <p className="feature-card__desc">{feature.desc[locale]}</p>
-          </article>
-        ))}
-      </section>
-
-      {/* Architecture Highlights */}
-      <div className="detail-section-title-wrap">
-        <span className="detail-section-badge">06 // SYSTEM ARCHITECTURE</span>
-        <h2>{isId ? "Rekayasa Arsitektur Sistem" : "System Architecture Highlights"}</h2>
-      </div>
-
-      <section className="project-architecture-grid">
-        {project.architectureHighlights.map((arch, idx) => (
-          <div key={idx} className="architecture-card">
-            <div className="architecture-card__top">
-              <span className="arch-layer">{arch.layer}</span>
-              <code className="arch-tech">{arch.tech}</code>
-            </div>
-            <p className="arch-detail">{arch.detail[locale]}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* Bottom CTA & Fast Navigation */}
+      {/* 7. Bottom CTA Banner */}
       <section className="project-cta-banner">
         <div className="project-cta-copy">
           <h2>{t.ctaProjectTitle}</h2>
@@ -417,7 +417,9 @@ export function ProjectPage({
         <div className="project-cta-actions">
           {project.liveUrl ? (
             <BrutalButton href={project.liveUrl} target="_blank" rel="noreferrer">
-              {isId ? "Kunjungi SIAKAD Battuta" : "Launch Live Platform"}
+              {isId
+                ? (project.acronym ? `Kunjungi ${project.acronym}` : "Kunjungi Website Live")
+                : (project.acronym ? `Launch ${project.acronym} Live` : "Launch Website Live")}
               <ArrowUpRight aria-hidden="true" />
             </BrutalButton>
           ) : null}
@@ -431,32 +433,32 @@ export function ProjectPage({
         </div>
       </section>
 
-      {/* Fullscreen Screenshot Lightbox Modal */}
-      {activeScreenshot && activeScreenshotIndex !== null ? (
+      {/* 8. Fullscreen HD Screenshot Lightbox Modal */}
+      {activeLightboxScreen && lightboxIndex !== null ? (
         <div
           className="certificate-lightbox"
           role="dialog"
           aria-modal="true"
-          aria-label={activeScreenshot.title[locale]}
+          aria-label={activeLightboxScreen.title[locale]}
         >
           <div
             className="certificate-lightbox__backdrop"
-            onClick={() => setActiveScreenshotIndex(null)}
+            onClick={() => setLightboxIndex(null)}
             aria-hidden="true"
           />
           <div className="certificate-lightbox__dialog">
             <div className="certificate-lightbox__toolbar">
               <div className="certificate-lightbox__meta">
                 <span className="certificate-badge">
-                  {activeScreenshot.category[locale]}
+                  {activeLightboxScreen.category[locale]}
                 </span>
                 <span className="certificate-lightbox__counter">
-                  {activeScreenshotIndex + 1} / {project.screenshots?.length ?? 1}
+                  {lightboxIndex + 1} / {screenshots.length}
                 </span>
               </div>
               <div className="certificate-lightbox__controls">
                 <a
-                  href={activeScreenshot.image}
+                  href={activeLightboxScreen.image}
                   target="_blank"
                   rel="noreferrer"
                   className="certificate-lightbox__btn"
@@ -468,7 +470,7 @@ export function ProjectPage({
                 <button
                   type="button"
                   className="certificate-lightbox__btn certificate-lightbox__btn--close"
-                  onClick={() => setActiveScreenshotIndex(null)}
+                  onClick={() => setLightboxIndex(null)}
                   title="Close"
                   aria-label="Close modal"
                 >
@@ -480,8 +482,8 @@ export function ProjectPage({
             <div className="certificate-lightbox__stage">
               <div className="certificate-lightbox__image-wrapper">
                 <img
-                  src={activeScreenshot.image}
-                  alt={activeScreenshot.title[locale]}
+                  src={activeLightboxScreen.image}
+                  alt={activeLightboxScreen.title[locale]}
                   className="certificate-lightbox__image"
                 />
               </div>
@@ -490,10 +492,10 @@ export function ProjectPage({
             <div className="certificate-lightbox__caption">
               <div>
                 <h3 className="certificate-lightbox__title">
-                  {activeScreenshot.title[locale]}
+                  {activeLightboxScreen.title[locale]}
                 </h3>
                 <p className="certificate-lightbox__desc">
-                  {activeScreenshot.caption[locale]}
+                  {activeLightboxScreen.caption[locale]}
                 </p>
               </div>
             </div>
@@ -503,3 +505,4 @@ export function ProjectPage({
     </div>
   );
 }
+

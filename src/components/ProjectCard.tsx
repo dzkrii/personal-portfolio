@@ -36,7 +36,11 @@ export function ProjectCard({
             <span className="dot dot--red" />
             <span className="dot dot--yellow" />
             <span className="dot dot--green" />
-            <span className="window-mini-url">siakad.battuta.ac.id</span>
+            <span className="window-mini-url">
+              {project.liveUrl
+                ? project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+                : `${project.slug}.app`}
+            </span>
           </div>
           <div className="project-card-minimal__img-container">
             <img
@@ -61,13 +65,6 @@ export function ProjectCard({
           <span className="project-card-minimal__index">
             {formattedIndex} // {project.type.toUpperCase()}
           </span>
-          <span className="project-card-minimal__category">
-            {project.category[locale]}
-          </span>
-        </div>
-        <div className="project-card-minimal__status">
-          <span className="status-dot" aria-hidden="true" />
-          <span>{project.status[locale]}</span>
         </div>
       </div>
 
@@ -81,10 +78,6 @@ export function ProjectCard({
             aria-hidden="true"
           />
         </h2>
-
-        <p className="project-card-minimal__summary">
-          {project.summary[locale]}
-        </p>
 
         {/* Tech Stack Pills */}
         <div className="project-card-minimal__tech-row">
