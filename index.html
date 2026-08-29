@@ -29,7 +29,7 @@
       as="image"
       href="/fatahul-hero-illustration-400.webp"
       imagesrcset="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-640.webp 640w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
-      imagesizes="(max-width: 47.99rem) min(100vw, 22.5rem), (max-width: 1024px) 28vw, 29rem"
+      imagesizes="(max-width: 47.99rem) min(100vw, 22.5rem), clamp(21.5rem, 28vw, 29rem)"
       type="image/webp"
       fetchpriority="high"
     />
@@ -43,22 +43,29 @@
       gtag('config', 'G-8ZGZFM88J7');
 
       (function () {
+        var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+        var timer;
         var loaded = false;
+
         function loadGtag() {
           if (loaded) return;
           loaded = true;
+          clearTimeout(timer);
+          events.forEach(function (e) { window.removeEventListener(e, loadGtag); });
+
           var s = document.createElement('script');
           s.async = true;
           s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8ZGZFM88J7';
           document.head.appendChild(s);
         }
+
         function schedule() {
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadGtag, { timeout: 3000 });
-          } else {
-            setTimeout(loadGtag, 2000);
-          }
+          events.forEach(function (e) {
+            window.addEventListener(e, loadGtag, { once: true, passive: true });
+          });
+          timer = setTimeout(loadGtag, 4000);
         }
+
         if (document.readyState === 'complete') schedule();
         else window.addEventListener('load', schedule, { once: true });
       })();

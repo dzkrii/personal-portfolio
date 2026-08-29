@@ -70,7 +70,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <img
           src="/fatahul-hero-illustration-400.webp"
           srcSet="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-640.webp 640w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
-          sizes="(max-width: 47.99rem) min(100vw, 22.5rem), (max-width: 1024px) 28vw, 29rem"
+          sizes="(max-width: 47.99rem) min(100vw, 22.5rem), clamp(21.5rem, 28vw, 29rem)"
           width="1003"
           height="1568"
           alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"}

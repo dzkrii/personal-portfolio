@@ -7,15 +7,23 @@
   Cache-Control: public, max-age=31536000, immutable
 
 # Static media: long-lived, but revalidated within a month if a file is replaced.
-/*.webp
-  Cache-Control: public, max-age=2592000
-/*.png
-  Cache-Control: public, max-age=2592000
-/*.svg
-  Cache-Control: public, max-age=2592000
+# Cloudflare Pages only matches a wildcard at the end of a path, so extension
+# globs such as /*.webp are ignored -- root-level files need an explicit rule.
 /certificates/*
   Cache-Control: public, max-age=2592000
 /projects/*
+  Cache-Control: public, max-age=2592000
+/fatahul-hero-illustration.webp
+  Cache-Control: public, max-age=2592000
+/fatahul-hero-illustration-400.webp
+  Cache-Control: public, max-age=2592000
+/fatahul-hero-illustration-640.webp
+  Cache-Control: public, max-age=2592000
+/fatahul-hero-illustration-800.webp
+  Cache-Control: public, max-age=2592000
+/fatahul-hero-illustration.png
+  Cache-Control: public, max-age=2592000
+/logo-fatahul.svg
   Cache-Control: public, max-age=2592000
 
 # The SPA shell carries the inlined CSS, so it must always be revalidated.
