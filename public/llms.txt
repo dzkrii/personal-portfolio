@@ -1,0 +1,33 @@
+# Fatahul Ahmad Dzikri - Portfolio & Profile
+
+> Fatahul Ahmad Dzikri (also known as `dzkrii` or `kyuradev`) is a Creative Developer and Software Developer based in Indonesia. He specializes in crafting high-performance, structured, and visually distinctive web and mobile applications using modern frameworks such as React, Next.js, TypeScript, Tailwind CSS, Laravel, and Flutter.
+
+## Profile Summary
+- **Full Name:** Fatahul Ahmad Dzikri
+- **Aliases / Handles:** dzkrii, kyuradev
+- **Primary Roles:** Creative Developer, Full-stack Web Developer, Mobile Developer, UI/UX Designer
+- **Affiliation / Education:** Informatics Student at Universitas Battuta, Medan, Indonesia
+- **Current Position:** Software Developer at Universitas Battuta (Sep 2024 - Present)
+- **Website:** https://fatahul.my.id
+- **Contact:** fatahulahmaddzikri@gmail.com
+
+## Technical Skills & Stack
+- **Languages:** TypeScript, JavaScript, PHP, Dart, HTML5, CSS3, SQL
+- **Frontend & Creative:** React, Next.js, Tailwind CSS, Vite, Framer Motion, GSAP, Figma
+- **Backend & APIs:** Laravel, NestJS, Express.js, RESTful APIs
+- **Mobile Development:** Flutter, Dart
+- **Databases & DevOps:** PostgreSQL, MySQL, Linux VPS, Nginx, Git, Cloudflare
+
+## Key Projects
+- **Universitas Battuta Academic Information System (SIAKAD):** Fullstack campus academic governance platform (KRS Online, digital attendance, grading calculation, thesis mentorship) actively used by 2,000+ students and faculty.
+  - Link: https://fatahul.my.id/projects/universitas-battuta-academic-system
+- **Universitas Battuta Official Website:** University institutional web portal featuring responsive UI, fast performance, and comprehensive information architecture.
+  - Link: https://fatahul.my.id/projects/universitas-battuta-official-website
+
+## Verified Online Profiles (SameAs)
+- **GitHub:** https://github.com/dzkrii
+- **LinkedIn:** https://www.linkedin.com/in/fatahul-ahmad-dzikri/
+- **Instagram:** https://www.instagram.com/dzkrii_12
+- **YouTube:** https://www.youtube.com/@kyuradev
+- **TikTok:** https://www.tiktok.com/@kyuradev
+- **Telegram:** https://t.me/dzkkrii

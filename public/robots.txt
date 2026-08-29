@@ -1,0 +1,22 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Allow AI & Search Crawlers (Google AI, GPTBot, ClaudeBot, Perplexity)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap
+Sitemap: https://fatahul.my.id/sitemap.xml
