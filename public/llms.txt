@@ -1,33 +1,30 @@
-# Fatahul Ahmad Dzikri - Portfolio & Profile
+# Fatahul Ahmad Dzikri
 
-> Fatahul Ahmad Dzikri (also known as `dzkrii` or `kyuradev`) is a Creative Developer and Software Developer based in Indonesia. He specializes in crafting high-performance, structured, and visually distinctive web and mobile applications using modern frameworks such as React, Next.js, TypeScript, Tailwind CSS, Laravel, and Flutter.
+> Creative Developer and Software Developer based in Indonesia. Specializes in building structured, high-performance web (React, Next.js, Laravel) and mobile (Flutter) applications.
 
-## Profile Summary
-- **Full Name:** Fatahul Ahmad Dzikri
-- **Aliases / Handles:** dzkrii, kyuradev
-- **Primary Roles:** Creative Developer, Full-stack Web Developer, Mobile Developer, UI/UX Designer
-- **Affiliation / Education:** Informatics Student at Universitas Battuta, Medan, Indonesia
-- **Current Position:** Software Developer at Universitas Battuta (Sep 2024 - Present)
-- **Website:** https://fatahul.my.id
-- **Contact:** fatahulahmaddzikri@gmail.com
+## Portfolio & Key Pages
 
-## Technical Skills & Stack
+- [Home](https://fatahul.my.id/): Official portfolio homepage of Fatahul Ahmad Dzikri.
+- [About Me](https://fatahul.my.id/about): Personal background, engineering philosophy, and technology stack.
+- [Projects Overview](https://fatahul.my.id/projects): Case studies and technical details of web and mobile software projects.
+- [SIAKAD Universitas Battuta](https://fatahul.my.id/projects/universitas-battuta-academic-system): Fullstack academic governance system (KRS Online, grading, thesis mentorship) used by 2,000+ campus users.
+- [Universitas Battuta Official Website](https://fatahul.my.id/projects/universitas-battuta-official-website): Official university website featuring accessible architecture and interactive media features.
+- [Certificates & Achievements](https://fatahul.my.id/certificates): Verified competitive awards, national hackathon podiums, and professional IT certificates.
+- [Curriculum Vitae](https://fatahul.my.id/cv): Complete career history, education, and development experience.
+- [Contact](https://fatahul.my.id/contact): Channels to contact Fatahul for collaboration or software development.
+
+## Verified Profiles & Socials
+
+- [GitHub Profile](https://github.com/dzkrii): Open source repositories, code contributions, and software experiments.
+- [LinkedIn Profile](https://www.linkedin.com/in/fatahul-ahmad-dzikri/): Professional network, endorsements, and verified career history.
+- [Instagram](https://www.instagram.com/dzkrii_12): Creative design highlights and developer journey.
+- [YouTube Channel](https://www.youtube.com/@kyuradev): Programming walkthroughs and technical showcases.
+- [TikTok](https://www.tiktok.com/@kyuradev): Short-form developer insights and UI/UX tutorials.
+- [Telegram](https://t.me/dzkkrii): Direct messaging channel for inquiries.
+
+## Technical Skills
+
 - **Languages:** TypeScript, JavaScript, PHP, Dart, HTML5, CSS3, SQL
-- **Frontend & Creative:** React, Next.js, Tailwind CSS, Vite, Framer Motion, GSAP, Figma
-- **Backend & APIs:** Laravel, NestJS, Express.js, RESTful APIs
-- **Mobile Development:** Flutter, Dart
-- **Databases & DevOps:** PostgreSQL, MySQL, Linux VPS, Nginx, Git, Cloudflare
-
-## Key Projects
-- **Universitas Battuta Academic Information System (SIAKAD):** Fullstack campus academic governance platform (KRS Online, digital attendance, grading calculation, thesis mentorship) actively used by 2,000+ students and faculty.
-  - Link: https://fatahul.my.id/projects/universitas-battuta-academic-system
-- **Universitas Battuta Official Website:** University institutional web portal featuring responsive UI, fast performance, and comprehensive information architecture.
-  - Link: https://fatahul.my.id/projects/universitas-battuta-official-website
-
-## Verified Online Profiles (SameAs)
-- **GitHub:** https://github.com/dzkrii
-- **LinkedIn:** https://www.linkedin.com/in/fatahul-ahmad-dzikri/
-- **Instagram:** https://www.instagram.com/dzkrii_12
-- **YouTube:** https://www.youtube.com/@kyuradev
-- **TikTok:** https://www.tiktok.com/@kyuradev
-- **Telegram:** https://t.me/dzkkrii
+- **Frontend:** React, Next.js, Tailwind CSS, Vite, Framer Motion, GSAP, Figma
+- **Backend:** Laravel, NestJS, Express.js, PostgreSQL, MySQL
+- **Mobile & DevOps:** Flutter, Linux VPS, Nginx, Git, Cloudflare

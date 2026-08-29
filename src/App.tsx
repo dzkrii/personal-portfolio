@@ -1,15 +1,34 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { MotionConfig } from "motion/react";
 import { SiteLayout } from "./components/SiteLayout";
 import { pageMeta } from "./data/site";
 import { useRoute, type Route } from "./router";
-import { AboutPage } from "./pages/AboutPage";
-import { CertificatesPage } from "./pages/CertificatesPage";
-import { ContactPage } from "./pages/ContactPage";
-import { CvPage } from "./pages/CvPage";
 import { HomePage } from "./pages/HomePage";
-import { NotFoundPage } from "./pages/NotFoundPage";
-import { ProjectPage, ProjectsPage } from "./pages/ProjectsPage";
+
+// Lazy load non-home pages to reduce initial JavaScript payload on mobile
+const AboutPage = lazy(() =>
+  import("./pages/AboutPage").then((m) => ({ default: m.AboutPage })),
+);
+const CertificatesPage = lazy(() =>
+  import("./pages/CertificatesPage").then((m) => ({
+    default: m.CertificatesPage,
+  })),
+);
+const ContactPage = lazy(() =>
+  import("./pages/ContactPage").then((m) => ({ default: m.ContactPage })),
+);
+const CvPage = lazy(() =>
+  import("./pages/CvPage").then((m) => ({ default: m.CvPage })),
+);
+const ProjectsPage = lazy(() =>
+  import("./pages/ProjectsPage").then((m) => ({ default: m.ProjectsPage })),
+);
+const ProjectPage = lazy(() =>
+  import("./pages/ProjectsPage").then((m) => ({ default: m.ProjectPage })),
+);
+const NotFoundPage = lazy(() =>
+  import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })),
+);
 
 function usePageMetadata(route: Route) {
   useEffect(() => {
@@ -51,7 +70,11 @@ function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <SiteLayout route={route}>{page}</SiteLayout>
+      <SiteLayout route={route}>
+        <Suspense fallback={<div className="page-loading-skeleton" />}>
+          {page}
+        </Suspense>
+      </SiteLayout>
     </MotionConfig>
   );
 }

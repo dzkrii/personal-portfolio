@@ -21,7 +21,9 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <section className="about-profile" aria-labelledby="about-profile-title">
         <div className="about-profile__portrait hero-illustration">
           <img
-            src="/fatahul-hero-illustration.webp"
+            src="/fatahul-hero-illustration-400.webp"
+            srcSet="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
+            sizes="(max-width: 640px) 320px, 400px"
             width="1003"
             height="1568"
             alt={"Neo-brutalist illustration of Fatahul Ahmad Dzikri"}
