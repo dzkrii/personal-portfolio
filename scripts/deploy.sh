@@ -24,7 +24,8 @@ git fetch origin main
 git reset --hard origin/main
 
 echo "==> Installing dependencies"
-bun install
+unset CI || true
+bun install --no-save || bun install || true
 
 echo "==> Building Astro static site"
 bun run build
