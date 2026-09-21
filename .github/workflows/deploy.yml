@@ -20,5 +20,8 @@ jobs:
           port: "1204"
           username: "kyura"
           key: ${{ secrets.VPS_SSH_KEY }}
-          script: bash /home/kyura/projects/personal/personal-portfolio/scripts/deploy.sh
+          script: |
+            cd /home/kyura/projects/personal/personal-portfolio
+            git remote set-url origin https://github.com/dzkrii/personal-portfolio.git 2>/dev/null || true
+            bash /home/kyura/projects/personal/personal-portfolio/scripts/deploy.sh
 

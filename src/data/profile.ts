@@ -5,12 +5,12 @@ export const profile = {
   },
   about: {
     id: [
-      "Saya adalah mahasiswa Program Studi Informatika di Universitas Battuta yang memiliki ketertarikan pada pengembangan produk digital dan pemecahan masalah melalui teknologi.",
-      "Saya memiliki pengalaman membangun beberapa project menggunakan Next.js dan Laravel untuk pengembangan aplikasi berbasis web, serta Flutter untuk pengembangan aplikasi mobile.",
+      "Saya adalah Software Developer dan Creative Developer di Universitas Battuta sekaligus mahasiswa Informatika yang fokus merancang dan membangun sistem digital terstruktur dengan arsitektur bersih.",
+      "Berpengalaman mengembangkan aplikasi web skala produksi menggunakan Next.js, React, TypeScript, dan Laravel, serta aplikasi mobile berbasis Flutter yang mengedepankan performa tinggi dan pengalaman pengguna yang intuitif.",
     ],
     en: [
-      "I am an Informatics student at Universitas Battuta with an interest in building digital products and solving problems through technology.",
-      "I have experience building projects with Next.js and Laravel for web applications, as well as Flutter for mobile development.",
+      "I am a Software Developer and Creative Developer at Universitas Battuta and an Informatics student focused on designing and building structured digital systems with clean architecture.",
+      "Experienced in engineering production-grade web applications using Next.js, React, TypeScript, and Laravel, as well as mobile development with Flutter—prioritizing high performance, maintainability, and intuitive user experiences.",
     ],
   },
   bio: {

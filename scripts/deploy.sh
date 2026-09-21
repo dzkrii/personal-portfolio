@@ -16,6 +16,9 @@ REPO_DIR="/home/kyura/projects/personal/personal-portfolio"
 
 cd "$REPO_DIR"
 
+echo "==> Ensuring HTTPS remote for reliable pull"
+git remote set-url origin https://github.com/dzkrii/personal-portfolio.git || true
+
 echo "==> Pulling latest main"
 git fetch origin main
 git reset --hard origin/main
