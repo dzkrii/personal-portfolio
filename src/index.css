@@ -2644,6 +2644,9 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.25rem, 2.5vw, 2rem);
   padding-block: clamp(2.5rem, 5vw, 4rem);
+  max-width: 72rem;
+  margin-inline: auto;
+  width: 100%;
 }
 
 @keyframes riseIn {
@@ -2678,10 +2681,25 @@ p {
   overflow: hidden;
 }
 
-.contact-card:hover {
-  background: var(--color-moss);
-  transform: translate(-3px, -3px);
-  box-shadow: 10px 10px 0 var(--color-ink);
+@media (hover: hover) and (pointer: fine) {
+  .contact-card:hover {
+    background: var(--color-moss);
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0 var(--color-ink);
+  }
+
+  .contact-card:hover .contact-card__icon-box {
+    background: var(--color-surface);
+  }
+
+  .contact-card:hover .contact-card__handle {
+    color: var(--color-ink);
+  }
+
+  .contact-card:hover .contact-card__arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
+  }
 }
 
 .contact-card:active {
@@ -2702,10 +2720,6 @@ p {
   transition:
     background-color var(--motion-fast) ease,
     color var(--motion-fast) ease;
-}
-
-.contact-card:hover .contact-card__icon-box {
-  background: var(--color-surface);
 }
 
 .contact-card__icon {
@@ -2737,10 +2751,8 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 0.15rem;
-}
-
-.contact-card:hover .contact-card__handle {
-  color: var(--color-ink);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .contact-card__arrow {
@@ -2752,13 +2764,10 @@ p {
     opacity var(--motion-fast) ease;
 }
 
-.contact-card:hover .contact-card__arrow {
-  opacity: 1;
-  transform: translate(2px, -2px);
-}
-
-.contact-card--center-last:last-child:nth-child(3n + 1) {
-  grid-column: 2;
+@media (min-width: 64rem) {
+  .contact-card--center-last:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
 }
 
 .contact-note-box {
@@ -2897,6 +2906,17 @@ p {
     border-bottom: 2px dashed #d4d4cb;
   }
 
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .contact-card--center-last:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    max-width: 28rem;
+    width: 100%;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 56rem) {
@@ -3004,8 +3024,21 @@ p {
   .about-profile,
   .home-intro,
   .contact-cta,
-  .principle-list article {
+  .principle-list article,
+  .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    gap: var(--space-4);
+    padding-block: var(--space-8);
+  }
+
+  .contact-card,
+  .contact-card--center-last {
+    width: 100%;
+    grid-column: auto !important;
+    padding: 1.1rem 1.25rem;
   }
 
   .project-list-minimal {
@@ -3218,11 +3251,33 @@ p {
 
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    gap: 0.75rem;
+    padding-block: var(--space-6);
   }
 
   .contact-card {
-    padding: 1rem 1.15rem;
+    padding: 0.875rem 1rem;
+    gap: 0.75rem;
+    border-radius: 0.875rem;
+  }
+
+  .contact-card__icon-box {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.625rem;
+  }
+
+  .contact-card__icon {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .contact-card__title {
+    font-size: 1.05rem;
+  }
+
+  .contact-card__handle {
+    font-size: 0.8rem;
   }
 
   .site-footer {

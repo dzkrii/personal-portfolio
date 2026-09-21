@@ -80,7 +80,7 @@ const contactItems = [
           <a
             href={item.href}
             target={item.isExternal ? "_blank" : undefined}
-            rel={item.isExternal ? "noreferrer" : undefined}
+            rel={item.isExternal ? "noreferrer noopener" : undefined}
             class="contact-card contact-card--center-last"
             style={`--index: ${idx}`}
           >
