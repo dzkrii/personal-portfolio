@@ -24,7 +24,7 @@ git fetch origin main
 git reset --hard origin/main
 
 echo "==> Installing dependencies"
-bun install --frozen-lockfile
+bun install
 
 echo "==> Building Astro static site"
 bun run build
