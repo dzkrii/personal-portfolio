@@ -1,0 +1,52 @@
+---
+interface Props {
+  alt: string;
+  className?: string;
+  fallbackLabel: string;
+  portrait?: boolean;
+  recommendedSize: string;
+  src?: string | null;
+  loading?: "lazy" | "eager";
+  fetchpriority?: "high" | "low" | "auto";
+  srcset?: string;
+  sizes?: string;
+}
+
+const {
+  alt,
+  className = "",
+  fallbackLabel,
+  portrait = false,
+  recommendedSize,
+  src,
+  loading = "lazy",
+  fetchpriority,
+  srcset,
+  sizes,
+} = Astro.props;
+---
+
+<figure
+  class={`media-frame${portrait ? " media-frame--portrait" : ""} ${className}`}
+>
+  {
+    src ? (
+      <img
+        src={src}
+        alt={alt}
+        loading={loading}
+        decoding="async"
+        fetchpriority={fetchpriority}
+        srcset={srcset}
+        sizes={sizes}
+        class="is-ready"
+      />
+    ) : (
+      <figcaption class="media-frame__fallback">
+        <strong>{fallbackLabel}</strong>
+        <small>{recommendedSize}</small>
+      </figcaption>
+    )
+  }
+</figure>
+

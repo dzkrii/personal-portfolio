@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectsExplorer from "../../components/islands/ProjectsExplorer";
+import { pageMeta } from "../../data/site";
+
+const locale = "en" as const;
+const meta = pageMeta.projects;
+---
+
+<BaseLayout
+  title={meta.title[locale]}
+  description={meta.description[locale]}
+>
+  <div class="projects-page">
+    <header class="projects-header">
+      <div class="section-badge-title">
+        <h1 class="section-badge-title__text">Projects</h1>
+      </div>
+    </header>
+
+    <p class="projects-intro-text">
+      A curated collection of digital systems, web platforms, and applications built with clean architecture, high performance, and distinctive UX.
+    </p>
+
+    <ProjectsExplorer client:idle locale={locale} />
+  </div>
+</BaseLayout>
+

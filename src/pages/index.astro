@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BrutalButton from "../components/ui/BrutalButton.astro";
+import RoleRotator from "../components/islands/RoleRotator";
+import { ArrowUpRight, FileText } from "lucide-react";
+import { pageMeta, profile } from "../data/site";
+
+const locale = "en" as const;
+const meta = pageMeta.home;
+---
+
+<BaseLayout
+  title={meta.title[locale]}
+  description={meta.description[locale]}
+  preloadHeroImage={true}
+>
+  <section class="hero hero--intro">
+    <div class="hero__content">
+      <p class="hero-kicker">Hi, I am</p>
+      <h1>
+        Fatahul
+        <br />
+        Ahmad Dzikri.
+      </h1>
+      <p class="hero-role">
+        I am a <RoleRotator client:load />
+      </p>
+      <p class="hero-copy">{profile.intro[locale]}</p>
+      <div class="hero-actions">
+        <BrutalButton href="/cv">
+          View CV
+          <FileText aria-hidden="true" size={18} />
+        </BrutalButton>
+        <BrutalButton href="/about" tone="secondary">
+          About me
+          <ArrowUpRight aria-hidden="true" size={18} />
+        </BrutalButton>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <img
+        src="/fatahul-hero-illustration-400.webp"
+        srcset="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-640.webp 640w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
+        sizes="(max-width: 47.99rem) min(100vw, 22.5rem), clamp(21.5rem, 28vw, 29rem)"
+        width="1003"
+        height="1568"
+        alt="Neo-brutalist illustration of Fatahul Ahmad Dzikri"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <span aria-hidden="true">01 / Fatahul</span>
+    </div>
+  </section>
+</BaseLayout>
+

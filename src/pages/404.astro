@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/ui/SectionHeading.astro";
+import BrutalButton from "../components/ui/BrutalButton.astro";
+import { messages, navigation, pageMeta } from "../data/site";
+
+const locale = "en" as const;
+const meta = pageMeta.notFound;
+---
+
+<BaseLayout
+  title={meta.title[locale]}
+  description={meta.description[locale]}
+  noindex={true}
+>
+  <section class="not-found">
+    <p>404</p>
+    <SectionHeading as="h1" description={messages[locale].notFoundBody}>
+      {messages[locale].notFoundTitle}
+    </SectionHeading>
+    <BrutalButton href="/">
+      {navigation[0].label[locale]}
+    </BrutalButton>
+  </section>
+</BaseLayout>
+

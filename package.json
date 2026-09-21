@@ -7,14 +7,15 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
-    "typecheck": "tsc -b --pretty",
-    "preview": "vite preview",
-    "build:client": "vite build"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "dependencies": {
+    "@astrojs/react": "^6.0.6",
     "@fontsource-variable/space-grotesk": "^5.3.0",
+    "astro": "^7.3.3",
     "lucide-react": "^1.26.0",
     "motion": "^12.42.2",
     "react": "^19.2.8",

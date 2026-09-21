@@ -1,0 +1,142 @@
+---
+import type { GetStaticPaths } from "astro";
+import { ArrowLeft, ArrowUpRight, ExternalLink, GraduationCap } from "lucide-react";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BrutalButton from "../../components/ui/BrutalButton.astro";
+import ProjectShowcase from "../../components/islands/ProjectShowcase";
+import { messages, projects, type Project } from "../../data/site";
+
+export const getStaticPaths = (() => {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const locale = "en" as const;
+const t = messages[locale];
+
+const pageTitle = `${project.title[locale]} | Fatahul Ahmad Dzikri`;
+const pageDescription = project.summary[locale];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={project.image}
+>
+  <div class="project-detail-page">
+    {/* 1. Top Navigation Bar */}
+    <nav class="project-detail-nav" aria-label="Project Navigation">
+      <a class="project-back-btn" href="/projects">
+        <ArrowLeft size={16} aria-hidden="true" />
+        <span>{t.backToProjects}</span>
+      </a>
+      <div class="project-detail-nav-right">
+        {
+          project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              class="project-live-btn"
+              title={`Launch ${project.liveUrl}`}
+            >
+              <ExternalLink size={14} aria-hidden="true" />
+              <span>{t.visitLive}</span>
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          )
+        }
+        <div class="project-detail-status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>{project.status[locale]}</span>
+        </div>
+      </div>
+    </nav>
+
+    {/* 2. Hero Header */}
+    <header class="project-detail-hero">
+      <div class="project-detail-tagline-wrap">
+        <span class="project-detail-eyebrow">
+          {project.category[locale]} · {project.client[locale]}
+        </span>
+      </div>
+      <h1 class="project-detail-main-title">
+        {project.title[locale]}
+      </h1>
+      <p class="project-detail-subtitle">
+        {project.subtitle[locale]}
+      </p>
+
+      {/* Impact Metrics Ribbon */}
+      <div class="project-metrics-ribbon" aria-label={t.keyMetrics}>
+        {
+          project.metrics.map((metric) => (
+            <div class="metric-ribbon-item">
+              <strong class="metric-ribbon-value">{metric.value}</strong>
+              <span class="metric-ribbon-label">{metric.label[locale]}</span>
+            </div>
+          ))
+        }
+      </div>
+    </header>
+
+    {/* 3. Interactive Multi-Screen Showcase Stage */}
+    <ProjectShowcase client:visible project={project} locale={locale} />
+
+    {/* 4. Technology Foundation Card */}
+    <section class="project-tech-card" aria-label={t.techStackBrief}>
+      <div class="tech-card-left">
+        <span class="detail-section-badge">TECH STACK // ARSITEKTUR</span>
+        <h3 class="tech-card-title">{t.techStackBrief}</h3>
+        <p class="tech-card-desc">{t.techStackBriefDesc}</p>
+      </div>
+
+      <div class="tech-card-right">
+        <div class="tech-card-role">
+          <GraduationCap size={16} aria-hidden="true" />
+          <span>{project.role[locale]}</span>
+        </div>
+        <div class="tech-card-pills">
+          {
+            project.techStack.map((tech) => (
+              <span class="tech-pill-tag">{tech}</span>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* 5. Bottom CTA Banner */}
+    <section class="project-cta-banner">
+      <div class="project-cta-copy">
+        <h2>{t.ctaProjectTitle}</h2>
+        <p>{t.ctaProjectDesc}</p>
+      </div>
+      <div class="project-cta-actions">
+        {
+          project.liveUrl && (
+            <BrutalButton href={project.liveUrl} target="_blank" rel="noreferrer">
+              {project.acronym ? `Launch ${project.acronym} Live` : "Launch Website Live"}
+              <ArrowUpRight aria-hidden="true" size={18} />
+            </BrutalButton>
+          )
+        }
+        <BrutalButton href="/contact" tone={project.liveUrl ? "secondary" : "primary"}>
+          {t.contactMe}
+          <ArrowUpRight aria-hidden="true" size={18} />
+        </BrutalButton>
+        <BrutalButton href="/projects" tone="secondary">
+          {t.backToAll}
+        </BrutalButton>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+

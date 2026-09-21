@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { experiences, pageMeta, profile, technologies } from "../data/site";
+
+const locale = "en" as const;
+const meta = pageMeta.about;
+
+const copy = {
+  aboutTitle: "About me",
+  experienceTitle: "My Experience",
+  skillsTitle: "Technology I Use",
+};
+---
+
+<BaseLayout
+  title={meta.title[locale]}
+  description={meta.description[locale]}
+>
+  <div class="about-page">
+    <header class="about-header">
+      <div class="section-badge-title">
+        <h1 class="section-badge-title__text">{copy.aboutTitle}</h1>
+      </div>
+    </header>
+
+    <section class="about-profile" aria-labelledby="about-profile-title">
+      <div class="about-profile__portrait hero-illustration">
+        <img
+          src="/fatahul-hero-illustration-400.webp"
+          srcset="/fatahul-hero-illustration-400.webp 400w, /fatahul-hero-illustration-640.webp 640w, /fatahul-hero-illustration-800.webp 800w, /fatahul-hero-illustration.webp 1003w"
+          sizes="(max-width: 47.99rem) min(100vw, 22.5rem), 400px"
+          width="1003"
+          height="1568"
+          alt="Neo-brutalist illustration of Fatahul Ahmad Dzikri"
+          loading="lazy"
+          decoding="async"
+        />
+        <span aria-hidden="true">01 / Fatahul</span>
+      </div>
+      <div class="about-profile__copy">
+        <div id="about-profile-title">
+          {profile.about[locale].map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="about-experience" aria-labelledby="experience-title">
+      <div class="section-badge-title-wrapper">
+        <div class="section-badge-title">
+          <h2 class="section-badge-title__text" id="experience-title">
+            {copy.experienceTitle}
+          </h2>
+        </div>
+      </div>
+      <div class="experience-timeline">
+        {experiences.map((item, index) => (
+          <article class="experience">
+            <div class="experience__content">
+              <p class="experience__period">{item.period[locale]}</p>
+              <h3>{item.role[locale]}</h3>
+              <p class="experience__company">{item.company}</p>
+              <p>{item.summary[locale]}</p>
+            </div>
+            <span class="experience__marker" aria-hidden="true">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="skills-section" aria-labelledby="skills-title">
+      <div class="section-badge-title-wrapper">
+        <div class="section-badge-title">
+          <h2 class="section-badge-title__text" id="skills-title">
+            {copy.skillsTitle}
+          </h2>
+        </div>
+      </div>
+      <div class="technology-grid">
+        {technologies.map((technology) => (
+          <article class="technology-card">
+            <div class="technology-card__icon" aria-hidden="true">
+              <img
+                src={`https://cdn.simpleicons.org/${technology.slug}/191a17`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                onload="this.classList.add('is-loaded')"
+                onerror="this.style.display = 'none'"
+              />
+              <span>{technology.mark}</span>
+            </div>
+            <h3>{technology.name}</h3>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

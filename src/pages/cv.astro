@@ -1,0 +1,62 @@
+---
+import { ArrowDownToLine } from "lucide-react";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BrutalButton from "../components/ui/BrutalButton.astro";
+import { pageMeta, siteConfig } from "../data/site";
+
+const locale = "en" as const;
+const meta = pageMeta.cv;
+const resumeSrc = siteConfig.media.resume.src;
+---
+
+<BaseLayout
+  title={meta.title[locale]}
+  description={meta.description[locale]}
+>
+  <div class="cv-page">
+    <header class="cv-header">
+      <div class="section-badge-title">
+        <h1 class="section-badge-title__text">Curriculum Vitae</h1>
+      </div>
+    </header>
+
+    {
+      resumeSrc ? (
+        <section class="cv-viewer">
+          <div class="cv-viewer__toolbar">
+            <p>CV document</p>
+            <a
+              class="brutal-button brutal-button--primary"
+              href={resumeSrc}
+              download
+            >
+              Download CV
+              <ArrowDownToLine aria-hidden="true" size={18} />
+            </a>
+          </div>
+          <iframe
+            class="cv-viewer__frame"
+            src={`${resumeSrc}#toolbar=0`}
+            title="Fatahul Ahmad Dzikri CV preview"
+          />
+        </section>
+      ) : (
+        <section class="empty-state" aria-live="polite">
+          <div class="empty-state__index">PDF</div>
+          <div>
+            <p class="eyebrow">Ready for content</p>
+            <h2>The CV is being prepared.</h2>
+            <p>
+              The preview area and download button will activate after the final PDF is added.
+            </p>
+            <BrutalButton aria-disabled="true" href="" tabindex={-1}>
+              Download CV
+              <ArrowDownToLine aria-hidden="true" size={18} />
+            </BrutalButton>
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>
+

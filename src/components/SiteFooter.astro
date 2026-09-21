@@ -1,0 +1,30 @@
+---
+import { navigation, siteConfig, type Locale } from "../data/site";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "en" } = Astro.props;
+
+function getHref(key: string) {
+  if (key === "home") return "/";
+  return `/${key}`;
+}
+---
+
+<footer class="site-footer">
+  <p>
+    <strong>{siteConfig.name}</strong>
+    <span>{siteConfig.role[locale]}</span>
+  </p>
+  <nav aria-label="Footer navigation">
+    {navigation.slice(1).map((item) => (
+      <a href={getHref(item.key)}>
+        {item.label[locale]}
+      </a>
+    ))}
+  </nav>
+  <small>© {new Date().getFullYear()}</small>
+</footer>
+

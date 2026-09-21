@@ -1,0 +1,96 @@
+---
+import { ArrowUpRight } from "lucide-react";
+import { messages, type Locale, type Project } from "../data/site";
+
+interface Props {
+  project: Project;
+  locale?: Locale;
+  index?: number;
+}
+
+const { project, locale = "en", index = 0 } = Astro.props;
+const t = messages[locale];
+const projectHref = `/projects/${project.slug}`;
+const formattedIndex = String(index + 1).padStart(2, "0");
+---
+
+<a
+  class="project-card-minimal"
+  href={projectHref}
+  aria-label={`${project.title[locale]} - ${t.viewCaseStudy}`}
+>
+  {/* Visual Screenshot Thumbnail */}
+  {
+    project.image && (
+      <div class="project-card-minimal__visual-wrap">
+        <div class="project-card-minimal__window-bar">
+          <span class="dot dot--red" />
+          <span class="dot dot--yellow" />
+          <span class="dot dot--green" />
+          <span class="window-mini-url">
+            {project.liveUrl
+              ? project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+              : `${project.slug}.app`}
+          </span>
+        </div>
+        <div class="project-card-minimal__img-container">
+          <img
+            src={project.image}
+            alt={project.title[locale]}
+            class="project-card-minimal__img"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="project-card-minimal__img-overlay">
+            <span class="project-card-minimal__view-hint">
+              <span>{t.viewCaseStudy}</span>
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </span>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  {/* Meta Bar */}
+  <div class="project-card-minimal__topbar">
+    <div class="project-card-minimal__tags">
+      <span class="project-card-minimal__index">
+        {formattedIndex} // {project.type.toUpperCase()}
+      </span>
+    </div>
+  </div>
+
+  {/* Main Content Area */}
+  <div class="project-card-minimal__body">
+    <h2 class="project-card-minimal__title">
+      <span>{project.title[locale]}</span>
+      <ArrowUpRight
+        className="project-card-minimal__title-icon"
+        size={20}
+        aria-hidden="true"
+      />
+    </h2>
+
+    {/* Tech Stack Pills */}
+    <div class="project-card-minimal__tech-row">
+      <ul class="project-card-minimal__tech-list" aria-label="Tech Stack">
+        {
+          project.techStack.slice(0, 5).map((tech) => (
+            <li class="tech-pill">{tech}</li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  {/* Bottom Action Footer */}
+  <div class="project-card-minimal__footer">
+    <span class="project-card-minimal__action-btn">
+      <span>{t.viewCaseStudy}</span>
+      <span class="btn-arrow-circle" aria-hidden="true">
+        <ArrowUpRight size={14} />
+      </span>
+    </span>
+  </div>
+</a>

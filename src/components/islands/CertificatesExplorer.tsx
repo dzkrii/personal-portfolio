@@ -14,11 +14,9 @@ import {
   type Certificate,
   type CertificateCategory,
   type Locale,
-} from "../data/site";
-import { EmptyState, navLabel } from "./PagePrimitives";
+} from "../../data/site";
 
-export function CertificatesPage({ locale }: { locale: Locale }) {
-  const title = navLabel("certificates", locale);
+export function CertificatesExplorer({ locale = "en" }: { locale?: Locale }) {
   const t = messages[locale];
 
   const [selectedCategory, setSelectedCategory] = useState<
@@ -32,7 +30,9 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
       : certificates.filter((cert) => cert.category === selectedCategory);
 
   const activeCertificate: Certificate | null =
-    activeModalIndex !== null ? filteredCertificates[activeModalIndex] ?? null : null;
+    activeModalIndex !== null
+      ? filteredCertificates[activeModalIndex] ?? null
+      : null;
 
   const handleOpenModal = (index: number) => {
     setActiveModalIndex(index);
@@ -47,14 +47,14 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
     setActiveModalIndex((prev) =>
       prev !== null
         ? (prev - 1 + filteredCertificates.length) % filteredCertificates.length
-        : null
+        : null,
     );
   }, [activeModalIndex, filteredCertificates.length]);
 
   const handleNext = useCallback(() => {
     if (activeModalIndex === null) return;
     setActiveModalIndex((prev) =>
-      prev !== null ? (prev + 1) % filteredCertificates.length : null
+      prev !== null ? (prev + 1) % filteredCertificates.length : null,
     );
   }, [activeModalIndex, filteredCertificates.length]);
 
@@ -83,7 +83,6 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
     };
   }, [activeModalIndex, handleCloseModal, handlePrev, handleNext]);
 
-  // Category counts
   const getCategoryCount = (key: "all" | CertificateCategory) => {
     if (key === "all") return certificates.length;
     return certificates.filter((c) => c.category === key).length;
@@ -95,17 +94,15 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
   };
 
   return (
-    <div className="certificates-page">
-      <header className="certificates-header">
-        <div className="section-badge-title">
-          <h1 className="section-badge-title__text">{title}</h1>
-        </div>
-      </header>
-
+    <>
       {/* Category Filter Tabs */}
       <nav
         className="certificate-filter-bar"
-        aria-label={locale === "id" ? "Filter Kategori Sertifikat" : "Certificate Category Filter"}
+        aria-label={
+          locale === "id"
+            ? "Filter Kategori Sertifikat"
+            : "Certificate Category Filter"
+        }
       >
         <ul className="certificate-filter-list" role="tablist">
           {certificateCategories.map((cat) => {
@@ -140,17 +137,25 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
 
       {/* Certificate Gallery Grid */}
       {filteredCertificates.length === 0 ? (
-        <EmptyState type="certificates" />
+        <section className="empty-state" aria-live="polite">
+          <div className="empty-state__index">00</div>
+          <div>
+            <p className="eyebrow">Ready for content</p>
+            <h2>No certificates displayed yet.</h2>
+            <p>
+              The data structure and gallery are ready. Certificates will appear
+              here once the title, issuer, date, image, and credential link are
+              added.
+            </p>
+          </div>
+        </section>
       ) : (
         <section
           className="certificate-grid"
-          aria-label={`${title} - ${selectedCategory}`}
+          aria-label={`Certificates - ${selectedCategory}`}
         >
           {filteredCertificates.map((certificate, index) => (
-            <article
-              className="certificate-card"
-              key={certificate.id}
-            >
+            <article className="certificate-card" key={certificate.id}>
               {/* Visual Thumbnail */}
               <div
                 className="certificate-card__visual"
@@ -346,6 +351,9 @@ export function CertificatesPage({ locale }: { locale: Locale }) {
           </div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 }
+
+export default CertificatesExplorer;
+
