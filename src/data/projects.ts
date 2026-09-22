@@ -1939,6 +1939,327 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "desa-simpang-tiga-evoting-system",
+    type: "web",
+    acronym: "E-VOTING PILKADES",
+    title: {
+      id: "Sistem Pemilihan Kepala Dusun Elektronik (E-Voting) Desa Simpang Tiga",
+      en: "Desa Simpang Tiga Electronic Village Election System (E-Voting)",
+    },
+    subtitle: {
+      id: "Platform Demokrasi Digital Tingkat Desa (Autentikasi NIK 16-Digit, Verifikasi Identitas e-KYC KTP & Live Quick Count Realtime)",
+      en: "Village-Level Digital Democracy Platform (16-Digit NIK Auth, e-KYC KTP Verification & Real-Time Live Quick Count)",
+    },
+    category: {
+      id: "Fullstack Web App · Civic Tech & Sistem Pemungutan Suara Digital",
+      en: "Fullstack Web App · Civic Tech & Digital Voting System",
+    },
+    summary: {
+      id: "Aplikasi pemilihan elektronik (e-voting) berbasis web untuk pemilihan kepala dusun di Desa Simpang Tiga, Kec. Sawit Seberang, Kab. Langkat. Menggantikan proses bilik suara konvensional dengan sistem digital yang aman melalui verifikasi NIK 16-digit, validasi e-KYC berkas KTP pemilih, serta rekapitulasi perolehan suara live quick count yang diperbarui secara realtime setiap 5 detik guna menjamin transparansi mutlak.",
+      en: "A secure web-based electronic voting (e-voting) platform for village hamlet head elections in Desa Simpang Tiga, Sawit Seberang, Langkat Regency. Modernizes physical paper ballots into a fraud-resistant digital voting workflow featuring 16-digit NIK authentication, digital e-KYC identity verification, and real-time live quick count polling refreshed every 5 seconds for complete electoral transparency.",
+    },
+    overview: {
+      id: "Sistem E-Voting Desa Simpang Tiga diinisiasi untuk mengatasi kendala logistik, inefisiensi pencoblosan kertas, serta potensi sengketa rekapitulasi suara manual pada pemilihan tingkat dusun. Dibangun dengan stack Laravel, Tailwind CSS, dan Alpine.js, sistem ini menyajikan antarmuka pemilih yang intuitif, ramah bagi seluruh kalangan warga desa, serta menjamin prinsip pemilihan Luber Jurdil (Langsung, Umum, Bebas, Rahasia, Jujur, dan Adil) lewat validasi identitas digital dan rekapitulasi terbuka.",
+      en: "The Desa Simpang Tiga E-Voting platform was developed to eliminate geographical barriers, costly paper ballots, and manual tally discrepancies in rural community leadership elections. Engineered using Laravel, Tailwind CSS, and Alpine.js, the system delivers an accessible, intuitive voter experience that upholds democratic integrity through digital voter validation, mandatory e-KYC checks, and an open real-time tally.",
+    },
+    context: {
+      id: "Pemilihan kepala dusun konvensional di Desa Simpang Tiga sebelumnya memerlukan biaya logistik pencetakan surat suara fisik, waktu penghitungan manual yang panjang di TPS hingga larut malam, serta risiko manipulasi data suara atau suara tidak sah akibat kertas rusak.",
+      en: "Traditional village elections in Desa Simpang Tiga previously required expensive paper ballot printing, prolonged manual vote tallying late into the night, and recurring risks of ballot invalidation or tabulation disputes.",
+    },
+    contribution: {
+      id: "Bertindak sebagai Fullstack Web Developer dan perancang sistem. Merancang pemodelan basis data pemilih berbasis NIK, modul upload dan validasi e-KYC foto KTP warga, antarmuka pemilih responsif, engine quick count polling realtime 5-detik, serta konfigurasi deployment pada server VPS Linux.",
+      en: "Acted as Fullstack Web Developer and system architect. Designed NIK-indexed voter database schemas, implemented voter e-KYC KTP document verification, crafted clean responsive voter UI, developed 5-second polling live quick-count feeds, and configured secure production Linux hosting.",
+    },
+    solution: {
+      id: "Menghadirkan platform civic tech terintegrasi dengan alur satu pemilih satu suara (one-man one-vote) terlindungi sesi unik, validasi KTP sebelum hak suara dibuka, profil interaktif visi-misi pasangan calon nomor urut, serta dashboard hasil perhitungan suara live yang transparan dan dapat disaksikan langsung oleh seluruh warga.",
+      en: "Delivered an integrated civic-tech platform enforcing one-person-one-vote via unique session tokens, mandatory pre-vote e-KYC KTP validation, candidate vision-mission comparison cards, and public live quick-count monitoring.",
+    },
+    role: {
+      id: "Fullstack Web Developer & System Architect",
+      en: "Fullstack Web Developer & System Architect",
+    },
+    period: {
+      id: "2025 - Sekarang (Aktif Digunakan)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Produksi / Digunakan Pemerintah Desa",
+      en: "Live in Production / Official Village Deployment",
+    },
+    client: {
+      id: "Desa Simpang Tiga, Kec. Sawit Seberang, Kab. Langkat",
+      en: "Desa Simpang Tiga, Kec. Sawit Seberang, Kab. Langkat",
+    },
+    liveUrl: "https://e-voting.technolabs.co.id",
+    image: "/media/projects/evoting-simpang-tiga-login.webp",
+    screenshots: [
+      {
+        id: "dashboard",
+        title: {
+          id: "Beranda Pemilih & Status Hak Suara",
+          en: "Voter Dashboard & Ballot Eligibility Status",
+        },
+        caption: {
+          id: "Antarmuka utama bagi warga terdaftar yang menampilkan status hak pilih, ilustrasi kotak suara 3D, serta notifikasi persyaratan verifikasi berkas KTP sebelum memberikan suara.",
+          en: "Main voter home interface displaying voting eligibility status, 3D ballot box illustration, and mandatory e-KYC identity verification requirements before casting a vote.",
+        },
+        image: "/media/projects/evoting-simpang-tiga-dashboard.webp",
+        category: { id: "Portal Pemilih", en: "Voter Portal" },
+      },
+      {
+        id: "candidates",
+        title: {
+          id: "Profil Pasangan Calon & Visi Misi",
+          en: "Candidate Nominees, Profiles & Manifestos",
+        },
+        caption: {
+          id: "Katalog digital pasangan calon Kepala Dusun lengkap dengan nomor urut, foto kandidat, dan ringkasan visi misi untuk membantu warga menentukan pilihan secara bijak.",
+          en: "Interactive candidate directory featuring ballot numbers, candidate portraits, and detailed manifestos to guide voters in making informed decisions.",
+        },
+        image: "/media/projects/evoting-simpang-tiga-candidates.webp",
+        category: { id: "Kandidat Paslon", en: "Candidates" },
+      },
+      {
+        id: "results",
+        title: {
+          id: "Live Quick Count & Rekapitulasi Suara Realtime",
+          en: "Real-Time Live Quick Count & Vote Tally",
+        },
+        caption: {
+          id: "Dashboard rekapitulasi suara terbuka dengan auto-polling setiap 5 detik, menampilkan total suara masuk, persentase partisipasi pemilih, dan perolehan suara masing-masing paslon.",
+          en: "Transparent public live tally dashboard updating every 5 seconds, displaying total votes cast, voter turnout percentages, and real-time candidate vote shares.",
+        },
+        image: "/media/projects/evoting-simpang-tiga-results.webp",
+        category: { id: "Quick Count Realtime", en: "Live Quick Count" },
+      },
+      {
+        id: "ktp",
+        title: {
+          id: "Verifikasi Identitas Digital e-KYC Berkas KTP",
+          en: "Digital e-KYC Identity & KTP Verification",
+        },
+        caption: {
+          id: "Modul verifikasi identitas pemilih berbasis unggah foto KTP guna memastikan keabsahan data kependudukan warga desa dan mencegah kecurangan pemilih ganda.",
+          en: "Voter identity verification workflow requiring photo KTP uploads to authenticate residency and prevent duplicate or fraudulent ballots.",
+        },
+        image: "/media/projects/evoting-simpang-tiga-ktp.webp",
+        category: { id: "Verifikasi e-KYC", en: "e-KYC Verification" },
+      },
+      {
+        id: "login",
+        title: {
+          id: "Portal Autentikasi Pemilih Berbasis NIK 16-Digit",
+          en: "16-Digit NIK Voter Authentication Portal",
+        },
+        caption: {
+          id: "Laman masuk split-screen elegan yang memvalidasi Nomor Induk Kependudukan (NIK) terdaftar pada Daftar Pemilih Tetap (DPT) Desa Simpang Tiga.",
+          en: "Secure split-screen voter gateway validating 16-digit national ID numbers (NIK) against the village registered voter database (DPT).",
+        },
+        image: "/media/projects/evoting-simpang-tiga-login.webp",
+        category: { id: "Autentikasi Pemilih", en: "Voter Auth" },
+      },
+    ],
+    techStack: [
+      "Laravel",
+      "PHP",
+      "Tailwind CSS",
+      "Alpine.js",
+      "Vite",
+      "MySQL",
+      "e-KYC Verification",
+      "Real-Time Polling",
+      "Cloudflare Protected",
+      "Linux VPS",
+    ],
+    metrics: [
+      {
+        value: "16-Digit NIK",
+        label: { id: "Validasi DPT", en: "Voter Registry Auth" },
+        description: {
+          id: "Autentikasi pemilih presisi berbasis Nomor Induk Kependudukan resmi",
+          en: "Precision voter authentication based on official citizen identification numbers",
+        },
+      },
+      {
+        value: "5 Detik",
+        label: { id: "Auto-Refresh Suara", en: "Auto-Refresh Polling" },
+        description: {
+          id: "Pembaruan live quick count otomatis tanpa reload laman untuk transparansi mutlak",
+          en: "Automatic live quick count polling without page reload for absolute transparency",
+        },
+      },
+      {
+        value: "100% Digital",
+        label: { id: "Bilik Suara Digital", en: "Paperless Ballots" },
+        description: {
+          id: "Mengeliminasi biaya cetak surat suara fisik dan memangkas waktu hitung berjam-jam",
+          en: "Eliminating physical paper ballot costs and cutting tally times from hours to seconds",
+        },
+      },
+      {
+        value: "e-KYC Validated",
+        label: { id: "Integritas Suara", en: "Voter Integrity" },
+        description: {
+          id: "Pencegahan suara ganda melalui verifikasi foto KTP asli pemilih desa",
+          en: "Rigorous prevention of duplicate votes through photo ID verification",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "pemilih",
+        roleTitle: { id: "Untuk Warga Pemilih (Masyarakat Desa)", en: "For Village Voters" },
+        roleBadge: { id: "Warga Desa", en: "Village Residents" },
+        summary: {
+          id: "Memudahkan warga desa memberikan hak suara secara mandiri, rahasia, dan terverifikasi dari perangkat manapun tanpa harus mengantre berjam-jam di TPS fisik.",
+          en: "Enables village residents to cast their confidential, verified ballots independently from any device without waiting in long queues at polling stations.",
+        },
+        items: [
+          {
+            id: "v-nik",
+            iconName: "shield",
+            title: {
+              id: "Login Praktis dengan NIK Kependudukan",
+              en: "Seamless 16-Digit NIK Login",
+            },
+            desc: {
+              id: "Akses akun pemilih instan hanya menggunakan 16 digit NIK yang sudah terverifikasi dalam Daftar Pemilih Tetap (DPT).",
+              en: "Instant voter login using the resident's 16-digit national ID pre-registered in the official electoral roll.",
+            },
+            tag: { id: "Mudah", en: "Simple" },
+          },
+          {
+            id: "v-candidate",
+            iconName: "users",
+            title: {
+              id: "Eksplorasi Visi & Misi Paslon",
+              en: "Candidate Manifesto Exploration",
+            },
+            desc: {
+              id: "Melihat profil lengkap dan gagasan kerja setiap calon kepala dusun secara objektif sebelum menjatuhkan pilihan.",
+              en: "Review comprehensive profiles and work programs of each candidate pair before casting a vote.",
+            },
+            tag: { id: "Transparan", en: "Transparent" },
+          },
+          {
+            id: "v-ballot",
+            iconName: "check-circle",
+            title: {
+              id: "Pemberian Suara Sekali Klik yang Aman",
+              en: "One-Click Encrypted Ballot Casting",
+            },
+            desc: {
+              id: "Mekanisme pencoblosan digital dengan konfirmasi ganda dan perlindungan token satu suara untuk mencegah duplikasi.",
+              en: "Secure digital voting mechanism with dual confirmation and single-use cryptographic token protection.",
+            },
+            tag: { id: "Luber Jurdil", en: "Fair & Secret" },
+          },
+          {
+            id: "v-live",
+            iconName: "sparkles",
+            title: {
+              id: "Pantau Hasil Live Quick Count",
+              en: "Live Quick Count Monitoring",
+            },
+            desc: {
+              id: "Menyaksikan perkembangan perolehan suara paslon secara langsung begitu proses pemungutan suara berlangsung.",
+              en: "Watch real-time candidate vote share updates as ballots are cast throughout election day.",
+            },
+            tag: { id: "Realtime", en: "Realtime" },
+          },
+        ],
+      },
+      {
+        roleKey: "panitia",
+        roleTitle: { id: "Untuk Panitia Pemilihan & Pemerintah Desa", en: "For Election Committee & Village Admin" },
+        roleBadge: { id: "Penyelenggara Pemilu", en: "Election Organizers" },
+        summary: {
+          id: "Memberikan kendali penuh bagi panitia pilkades dalam mengelola DPT, memvalidasi bukti e-KYC warga, dan mengumumkan hasil akhir pemilu secara akuntabel.",
+          en: "Empowers the election committee with complete control over voter registries, e-KYC document verification, and auditable election result announcements.",
+        },
+        items: [
+          {
+            id: "p-ekyc",
+            iconName: "file-text",
+            title: {
+              id: "Verifikasi Berkas e-KYC KTP",
+              en: "e-KYC Document Verification",
+            },
+            desc: {
+              id: "Memeriksa kesesuaian identitas foto KTP yang diunggah warga untuk memastikan pemilih benar merupakan penduduk sah dusun.",
+              en: "Review uploaded KTP identity cards to confirm valid village hamlet residency and approve voting clearance.",
+            },
+            tag: { id: "Akuntabel", en: "Accountable" },
+          },
+          {
+            id: "p-tally",
+            iconName: "check-circle",
+            title: {
+              id: "Rekapitulasi Suara Otomatis & Cepat",
+              en: "Instant Automated Vote Tabulation",
+            },
+            desc: {
+              id: "Mengeliminasi penghitungan manual di lembar plano yang melelahkan dengan kalkulasi persentase dan suara masuk instan.",
+              en: "Replaces tedious manual paper sheet counting with instant automated vote tallies and turnout percentages.",
+            },
+            tag: { id: "Cepat & Akurat", en: "Fast & Accurate" },
+          },
+          {
+            id: "p-audit",
+            iconName: "globe",
+            title: {
+              id: "Audit Trail & Pencegahan Kecurangan",
+              en: "Audit Trail & Fraud Prevention",
+            },
+            desc: {
+              id: "Setiap suara terlindungi log sistem yang memastikan prinsip satu NIK hanya dapat melakukan voting tepat satu kali.",
+              en: "Every submitted ballot is locked to prevent ballot box stuffing, ensuring strict one-NIK one-vote compliance.",
+            },
+            tag: { id: "Aman", en: "Secure" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "metode-flow",
+        topic: { id: "Metode Pemilihan & Bilik Suara", en: "Voting Method & Polling Station Experience" },
+        before: {
+          id: "Mencetak ribuan lembar surat suara kertas, antrean panjang di TPS fisik, serta potensi surat suara rusak atau tercoblos ganda.",
+          en: "Printing thousands of paper ballots, long physical TPS queues, and high risk of spoiled or invalid paper ballots.",
+        },
+        after: {
+          id: "Bilik suara digital yang dapat diakses melalui gawai pemilih, terlindungi verifikasi NIK dan validasi KTP tanpa antrean fisik.",
+          en: "Digital ballot box accessible from voter devices, safeguarded by NIK and KTP validation without long physical lines.",
+        },
+      },
+      {
+        id: "rekapitulasi-flow",
+        topic: { id: "Kecepatan & Akurasi Rekapitulasi Suara", en: "Vote Tally Speed & Accuracy" },
+        before: {
+          id: "Penghitungan suara manual memakan waktu berjam-jam hingga larut malam dengan potensi kesalahan hitung atau perselisihan saksi.",
+          en: "Manual ballot counting took hours into the night with risks of human calculation errors and witness disputes.",
+        },
+        after: {
+          id: "Live Quick Count otomatis diperbarui setiap 5 detik dengan grafik persentase transparan yang dapat disaksikan seluruh warga secara bersamaan.",
+          en: "Live Quick Count automatically refreshes every 5 seconds with transparent percentage charts viewable by all residents simultaneously.",
+        },
+      },
+      {
+        id: "integritas-flow",
+        topic: { id: "Validitas Identitas & Pencegahan Suara Ganda", en: "Voter Identity Validity & Anti-Fraud" },
+        before: {
+          id: "Pengecekan buku absensi DPT manual di TPS rawan pemilih siluman atau penggunaan identitas warga lain.",
+          en: "Manual attendance sheet checks at polling stations were prone to ghost voters or proxy voting abuse.",
+        },
+        after: {
+          id: "Sistem mengunci setiap akun pemilih dengan NIK 16-digit unik dan verifikasi upload foto KTP asli, mencegah duplikasi suara 100%.",
+          en: "System locks each voter to an authentic 16-digit NIK combined with photo KTP verification, eliminating duplicate ballots.",
+        },
+      },
+    ],
+  },
 ];
 
 
