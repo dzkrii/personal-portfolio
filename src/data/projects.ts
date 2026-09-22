@@ -857,6 +857,338 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "universitas-battuta-hris-system",
+    type: "mobile",
+    acronym: "HRIS BATTUTA",
+    title: {
+      id: "Sistem Informasi SDM & Presensi Kepegawaian (HRIS) Universitas Battuta",
+      en: "Universitas Battuta Human Resource Information System (HRIS)",
+    },
+    subtitle: {
+      id: "Aplikasi Kepegawaian Mobile-First (Presensi Biometrik Wajah, Validasi Radius Geofencing, Manajemen Cuti, Lembur & Integrasi Portal SSO)",
+      en: "Mobile-First HR Platform (Biometric Face Verification, Geofencing Radius Validation, Leave & Overtime Management, and SSO Integration)",
+    },
+    category: {
+      id: "Mobile-First Web App · Sistem Informasi SDM & Presensi",
+      en: "Mobile-First Web App · HRIS & Biometric Attendance",
+    },
+    summary: {
+      id: "Platform layanan mandiri SDM kampus berbasis mobile-first yang mengotomasi pencatatan kehadiran pegawai dan dosen melalui validasi radius GPS (geofencing) 25 meter dan verifikasi biometrik wajah, pengajuan cuti tahunan, pelaporan sesi lembur, hingga integrasi akun terpusat dengan Portal SSO Universitas Battuta.",
+      en: "Mobile-first university human resource self-service platform automating staff and faculty attendance through 25-meter GPS geofencing and facial biometric verification, annual leave requests, overtime tracking, and unified authentication via the Universitas Battuta SSO Portal.",
+    },
+    overview: {
+      id: "HRIS Universitas Battuta dirancang dengan paradigma mobile-first yang mengutamakan kecepatan akses dan kenyamanan interaksi di smartphone pegawai. Menggunakan React, Vite, dan Tailwind CSS dengan styling native-app feel, aplikasi ini terhubung ke backend NestJS dan database PostgreSQL berkeamanan tinggi untuk memastikan seluruh catatan waktu kerja, koordinat presensi, dan berkas pengajuan SDM tervalidasi secara presisi dan anti-fraud.",
+      en: "HRIS Universitas Battuta was engineered with a mobile-first paradigm prioritizing fast load times and seamless smartphone interactions. Built with React, Vite, and Tailwind CSS delivering a native app feel, it connects to a secure NestJS and PostgreSQL backend to ensure all work hours, GPS coordinates, and HR submissions are validated with anti-fraud precision.",
+    },
+    context: {
+      id: "Pencatatan absensi manual dengan mesin fingerprint konvensional sering menimbulkan antrean, sulit dipantau secara realtime oleh pimpinan, dan rentan terhadap ketidaksesuaian lokasi kerja staf di lingkungan kampus.",
+      en: "Manual paper attendance and conventional fingerprint clocks created physical queues, made real-time monitoring difficult for leadership, and lacked flexible location validation across campus facilities.",
+    },
+    contribution: {
+      id: "Bertindak sebagai Lead Fullstack Developer dan UI/UX Designer secara mandiri (Solo Project). Merancang antarmuka mobile-first bernuansa modern dan ramah sentuhan, mengintegrasikan API browser untuk verifikasi biometrik wajah dan deteksi geofencing GPS, serta merancang skema database PostgreSQL dan API NestJS kepegawaian.",
+      en: "Acted as solo Lead Fullstack Developer and UI/UX Designer. Designed a modern touch-friendly mobile-first UI, integrated browser APIs for facial biometric verification and GPS geofencing, and engineered NestJS HR APIs backed by PostgreSQL.",
+    },
+    solution: {
+      id: "Mengembangkan aplikasi web mobile-first dengan navigasi bottom-bar intuitif, sistem presensi 2-langkah (validasi radius GPS Gedung Administrasi + pengenalan wajah), kartu status jam kerja realtime, manajemen cuti & lembur digital, serta audit log kehadiran yang transparan.",
+      en: "Developed a mobile-first web app featuring an intuitive bottom navigation bar, 2-step attendance workflow (GPS campus geofencing + facial recognition), real-time work duration tracking, digital leave/overtime workflows, and transparent audit logs.",
+    },
+    role: {
+      id: "Lead Fullstack Developer & UI Designer (Solo Project)",
+      en: "Lead Fullstack Developer & UI Designer (Solo Project)",
+    },
+    period: {
+      id: "2025 - Sekarang (Aktif Digunakan)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Kampus / Digunakan Harian",
+      en: "Live in Campus / Daily Active Use",
+    },
+    client: {
+      id: "Universitas Battuta",
+      en: "Universitas Battuta",
+    },
+    liveUrl: "https://hris.battuta.ac.id",
+    image: "/media/projects/hris-battuta-login.webp",
+    screenshots: [
+      {
+        id: "dashboard",
+        title: {
+          id: "Dashboard Mandiri Kepegawaian (Mobile)",
+          en: "Employee Self-Service Dashboard (Mobile)",
+        },
+        caption: {
+          id: "Beranda mobile menampilkan status kehadiran hari ini, durasi kerja berjalan realtime, akses cepat menu SDM, jadwal shift, dan histori presensi terakhir.",
+          en: "Mobile homepage featuring real-time attendance status, active work duration counter, quick HR action shortcuts, shift schedule, and recent attendance history.",
+        },
+        image: "/media/projects/hris-battuta-dashboard.webp",
+        category: { id: "Mobile Dashboard", en: "Mobile Dashboard" },
+      },
+      {
+        id: "absen",
+        title: {
+          id: "Presensi Biometrik & Geofencing GPS",
+          en: "Biometric & GPS Geofenced Attendance",
+        },
+        caption: {
+          id: "Alur presensi 2-langkah dengan validasi radius lokasi GPS (Gedung Administrasi radius 25 meter) dan verifikasi biometrik wajah anti-titip absen.",
+          en: "Two-step attendance flow combining GPS geofence radius validation (25m campus perimeter) and facial biometric verification to prevent attendance fraud.",
+        },
+        image: "/media/projects/hris-battuta-absen.webp",
+        category: { id: "Presensi Digital", en: "Digital Attendance" },
+      },
+      {
+        id: "rekap",
+        title: {
+          id: "Rekap Kehadiran & Statistik Disiplin",
+          en: "Attendance History & Discipline Metrics",
+        },
+        caption: {
+          id: "Laporan rekapitulasi jam masuk dan jam pulang per hari, indikator ketepatan waktu, dan persentase kedisiplinan kerja bulanan.",
+          en: "Detailed daily check-in and check-out ledger, punctuality status indicators, and monthly work discipline percentage.",
+        },
+        image: "/media/projects/hris-battuta-rekap.webp",
+        category: { id: "Rekap & Statistik", en: "Records & Stats" },
+      },
+      {
+        id: "face-scan",
+        title: {
+          id: "Presensi Biometrik Wajah & Liveness Detection",
+          en: "Facial Biometric & Liveness Verification",
+        },
+        caption: {
+          id: "Pemindaian biometrik wajah realtime dengan tantangan liveness acak (kedipan mata, toleh arah) berbasis model InsightFace untuk memastikan keaslian kehadiran tanpa manipulasi foto.",
+          en: "Real-time facial biometric scanning with dynamic randomized liveness challenges (eye blink, head turning) powered by InsightFace AI to prevent photo and spoofing fraud.",
+        },
+        image: "/media/projects/hris-battuta-face-scan.webp",
+        category: { id: "Biometrik AI", en: "AI Biometrics" },
+      },
+    ],
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "InsightFace / Biometric AI",
+      "Geolocation API",
+      "Linux VPS",
+    ],
+    metrics: [
+      {
+        value: "25 m",
+        label: { id: "Radius Geofencing", en: "Geofence Radius" },
+        description: {
+          id: "Validasi presensi akurat di titik koordinat Gedung Administrasi kampus",
+          en: "Accurate attendance boundary locked to campus administration coordinates",
+        },
+      },
+      {
+        value: "2-Step",
+        label: { id: "Verifikasi Kehadiran", en: "Dual Verification" },
+        description: {
+          id: "Kombinasi sensor lokasi GPS presisi dan verifikasi wajah biometrik",
+          en: "Integrated precision GPS boundary and biometric facial recognition",
+        },
+      },
+      {
+        value: "Realtime",
+        label: { id: "Durasi & Status Kerja", en: "Live Work Counter" },
+        description: {
+          id: "Perhitungan jam kerja dan status shift terupdate otomatis per detik",
+          en: "Real-time shift calculation and active working hours counter",
+        },
+      },
+      {
+        value: "Solo Dev",
+        label: { id: "Fullstack & UI/UX", en: "Solo Fullstack" },
+        description: {
+          id: "Dikerjakan mandiri mulai dari desain mobile UI, frontend React, hingga backend NestJS",
+          en: "Independently engineered from mobile UI design, React frontend, to NestJS backend",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "pegawai",
+        roleTitle: { id: "Untuk Pegawai & Dosen", en: "For Staff & Faculty" },
+        roleBadge: { id: "Akses Karyawan", en: "Staff Portal" },
+        summary: {
+          id: "Memudahkan pegawai mencatatkan kehadiran secara cepat dari smartphone, memantau histori jam kerja, dan mengajukan cuti tanpa birokrasi rumit.",
+          en: "Enables staff to record attendance swiftly from smartphones, track work hours, and submit leave requests without bureaucratic friction.",
+        },
+        items: [
+          {
+            id: "p-absen",
+            iconName: "check-circle",
+            title: {
+              id: "Presensi Mandiri Cepat",
+              en: "Fast Self-Service Attendance",
+            },
+            desc: {
+              id: "Absen masuk dan pulang hanya dengan beberapa sentuhan saat berada di dalam radius kampus.",
+              en: "Clock in and out in seconds when physically inside the designated campus perimeter.",
+            },
+            tag: { id: "Presensi", en: "Attendance" },
+          },
+          {
+            id: "p-durasi",
+            iconName: "calendar",
+            title: {
+              id: "Monitoring Jam & Shift Kerja",
+              en: "Shift & Work Hours Tracker",
+            },
+            desc: {
+              id: "Pantau sisa waktu shift kerja hari ini dan total akumulasi jam kerja bulanan.",
+              en: "Monitor active daily shift duration and total monthly work hour accumulation.",
+            },
+            tag: { id: "Jadwal", en: "Schedule" },
+          },
+          {
+            id: "p-cuti",
+            iconName: "file-text",
+            title: {
+              id: "Pengajuan Cuti & Izin Online",
+              en: "Online Leave & Permit Requests",
+            },
+            desc: {
+              id: "Kirim permohonan cuti tahunan dan izin kerja langsung dari aplikasi dengan status persetujuan transparan.",
+              en: "Submit annual leave and permit requests directly from the app with transparent approval tracking.",
+            },
+            tag: { id: "Layanan SDM", en: "HR Service" },
+          },
+          {
+            id: "p-sso",
+            iconName: "shield",
+            title: {
+              id: "Keamanan Akun Terpadu SSO",
+              en: "Unified SSO Security",
+            },
+            desc: {
+              id: "Manajemen kredensial dan sesi login terpusat melalui gerbang Portal SSO Universitas Battuta.",
+              en: "Centralized credential and session management through Universitas Battuta's SSO Gateway.",
+            },
+            tag: { id: "Keamanan", en: "Security" },
+          },
+        ],
+      },
+      {
+        roleKey: "institusi",
+        roleTitle: { id: "Untuk Manajemen & Biro SDM", en: "For HR Management" },
+        roleBadge: { id: "Manajemen SDM", en: "HR Governance" },
+        summary: {
+          id: "Memberikan visibilitas penuh atas kehadiran seluruh pegawai, kepatuhan jam kerja, dan otomasi rekapitulasi data penggajian.",
+          en: "Provides full visibility over employee attendance, shift compliance, and automated payroll reporting.",
+        },
+        items: [
+          {
+            id: "i-geofence",
+            iconName: "compass",
+            title: {
+              id: "Pengendalian Radius Lokasi (Anti-Fraud)",
+              en: "Location Perimeter Control (Anti-Fraud)",
+            },
+            desc: {
+              id: "Mencegah kecurangan presensi palsu dengan verifikasi koordinat GPS dan validasi biometrik.",
+              en: "Eliminates attendance spoofing through GPS geofencing and facial biometrics.",
+            },
+            tag: { id: "Anti-Fraud", en: "Anti-Fraud" },
+          },
+          {
+            id: "i-rekap",
+            iconName: "award",
+            title: {
+              id: "Rekapitulasi Disiplin Otomatis",
+              en: "Automated Discipline Ledger",
+            },
+            desc: {
+              id: "Kalkulasi otomatis hari masuk, keterlambatan, dan jam kerja efektif tanpa rekap kertas manual.",
+              en: "Automatic calculation of check-ins, tardiness, and effective work hours without paper logs.",
+            },
+            tag: { id: "Otomasi", en: "Automation" },
+          },
+          {
+            id: "i-cuti",
+            iconName: "check-circle",
+            title: {
+              id: "Approval Cuti Terstruktur",
+              en: "Structured Leave Approvals",
+            },
+            desc: {
+              id: "Alur persetujuan cuti berjenjang yang langsung memotong sisa kuota hak cuti tahunan pegawai.",
+              en: "Multi-tier leave approvals automatically deducting from the employee's annual leave balance.",
+            },
+            tag: { id: "Manajemen", en: "Management" },
+          },
+          {
+            id: "i-sso",
+            iconName: "settings",
+            title: {
+              id: "Integrasi Ekosistem Kampus",
+              en: "Campus Ecosystem Integration",
+            },
+            desc: {
+              id: "Terhubung selaras dengan database identitas pegawai dan ekosistem digital kampus lainnya.",
+              en: "Seamlessly connected with employee master data and the broader digital campus ecosystem.",
+            },
+            tag: { id: "Terintegrasi", en: "Integrated" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "absen-flow",
+        topic: { id: "Metode Pencatatan Kehadiran Kerja", en: "Attendance Logging Method" },
+        before: {
+          id: "Mesin fingerprint fisik yang sering macet, menimbulkan antrean panjang di pintu masuk, dan tidak fleksibel.",
+          en: "Physical fingerprint clocks that jammed frequently, caused queues at entry points, and lacked flexibility.",
+        },
+        after: {
+          id: "Presensi mandiri instan di smartphone pegawai dengan verifikasi radius geofencing 25 meter dan validasi biometrik wajah.",
+          en: "Instant smartphone check-in featuring 25-meter GPS geofencing and anti-fraud facial biometric validation.",
+        },
+      },
+      {
+        id: "waktu-flow",
+        topic: { id: "Pemantauan Jam Kerja & Disiplin", en: "Work Hour & Punctuality Tracking" },
+        before: {
+          id: "Rekap jam kerja staf harus diunduh manual dari mesin setiap akhir bulan, menyulitkan monitoring keterlambatan.",
+          en: "Monthly manual data extraction from physical devices, making real-time tardiness oversight impossible.",
+        },
+        after: {
+          id: "Dashboard realtime menghitung durasi kerja detik-per-detik, status keterlambatan otomatis, dan indeks kedisiplinan bulanan.",
+          en: "Real-time dashboard computing work duration live, automatic tardiness status, and monthly discipline scores.",
+        },
+      },
+      {
+        id: "cuti-flow",
+        topic: { id: "Pengajuan Cuti & Perizinan", en: "Leave & Permit Workflows" },
+        before: {
+          id: "Formulir kertas fisik yang harus ditandatangani manual oleh beberapa atasan dan rawan tercecer.",
+          en: "Paper-based forms requiring multiple in-person signatures that were frequently misplaced.",
+        },
+        after: {
+          id: "Pengajuan cuti digital satu pintu dengan kalkulasi sisa kuota cuti otomatis dan verifikasi persetujuan instan.",
+          en: "Unified online leave submission with automatic balance deduction and instant digital approval status.",
+        },
+      },
+      {
+        id: "sso-flow",
+        topic: { id: "Autentikasi & Keamanan Akun", en: "Authentication & Account Security" },
+        before: {
+          id: "Setiap sistem internal kampus menggunakan kredensial dan database login yang terpisah-pisah.",
+          en: "Each internal campus system maintained disconnected user credentials and separate databases.",
+        },
+        after: {
+          id: "Satu akun resmi kepegawaian terintegrasi dengan Portal SSO (Single Sign-On) Universitas Battuta.",
+          en: "Single official employee identity seamlessly integrated with Universitas Battuta's SSO Portal.",
+        },
+      },
+    ],
+  },
+  {
     slug: "universitas-battuta-official-website",
     type: "web",
     acronym: "BATTUTA.AC.ID",
