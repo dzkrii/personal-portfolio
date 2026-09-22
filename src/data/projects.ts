@@ -1645,5 +1645,300 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "universitas-battuta-shortlink-system",
+    type: "web",
+    acronym: "SHORTLINK BATTUTA",
+    title: {
+      id: "Layanan Pemendek Tautan Resmi (Shortlink) Universitas Battuta",
+      en: "Universitas Battuta Official URL Shortener & QR Management System",
+    },
+    subtitle: {
+      id: "Platform Pemendek Tautan Kampus (Slug Kustom, Generator QR Code Instan, Analisis Klik & Integrasi SSO)",
+      en: "Campus Shortlink Infrastructure (Custom Branded Slugs, Instant Dynamic QR Codes, Click Analytics & SSO Integration)",
+    },
+    category: {
+      id: "Fullstack Web App · Infrastruktur Utilitas & Pengalihan Tautan",
+      en: "Fullstack Web App · Utility Infrastructure & Link Redirection",
+    },
+    summary: {
+      id: "Layanan pemendek tautan resmi kampus (domain s.battuta.ac.id) yang dirancang untuk menyederhanakan URL panjang pengumuman akademik, pendaftaran PMB, formulir wisuda, dan survei kampus menjadi tautan bermerek yang ringkas, mudah diingat, dapat dipantau statistik kliknya, dan dilengkapi generator QR Code otomatis beresolusi tinggi.",
+      en: "Official university URL shortening service (powered by s.battuta.ac.id) designed to condense complex campus URLs—from admissions (PMB) to academic surveys—into clean, branded links with live click tracking and automatic high-resolution QR code generation.",
+    },
+    overview: {
+      id: "Shortlink Universitas Battuta dibangun sebagai utilitas sentral untuk mendukung publikasi dan promosi informasi digital kampus. Menggunakan antarmuka desktop modern berbasis React dan Tailwind CSS, aplikasi ini memungkinkan staf dan pimpinan mengelola slug kustom, memantau trafik pengunjung secara realtime, mengunduh QR Code siap cetak, serta terintegrasi penuh dengan Single Sign-On (SSO) Universitas Battuta.",
+      en: "Universitas Battuta Shortlink was engineered as a centralized utility to power digital campus communications. Built with a modern desktop UI using React and Tailwind CSS, it enables faculty and staff to manage branded custom slugs, track visitor engagement in real-time, export print-ready QR codes, and seamlessly authenticate via Universitas Battuta SSO.",
+    },
+    context: {
+      id: "URL formulir online, survei akademik, dan sistem kampus seringkali sangat panjang, rumit untuk diketik secara manual pada brosur cetak atau slide presentasi, serta tidak memiliki pencatatan performa klik terpusat.",
+      en: "Campus forms, academic surveys, and internal portal URLs were often unwieldy and hard to type from print flyers or lecture slides, lacking centralized click-through analytics.",
+    },
+    contribution: {
+      id: "Bertindak sebagai Lead Fullstack Developer dan UI/UX Designer secara mandiri (Solo Project). Merancang arsitektur database relasional, antarmuka web responsif, engine pengalihan tautan berlatensi rendah, generator QR Code SVG/PNG otomatis, dan integrasi Single Sign-On kampus.",
+      en: "Served as solo Lead Fullstack Developer and UI/UX Designer. Engineered relational data schema, responsive web interface, ultra-low latency redirection engine, automated SVG/PNG QR generator, and unified campus SSO integration.",
+    },
+    solution: {
+      id: "Mengembangkan aplikasi pemendek tautan berstandar enterprise dengan dashboard manajemen intuitif, validasi slug kustom anti-duplikasi, tombol toggle aktif/nonaktif instan, generator QR Code sekali klik, dan tracking klik real-time.",
+      en: "Engineered an enterprise-grade URL shortening platform featuring an intuitive management dashboard, anti-collision custom slug validation, instant active status toggles, one-click QR code export, and real-time click tracking.",
+    },
+    role: {
+      id: "Lead Fullstack Developer & UI/UX Designer (Solo Project)",
+      en: "Lead Fullstack Developer & UI/UX Designer (Solo Project)",
+    },
+    period: {
+      id: "2025 - Sekarang (Aktif Digunakan)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Kampus / Digunakan Resmi",
+      en: "Live in Production / Official Campus Utility",
+    },
+    client: {
+      id: "Universitas Battuta",
+      en: "Universitas Battuta",
+    },
+    liveUrl: "https://shortlink.battuta.ac.id",
+    image: "/media/projects/shortlink-battuta-login.webp",
+    screenshots: [
+      {
+        id: "dashboard",
+        title: {
+          id: "Dashboard Pengelolaan Tautan & Statistik Trafik",
+          en: "Link Management Dashboard & Click Analytics",
+        },
+        caption: {
+          id: "Pusat kontrol tautan kampus menampilkan daftar link aktif, URL tujuan, slug kustom s.battuta.ac.id, switch status aktif/nonaktif, dan total akumulasi klik pengunjung.",
+          en: "Centralized link control panel displaying active URLs, destinations, custom s.battuta.ac.id slugs, active toggle switches, and total visitor click counts.",
+        },
+        image: "/media/projects/shortlink-battuta-dashboard.webp",
+        category: { id: "Dashboard Tautan", en: "Link Dashboard" },
+      },
+      {
+        id: "create",
+        title: {
+          id: "Formulir Pembuatan Tautan & Slug Kustom",
+          en: "Shortlink Creation & Custom Slug Validation",
+        },
+        caption: {
+          id: "Modal pembuatan tautan baru dengan validasi otomatis URL tujuan, judul deskriptif, dan kustomisasi slug bermerek (contoh: s.battuta.ac.id/pmb-2026).",
+          en: "Creation modal with real-time target URL validation, descriptive titles, and custom branded slug assignment (e.g. s.battuta.ac.id/pmb-2026).",
+        },
+        image: "/media/projects/shortlink-battuta-create.webp",
+        category: { id: "Pembuat Tautan", en: "Link Creator" },
+      },
+      {
+        id: "qrcode",
+        title: {
+          id: "Generator QR Code Dinamis Siap Cetak",
+          en: "Dynamic QR Code Generator & PNG Export",
+        },
+        caption: {
+          id: "Fitur pembuatan QR Code otomatis beresolusi tinggi dengan tombol Unduh PNG instan untuk dicetak pada brosur, banner PMB, dan poster kegiatan kampus.",
+          en: "Automated high-resolution QR code generator with one-click PNG download for physical brochures, admissions banners, and campus event posters.",
+        },
+        image: "/media/projects/shortlink-battuta-qrcode.webp",
+        category: { id: "QR Code Dinamis", en: "Dynamic QR Code" },
+      },
+      {
+        id: "login",
+        title: {
+          id: "Portal Masuk & Integrasi Akun Terpusat",
+          en: "Authentication Portal & Campus SSO Integration",
+        },
+        caption: {
+          id: "Gerbang login aman dengan branding khas Universitas Battuta dan integrasi manajemen hak akses staff/administrator kampus.",
+          en: "Secure branded authentication gateway integrated with Universitas Battuta's centralized staff and administrator role management.",
+        },
+        image: "/media/projects/shortlink-battuta-login.webp",
+        category: { id: "Autentikasi", en: "Authentication" },
+      },
+    ],
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "TypeScript",
+      "Node.js / Express",
+      "PostgreSQL",
+      "QR Code Engine",
+      "Portal SSO Battuta",
+      "Linux VPS",
+    ],
+    metrics: [
+      {
+        value: "s.battuta.ac.id",
+        label: { id: "Domain Bermerek", en: "Branded Domain" },
+        description: {
+          id: "Domain pendek resmi universitas yang kredibel dan tepercaya untuk publikasi",
+          en: "Official credible short domain recognized by students and external partners",
+        },
+      },
+      {
+        value: "Realtime",
+        label: { id: "Pelacakan Klik", en: "Click Tracking" },
+        description: {
+          id: "Pencatatan statistik kunjungan tautan akurat detik-per-detik",
+          en: "Accurate real-time visitor click monitoring on every active link",
+        },
+      },
+      {
+        value: "Instant",
+        label: { id: "Generator QR Code", en: "QR Code Export" },
+        description: {
+          id: "Generasi kode QR vektor siap unduh format gambar PNG resolusi tinggi",
+          en: "Instant high-resolution PNG QR code creation for physical print media",
+        },
+      },
+      {
+        value: "Solo Dev",
+        label: { id: "Fullstack Engineering", en: "Solo Engineering" },
+        description: {
+          id: "Dikerjakan mandiri mulai dari desain UI, integrasi SSO, hingga arsitektur backend",
+          en: "Independently built from frontend design, SSO integration, to backend routing",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "humas",
+        roleTitle: { id: "Untuk Tim Promosi & Humas", en: "For PR & Marketing Teams" },
+        roleBadge: { id: "Promosi & Publikasi", en: "Outreach & Media" },
+        summary: {
+          id: "Memudahkan tim publikasi dan humas kampus mendistribusikan materi promosi dengan tautan pendek bermerek yang rapi dan dapat dievaluasi performa kliknya.",
+          en: "Enables university outreach and PR teams to distribute promotional content via clean branded short URLs with quantifiable click metrics.",
+        },
+        items: [
+          {
+            id: "h-brand",
+            iconName: "globe",
+            title: {
+              id: "Tautan Pendek Bermerek Resmi",
+              en: "Official Branded Shortlinks",
+            },
+            desc: {
+              id: "Menghasilkan URL berawalan domain resmi s.battuta.ac.id untuk meningkatkan rasa percaya dan keamanan sivitas akademika.",
+              en: "Generates links under the official s.battuta.ac.id domain to maximize student trust and institutional credibility.",
+            },
+            tag: { id: "Kredibel", en: "Credible" },
+          },
+          {
+            id: "h-qr",
+            iconName: "sparkles",
+            title: {
+              id: "QR Code Siap Cetak Brosur & Spanduk",
+              en: "Print-Ready QR Codes for Flyers & Banners",
+            },
+            desc: {
+              id: "Ekspor gambar QR Code beresolusi tinggi sekali klik yang siap ditempel pada materi cetak PMB dan poster kegiatan.",
+              en: "One-click export of high-resolution QR codes directly usable on admissions brochures, event roll-ups, and posters.",
+            },
+            tag: { id: "Praktis", en: "Effortless" },
+          },
+          {
+            id: "h-analytics",
+            iconName: "check-circle",
+            title: {
+              id: "Evaluasi Trafik Kampanye PMB",
+              en: "Campaign Performance Analytics",
+            },
+            desc: {
+              id: "Pantau tautan promosi mana yang paling banyak menghasilkan kunjungan pendaftar mahasiswa baru secara transparan.",
+              en: "Transparently monitor which campaign links drive the highest prospective student visitor engagement.",
+            },
+            tag: { id: "Terukur", en: "Measurable" },
+          },
+        ],
+      },
+      {
+        roleKey: "akademik",
+        roleTitle: { id: "Untuk Unit BAAK & Panitia Kegiatan", en: "For Academic Units & Committees" },
+        roleBadge: { id: "Administrasi Kampus", en: "Campus Operations" },
+        summary: {
+          id: "Membantu kepanitiaan acara dan unit kerja membagikan formulir survei, registrasi seminar, atau berkas akademik tanpa link rumit.",
+          en: "Assists event committees and academic units in distributing registration forms, event surveys, and files without lengthy URLs.",
+        },
+        items: [
+          {
+            id: "a-simple",
+            iconName: "file-text",
+            title: {
+              id: "Penyederhanaan Link Formulir Panjang",
+              en: "Simplifying Long Form Links",
+            },
+            desc: {
+              id: "Mengubah tautan Google Form, Zoom meeting, atau Cloud Drive yang panjang menjadi slug kustom ringkas seperti s.battuta.ac.id/wisuda-5.",
+              en: "Condenses lengthy Google Form, Zoom, or Cloud Drive links into concise custom slugs like s.battuta.ac.id/wisuda-5.",
+            },
+            tag: { id: "Rapi & Ringkas", en: "Clean & Concise" },
+          },
+          {
+            id: "a-toggle",
+            iconName: "settings",
+            title: {
+              id: "Kontrol Status Tautan (On/Off)",
+              en: "Instant Link Availability Control",
+            },
+            desc: {
+              id: "Tutup akses pendaftaran secara instan hanya dengan mematikan toggle switch tanpa perlu menghapus tautan dari sistem.",
+              en: "Close form submissions or registration instantly by flipping the status toggle without deleting the link record.",
+            },
+            tag: { id: "Fleksibel", en: "Flexible" },
+          },
+          {
+            id: "a-sso",
+            iconName: "shield",
+            title: {
+              id: "Akses Aman Berbasis SSO Kampus",
+              en: "Campus SSO-Backed Security",
+            },
+            desc: {
+              id: "Autentikasi terpusat memastikan pembuatan dan perubahan tautan hanya dapat dilakukan oleh staf berwenang Universitas Battuta.",
+              en: "Centralized campus authentication ensures link creation and modifications are restricted to authorized university personnel.",
+            },
+            tag: { id: "Aman", en: "Secure" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "distribusi-flow",
+        topic: { id: "Metode Distribusi Tautan Kampus", en: "Campus Link Distribution Method" },
+        before: {
+          id: "Membagikan tautan mentah Google Form atau URL sistem internal yang sangat panjang dan sulit diketik manual oleh mahasiswa.",
+          en: "Sharing raw, lengthy Google Form URLs or internal system links that were prone to typos and difficult to type manually.",
+        },
+        after: {
+          id: "Tautan bermerek resmi kampus (s.battuta.ac.id/...) yang elegan, ringkas, mudah diingat, dan dilengkapi kode QR otomatis.",
+          en: "Elegant, official branded links (s.battuta.ac.id/...) that are concise, memorable, and paired with automatic QR codes.",
+        },
+      },
+      {
+        id: "visibilitas-flow",
+        topic: { id: "Transparansi Efektivitas Informasi", en: "Campaign & Click Visibility" },
+        before: {
+          id: "Tidak ada visibilitas mengenai berapa banyak calon mahasiswa atau civitas yang mengeklik tautan pengumuman.",
+          en: "Zero visibility into how many prospective students or faculty clicked announcement links.",
+        },
+        after: {
+          id: "Statistik klik terpantau realtime di dashboard sehingga efektivitas media promosi dan pengumuman dapat dievaluasi.",
+          en: "Real-time click counts directly in the dashboard, enabling accurate measurement of outreach campaigns.",
+        },
+      },
+      {
+        id: "qr-flow",
+        topic: { id: "Kebutuhan Materi Promosi Cetak", en: "Print Promotional Material Readiness" },
+        before: {
+          id: "Desainer grafis harus membuat kode QR manual dari situs pihak ketiga yang sering disisipi iklan dan kadaluwarsa.",
+          en: "Designers relied on third-party ad-laden QR generators for print flyers which could expire.",
+        },
+        after: {
+          id: "Satu klik untuk mengunduh QR Code resmi beresolusi tinggi langsung dari dashboard tautan kampus.",
+          en: "One-click instant official high-res PNG QR code download directly from the university dashboard.",
+        },
+      },
+    ],
+  },
 ];
+
 
