@@ -527,6 +527,336 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "universitas-battuta-elearning-system",
+    type: "web",
+    acronym: "E-LEARNING BATTUTA",
+    title: {
+      id: "Sistem Manajemen Pembelajaran (E-Learning) Universitas Battuta",
+      en: "Universitas Battuta Learning Management System (E-Learning)",
+    },
+    subtitle: {
+      id: "Platform Perkuliahan Daring Terpadu (Kelas Virtual, Materi Kuliah, Presensi Daring, Kuis & Penugasan Terintegrasi Jadwal KRS)",
+      en: "Integrated Digital Learning Platform (Virtual Classrooms, Course Modules, Online Attendance, Quizzes & Assignments Synced with KRS Timetables)",
+    },
+    category: {
+      id: "Fullstack Web App · Learning Management System (LMS)",
+      en: "Fullstack Web App · Learning Management System (LMS)",
+    },
+    summary: {
+      id: "Ekosistem pembelajaran digital kampus terintegrasi yang memfasilitasi perkuliahan hybrid: distribusi modul materi per pertemuan, pengumpulan tugas daring terstruktur, evaluasi kuis, serta presensi sesi kelas yang tersinkronisasi otomatis dengan jadwal KRS bagi ribuan mahasiswa dan dosen.",
+      en: "Integrated campus digital learning ecosystem facilitating hybrid and blended lectures: session-by-session module distribution, structured online assignment submissions, quiz evaluations, and automated session attendance synchronized with KRS schedules for thousands of students and faculty.",
+    },
+    overview: {
+      id: "E-Learning Universitas Battuta dibangun dari fondasi awal untuk menyediakan media belajar digital yang tangguh, interaktif, dan mudah digunakan di desktop maupun mobile. Frontend dibangun dengan React, Vite, dan Tailwind CSS untuk pengalaman navigasi yang instan, ditopang oleh backend arsitektur modular NestJS dan database PostgreSQL berkinerja tinggi yang menangani ribuan transaksi akademik harian secara stabil.",
+      en: "E-Learning Universitas Battuta was engineered from the ground up to deliver a robust, interactive, and responsive digital learning environment across desktop and mobile devices. The frontend leverages React, Vite, and Tailwind CSS for snappy navigation, backed by a modular NestJS architecture and high-performance PostgreSQL database handling thousands of daily academic transactions.",
+    },
+    context: {
+      id: "Kebutuhan perkuliahan hybrid dan blended learning menuntut adanya sistem LMS independen kampus yang cepat, tidak lambat diakses ribuan civitas akademika, serta terhubung selaras dengan struktur kurikulum dan jadwal mata kuliah di SIAKAD.",
+      en: "The demand for hybrid and blended learning required a dedicated, high-speed university LMS capable of handling concurrent usage without lag, tightly integrated with the curriculum structure and timetable from SIAKAD.",
+    },
+    contribution: {
+      id: "Bertindak sebagai Lead Fullstack Developer dan UI/UX Designer secara mandiri (Solo Project). Merancang antarmuka modern yang bersih dan intuitif, membangun RESTful API performa tinggi menggunakan NestJS, merancang skema relasional PostgreSQL, serta mengonfigurasi dan mengelola deployment server Linux VPS.",
+      en: "Acted as solo Lead Fullstack Developer and UI/UX Designer. Designed clean, modern, and intuitive user interfaces, implemented high-performance RESTful APIs with NestJS, modeled PostgreSQL relational schemas, and managed end-to-end deployment on Linux VPS.",
+    },
+    solution: {
+      id: "Membangun arsitektur SPA yang ringan menggunakan React + Vite dan Tailwind CSS, ditopang backend NestJS berstandar enterprise dengan validasi ketat, autentikasi aman JWT, query PostgreSQL yang teroptimasi, serta manajemen file materi dan tugas kuliah yang terstruktur.",
+      en: "Constructed a lightweight SPA architecture using React + Vite and Tailwind CSS, backed by enterprise-grade NestJS micro-services with robust validation, secure JWT auth, optimized PostgreSQL queries, and organized course asset storage.",
+    },
+    role: {
+      id: "Lead Fullstack Developer & UI Designer (Solo Project)",
+      en: "Lead Fullstack Developer & UI Designer (Solo Project)",
+    },
+    period: {
+      id: "2025 - Sekarang (Aktif Digunakan)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Kampus / Digunakan Harian",
+      en: "Live in Campus / Daily Active Use",
+    },
+    client: {
+      id: "Universitas Battuta",
+      en: "Universitas Battuta",
+    },
+    liveUrl: "https://elearning.battuta.ac.id",
+    image: "/media/projects/elearning-battuta-login.webp",
+    screenshots: [
+      {
+        id: "login",
+        title: {
+          id: "Portal Masuk Sivitas Akademika",
+          en: "Academic Community Login Gateway",
+        },
+        caption: {
+          id: "Gerbang autentikasi terpusat dosen dan mahasiswa dengan antarmuka clean light mode yang modern, tata kelola akses aman, dan identitas visual kampus.",
+          en: "Centralized login gateway for faculty and students featuring a modern clean light interface, secure authentication, and campus visual identity.",
+        },
+        image: "/media/projects/elearning-battuta-login.webp",
+        category: { id: "Portal Utama", en: "Main Portal" },
+      },
+      {
+        id: "dashboard",
+        title: {
+          id: "Dashboard Perkuliahan Dosen",
+          en: "Faculty Lecture Dashboard",
+        },
+        caption: {
+          id: "Pusat aktivitas perkuliahan: ringkasan jadwal kelas harian, status persiapan sesi pertemuan perkuliahan, dan pengingat evaluasi tugas.",
+          en: "Central teaching hub: daily lecture schedule overview, meeting session readiness tracking, and pending grading reminders.",
+        },
+        image: "/media/projects/elearning-battuta-dashboard.webp",
+        category: { id: "Dashboard", en: "Dashboard" },
+      },
+      {
+        id: "classes",
+        title: {
+          id: "Manajemen Kelas & Beban SKS Semester",
+          en: "Course Management & Semester Credit Load",
+        },
+        caption: {
+          id: "Katalog seluruh kelas yang diampu pada semester aktif tersinkronisasi dari SIAKAD, lengkap dengan filter sesi, pencarian cepat, dan monitoring peserta.",
+          en: "Complete catalog of active semester courses synced from SIAKAD, featuring session filters, quick search, and student count metrics.",
+        },
+        image: "/media/projects/elearning-battuta-classes.webp",
+        category: { id: "Kelas Saya", en: "My Classes" },
+      },
+      {
+        id: "pertemuan",
+        title: {
+          id: "Ruang Perkuliahan & Distribusi 16 Pertemuan",
+          en: "Classroom Hub & 16-Session Module Syllabus",
+        },
+        caption: {
+          id: "Struktur silabus per pertemuan (Pertemuan 1 - 16) dengan kontrol materi modul kuliah, video pembelajaran, sesi presensi, dan kuis interaktif.",
+          en: "Structured 16-session syllabus featuring lecture module controls, video materials, attendance sessions, and interactive quizzes.",
+        },
+        image: "/media/projects/elearning-battuta-pertemuan.webp",
+        category: { id: "Modul Pertemuan", en: "Courseware" },
+      },
+    ],
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Linux VPS",
+    ],
+    metrics: [
+      {
+        value: "2,000+",
+        label: { id: "Mahasiswa & Dosen", en: "Students & Faculty" },
+        description: {
+          id: "Digunakan aktif setiap semester untuk kegiatan belajar mengajar hybrid",
+          en: "Actively utilized every semester for hybrid course delivery",
+        },
+      },
+      {
+        value: "Solo Dev",
+        label: { id: "Fullstack & UI/UX", en: "Solo Fullstack" },
+        description: {
+          id: "Dikerjakan mandiri mulai dari desain UI Figma, frontend React, backend NestJS, hingga deployment server",
+          en: "Independently engineered from Figma UI design, React frontend, NestJS backend, to Linux VPS deployment",
+        },
+      },
+      {
+        value: "Realtime",
+        label: { id: "Sinkronisasi KRS", en: "KRS Timetable Sync" },
+        description: {
+          id: "Kelas dan jadwal perkuliahan terhubung langsung dengan data akademik kampus",
+          en: "Classes and course timetables seamlessly connected with academic system data",
+        },
+      },
+      {
+        value: "100%",
+        label: { id: "Paperless Assignment", en: "Paperless Assignment" },
+        description: {
+          id: "Pengumpulan tugas, pembagian materi ajar, dan rekap nilai terselenggara secara digital",
+          en: "Assignment submissions, lecture modules, and evaluation recap managed digitally",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "mahasiswa",
+        roleTitle: { id: "Untuk Mahasiswa", en: "For Students" },
+        roleBadge: { id: "Akses Mahasiswa", en: "Student Portal" },
+        summary: {
+          id: "Memberikan ruang belajar digital yang fleksibel, akses modul kuliah, pengumpulan tugas daring, dan absensi per sesi perkuliahan.",
+          en: "Provides a flexible digital learning space, module access, online assignment submissions, and per-session attendance.",
+        },
+        items: [
+          {
+            id: "m-kelas",
+            iconName: "book",
+            title: {
+              id: "Ruang Perkuliahan Virtual",
+              en: "Virtual Classroom Hub",
+            },
+            desc: {
+              id: "Akses daftar kelas aktif semester ini lengkap dengan rincian dosen pengampu, silabus, dan jadwal pertemuan.",
+              en: "Access active course lists for the semester with lecturer profiles, syllabus, and meeting schedules.",
+            },
+            tag: { id: "Perkuliahan", en: "Lectures" },
+          },
+          {
+            id: "m-materi",
+            iconName: "file-text",
+            title: {
+              id: "Modul & Bahan Ajar Terstruktur",
+              en: "Structured Learning Modules",
+            },
+            desc: {
+              id: "Unduh presentasi kuliah, modul PDF, dan rekaman materi perkuliahan per sesi pertemuan kapan saja.",
+              en: "Download lecture slides, PDF modules, and meeting resources organized session by session.",
+            },
+            tag: { id: "Materi Kuliah", en: "Courseware" },
+          },
+          {
+            id: "m-presensi",
+            iconName: "check-circle",
+            title: {
+              id: "Presensi Daring Per Pertemuan",
+              en: "Per-Session Online Attendance",
+            },
+            desc: {
+              id: "Konfirmasi kehadiran kuliah secara mandiri selama sesi absensi dibuka oleh dosen pengampu.",
+              en: "Confirm class attendance independently during open attendance windows initiated by the lecturer.",
+            },
+            tag: { id: "Kehadiran", en: "Attendance" },
+          },
+          {
+            id: "m-tugas",
+            iconName: "award",
+            title: {
+              id: "Pengumpulan Tugas & Kuis Interaktif",
+              en: "Assignment Submissions & Quizzes",
+            },
+            desc: {
+              id: "Unggah lembar tugas sebelum batas waktu dan ikuti kuis evaluasi pemahaman materi secara daring.",
+              en: "Upload homework before deadlines and participate in online comprehension evaluation quizzes.",
+            },
+            tag: { id: "Evaluasi", en: "Evaluation" },
+          },
+        ],
+      },
+      {
+        roleKey: "dosen",
+        roleTitle: { id: "Untuk Dosen", en: "For Lecturers" },
+        roleBadge: { id: "Akses Dosen", en: "Faculty Portal" },
+        summary: {
+          id: "Memfasilitasi dosen mendistribusikan bahan ajar, membuka sesi presensi, serta menilai tugas mahasiswa secara efisien dan terorganisir.",
+          en: "Empowers faculty to distribute courseware, manage attendance sessions, and evaluate student assignments efficiently.",
+        },
+        items: [
+          {
+            id: "d-materi",
+            iconName: "book",
+            title: {
+              id: "Manajemen Bahan Ajar & Sesi",
+              en: "Session & Courseware Management",
+            },
+            desc: {
+              id: "Unggah materi presentasi, referensi bacaan, dan instruksi pembelajaran untuk setiap pertemuan kuliah.",
+              en: "Upload lecture slides, reading references, and learning instructions for each class meeting.",
+            },
+            tag: { id: "Bahan Ajar", en: "Courseware" },
+          },
+          {
+            id: "d-absen",
+            iconName: "check-circle",
+            title: {
+              id: "Kontrol Presensi Kelas",
+              en: "Class Attendance Control",
+            },
+            desc: {
+              id: "Buka dan tutup sesi presensi perkuliahan dengan batas waktu tertentu serta rekap kehadiran mahasiswa.",
+              en: "Open and close attendance sessions with customizable time limits and instant presence audit.",
+            },
+            tag: { id: "Presensi", en: "Attendance" },
+          },
+          {
+            id: "d-tugas",
+            iconName: "file-text",
+            title: {
+              id: "Penugasan & Penilaian Mahasiswa",
+              en: "Assignment Grading & Review",
+            },
+            desc: {
+              id: "Buat tugas dengan rubrik penilaian, periksa berkas unggahan mahasiswa, dan berikan feedback nilai langsung.",
+              en: "Create assignments with scoring rubrics, review submitted student files, and provide direct grade feedback.",
+            },
+            tag: { id: "Penilaian", en: "Grading" },
+          },
+          {
+            id: "d-monitoring",
+            iconName: "users",
+            title: {
+              id: "Monitoring Partisipasi Belajar",
+              en: "Learning Engagement Monitoring",
+            },
+            desc: {
+              id: "Pantau tingkat keaktifan mahasiswa, statistik pengerjaan tugas, dan progress pembelajaran kelas.",
+              en: "Monitor student engagement levels, assignment completion rates, and overall class learning progress.",
+            },
+            tag: { id: "Analitik", en: "Analytics" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "materi-flow",
+        topic: { id: "Distribusi Bahan Ajar Perkuliahan", en: "Course Material Distribution" },
+        before: {
+          id: "Slide materi kuliah dan silabus dibagikan lewat grup chat WhatsApp atau flashdisk yang sering hilang dan tidak terarsipkan.",
+          en: "Lecture slides and syllabus shared via chat groups or USB drives that easily get lost without archival.",
+        },
+        after: {
+          id: "Repositori materi kuliah tertata rapi per pertemuan (Pertemuan 1 - 16), selalu dapat diunduh mahasiswa kapan saja.",
+          en: "Structured courseware repository per session (Sessions 1 - 16), permanently accessible to enrolled students anytime.",
+        },
+      },
+      {
+        id: "presensi-flow",
+        topic: { id: "Pencatatan Presensi Sesi Kelas", en: "Class Meeting Attendance Recording" },
+        before: {
+          id: "Absensi mengandalkan lembaran kertas tanda tangan manual yang menyita waktu kuliah dan rawan kecurangan.",
+          en: "Roll call relied on physical paper sign sheets that consumed class time and were prone to proxy attendance.",
+        },
+        after: {
+          id: "Presensi digital berbasis sesi dengan token/waktu validasi otomatis yang langsung tersimpan dalam database PostgreSQL.",
+          en: "Digital session-based attendance with automatic validation windows stored directly in PostgreSQL.",
+        },
+      },
+      {
+        id: "tugas-flow",
+        topic: { id: "Pengumpulan & Pemeriksaan Tugas", en: "Assignment Submissions & Grading" },
+        before: {
+          id: "Tugas dikirim via email atau cetak fisik kertas; dosen kesulitan memantau mahasiswa yang terlambat mengumpulkan.",
+          en: "Assignments submitted via email or paper prints; difficult to track late submissions and provide feedback.",
+        },
+        after: {
+          id: "Pengumpulan tugas terpusat dengan penanda waktu (timestamp) otomatis, pencegahan keterlambatan, dan lembar nilai terpadu.",
+          en: "Centralized uploads with automated timestamps, deadline enforcement, and integrated grading ledger.",
+        },
+      },
+      {
+        id: "arsip-flow",
+        topic: { id: "Evaluasi & Riwayat Pembelajaran Semester", en: "Semester Learning History & Evaluation" },
+        before: {
+          id: "Riwayat perkuliahan semester lalu hilang setelah kelas selesai tanpa dokumentasi pembelajaran yang terstruktur.",
+          en: "Previous semester learning logs vanished after courses ended without structured institutional documentation.",
+        },
+        after: {
+          id: "Arsip lengkap perkuliahan, riwayat materi, dan rekap keaktifan tersimpan aman dan terhubung dengan ekosistem kampus.",
+          en: "Comprehensive lecture logs, courseware archives, and engagement recaps securely maintained in the campus ecosystem.",
+        },
+      },
+    ],
+  },
+  {
     slug: "universitas-battuta-official-website",
     type: "web",
     acronym: "BATTUTA.AC.ID",
