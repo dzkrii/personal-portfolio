@@ -2260,6 +2260,339 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "pt-belligat-global-logistik-company-profile",
+    type: "web",
+    acronym: "BELLGLOBAL LOGISTIK",
+    title: {
+      id: "Company Profile & Portal Manajemen Kargo PT. Belligat Global Logistik",
+      en: "PT. Belligat Global Logistik Corporate Profile & Cargo Management Portal",
+    },
+    subtitle: {
+      id: "Platform Profil Korporat & Katalog Solusi Ekspedisi Logistik Kargo Berat Skala Nasional (Hingga 150+ Ton)",
+      en: "Corporate Profile & Heavy Cargo Management Platform for National-Scale Logistics (Up to 150+ Tons)",
+    },
+    category: {
+      id: "Web App · Profil Perusahaan Logistik & Ekspedisi Kargo Berat",
+      en: "Web App · Heavy Cargo Logistics & Freight Management Profile",
+    },
+    summary: {
+      id: "Platform profil perusahaan dan katalog logistik modern untuk PT. Belligat Global Logistik, perusahaan ekspedisi profesional terkemuka yang bergerak di bidang manajemen kargo berat, pengangkutan antarpulau multimoda (laut, darat, dan udara), penanganan project cargo hingga kapasitas 150+ ton, serta konsultasi kepabeanan di seluruh wilayah Indonesia.",
+      en: "A modern corporate profile and logistics catalog platform for PT. Belligat Global Logistik, an established cargo management enterprise specializing in heavy industrial freight, multimodal inter-island shipping (sea, land, air), 150+ ton project cargo execution, and customs consultation across Indonesia.",
+    },
+    overview: {
+      id: "Website korporat PT. Belligat Global Logistik dirancang untuk memperkuat kredibilitas perusahaan di mata mitra korporasi, industri manufaktur, dan kontraktor migas maupun kelapa sawit nasional. Menggunakan perpaduan warna merah industri yang tegas, tipografi elegan, dan galeri studi kasus nyata, platform ini menyajikan katalog terperinci mulai dari manajemen transportasi kargo, spesialisasi kargo bermuatan besar (heavy lift), portofolio proyek terfilter, profil tim ahli berpengalaman, hingga integrasi formulir penawaran harga cepat.",
+      en: "Engineered to elevate corporate credibility for enterprise industrial clients, palm oil manufacturers, and infrastructure contractors across Indonesia. Featuring a bold industrial aesthetic, refined typography, and authentic project case studies, the platform showcases freight management services, 150+ ton heavy-lift capabilities, filterable project archives, expert leadership profiles, and interactive quote inquiry workflows.",
+    },
+    context: {
+      id: "Sebagai perusahaan ekspedisi yang menangani kargo bernilai tinggi dan berspesifikasi khusus, PT. Belligat Global Logistik membutuhkan representasi digital bereputasi tinggi yang mampu memperlihatkan rekam jejak riil pengangkutan alat berat, kapal tongkang, serta armada ekspedisi darat secara transparan kepada calon klien B2B.",
+      en: "Handling high-value, specialized industrial cargo, PT. Belligat Global Logistik required a prestigious digital presence to showcase authentic track records of heavy equipment transport, sea barges, and heavy-haul truck fleets to B2B enterprise partners.",
+    },
+    contribution: {
+      id: "Merancang dan mengembangkan seluruh antarmuka web responsif, katalog layanan interaktif, direktori portofolio kargo dengan filter dinamis, sistem galeri dokumentasi ekspedisi proyek, serta formulir pengajuan konsultasi penawaran harga berbasis Laravel dan Tailwind CSS.",
+      en: "Designed and engineered the responsive web interface, interactive service catalog, filterable project directory, heavy equipment documentation galleries, and rapid quote inquiry pipeline using Laravel and Tailwind CSS.",
+    },
+    solution: {
+      id: "Membangun arsitektur website modern dengan navigasi responsif, tata letak kartu studi kasus proyek dengan filter kategori industri (seperti Pabrik Kelapa Sawit, Tambang, dan Infrastruktur), detail rute pengiriman, serta saluran komunikasi terintegrasi yang memudahkan klien korporat menjadwalkan konsultasi kargo.",
+      en: "Built a high-performance web architecture featuring intuitive navigation, categorized case study cards tagged by industry (Palm Oil, Mining, Infrastructure), transit route documentation, and unified client communication channels.",
+    },
+    role: {
+      id: "Fullstack Web Developer & UI/UX Designer",
+      en: "Fullstack Web Developer & UI/UX Designer",
+    },
+    period: {
+      id: "2025 - Sekarang (Aktif Digunakan)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Produksi / Website Resmi Korporat",
+      en: "Live in Production / Official Corporate Website",
+    },
+    client: {
+      id: "PT. Belligat Global Logistik",
+      en: "PT. Belligat Global Logistik",
+    },
+    liveUrl: "https://bell.technolabs.co.id",
+    image: "/media/projects/belligat-logistik-home.webp",
+    screenshots: [
+      {
+        id: "home",
+        title: {
+          id: "Beranda Korporat & Nilai Unggulan Kargo Berat",
+          en: "Corporate Homepage & Heavy Cargo Value Proposition",
+        },
+        caption: {
+          id: "Tampilan beranda utama yang menyajikan positioning perusahaan 'Smarter, Wiser, and Stronger', foto dokumentasi armada kargo berat, ringkasan kapasitas 150+ ton, dan akses cepat layanan.",
+          en: "Hero landing page presenting the corporate positioning 'Smarter, Wiser, and Stronger', heavy cargo fleet documentation, 150+ ton capacity summary, and service action prompts.",
+        },
+        image: "/media/projects/belligat-logistik-home.webp",
+        category: { id: "Beranda Utama", en: "Homepage Hero" },
+      },
+      {
+        id: "about",
+        title: {
+          id: "Profil Perusahaan & Komitmen Nilai Unggul",
+          en: "Corporate Profile, History & Core Values",
+        },
+        caption: {
+          id: "Halaman pengenalan sejarah dan profil korporat PT. Belligat Global Logistik, visi misi ekspedisi, standar keselamatan operasional, serta komitmen keandalan manajemen kargo.",
+          en: "Company introduction page highlighting PT. Belligat Global Logistik's background, vision and mission, rigorous safety standards, and operational cargo excellence.",
+        },
+        image: "/media/projects/belligat-logistik-about.webp",
+        category: { id: "Profil Perusahaan", en: "About Us" },
+      },
+      {
+        id: "services",
+        title: {
+          id: "Katalog Solusi Layanan Kargo Terintegrasi",
+          en: "Integrated Cargo Management & Logistics Catalog",
+        },
+        caption: {
+          id: "Katalog komprehensif yang menampilkan 3 pilar layanan utama: Freight Transport Management (darat, laut, udara), Project Cargo khusus alat berat, dan Freight Consultation.",
+          en: "Comprehensive services catalog showcasing 3 core pillars: Freight Transport Management (multimodal sea/air/land), heavy Project Cargo, and Freight Customs Consultation.",
+        },
+        image: "/media/projects/belligat-logistik-services.webp",
+        category: { id: "Layanan Kargo", en: "Services Catalog" },
+      },
+      {
+        id: "service-detail",
+        title: {
+          id: "Detail Layanan Spesialisasi Project Cargo 150+ Ton",
+          en: "Project Cargo Specialist Service Detail",
+        },
+        caption: {
+          id: "Laman rincian kapabilitas penanganan kargo berukuran besar (oversized) dan berbobot ekstrem hingga 150+ ton menggunakan armada khusus dan perencanaan rute matang.",
+          en: "Specialized service detail page detailing oversized and extreme heavy cargo handling up to 150+ tons with custom heavy-lift equipment and route surveys.",
+        },
+        image: "/media/projects/belligat-logistik-service-detail.webp",
+        category: { id: "Spesialisasi Kargo", en: "Project Cargo" },
+      },
+      {
+        id: "projects",
+        title: {
+          id: "Direktori Portofolio Proyek Ekspedisi Nasional",
+          en: "National Logistics Portfolio & Filterable Case Studies",
+        },
+        caption: {
+          id: "Pusat dokumentasi proyek pengiriman kargo dengan filter dinamis berdasarkan kategori industri dan tahun, memperlihatkan rekam jejak sukses ekspedisi di berbagai pulau.",
+          en: "Project showcase directory with dynamic filtering by industry category and year, demonstrating successful cargo operations across the Indonesian archipelago.",
+        },
+        image: "/media/projects/belligat-logistik-projects.webp",
+        category: { id: "Portofolio Proyek", en: "Projects Directory" },
+      },
+      {
+        id: "project-detail",
+        title: {
+          id: "Studi Kasus Pengangkutan Logistik Pabrik Kelapa Sawit",
+          en: "Industrial Case Study: Palm Oil Equipment Transport",
+        },
+        caption: {
+          id: "Dokumentasi mendalam pengangkutan tangki dan mesin boiler raksasa untuk industri kelapa sawit rute Palembang menuju Bengkulu, lengkap dengan galeri foto lapangan.",
+          en: "In-depth case study of transporting heavy industrial palm oil boilers from Palembang to Bengkulu, featuring comprehensive on-site equipment photo documentation.",
+        },
+        image: "/media/projects/belligat-logistik-project-detail.webp",
+        category: { id: "Studi Kasus", en: "Case Study" },
+      },
+      {
+        id: "team",
+        title: {
+          id: "Struktur Manajemen & Tenaga Ahli Operasional",
+          en: "Leadership Team & Logistics Operations Specialists",
+        },
+        caption: {
+          id: "Profil pimpinan dan tim profesional logistik yang berpengalaman dalam menangani kepabeanan, perizinan transportasi alat berat, dan manajemen rantai pasok.",
+          en: "Profiles of executive leadership and logistics specialists experienced in customs clearance, heavy transport permits, and supply chain management.",
+        },
+        image: "/media/projects/belligat-logistik-team.webp",
+        category: { id: "Tim Profesional", en: "Our Team" },
+      },
+      {
+        id: "contact",
+        title: {
+          id: "Formulir Permintaan Penawaran & Kontak Kantor",
+          en: "Inquiry Form, Quote Request & Office Location",
+        },
+        caption: {
+          id: "Portal kontak terintegrasi dengan formulir 'Get Quote' untuk konsultasi kebutuhan kargo, informasi kantor pusat di Deli Serdang/Medan, dan saluran bantuan responsif.",
+          en: "Integrated contact portal featuring a 'Get Quote' form for cargo consultation, headquarters location in Deli Serdang/Medan, and direct communication channels.",
+        },
+        image: "/media/projects/belligat-logistik-contact.webp",
+        category: { id: "Kontak & Penawaran", en: "Contact & Quote" },
+      },
+    ],
+    techStack: [
+      "Laravel",
+      "PHP",
+      "Tailwind CSS",
+      "Vite",
+      "JavaScript",
+      "B2B Lead Generation",
+      "Responsive UI/UX",
+      "Linux VPS",
+      "Cloudflare Protected",
+    ],
+    metrics: [
+      {
+        value: "150+ Ton",
+        label: { id: "Kapasitas Kargo", en: "Max Cargo Capacity" },
+        description: {
+          id: "Kemampuan penanganan kargo berat dan mesin industri berskala besar",
+          en: "Handling heavy oversized cargo and large-scale industrial machinery",
+        },
+      },
+      {
+        value: "5+ Tahun",
+        label: { id: "Pengalaman Industri", en: "Industry Experience" },
+        description: {
+          id: "Rekam jejak keandalan operasional ekspedisi darat, laut, dan udara",
+          en: "Proven operational track record across land, sea, and air logistics",
+        },
+      },
+      {
+        value: "50+ Proyek",
+        label: { id: "Proyek Selesai", en: "Projects Completed" },
+        description: {
+          id: "Penyelesaian pengangkutan kargo lintas provinsi dan antarpulau di Indonesia",
+          en: "Successful delivery of complex cargo shipments across Indonesia",
+        },
+      },
+      {
+        value: "24/7",
+        label: { id: "Layanan Konsultasi", en: "Consultation Support" },
+        description: {
+          id: "Dukungan komunikasi responsif untuk perencanaan logistik & kepabeanan",
+          en: "Responsive communication for route planning and customs advisory",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "klien",
+        roleTitle: { id: "Untuk Klien Korporasi & Industri", en: "For Enterprise & Industrial Clients" },
+        roleBadge: { id: "Klien B2B", en: "B2B Partners" },
+        summary: {
+          id: "Memberikan kemudahan bagi pimpinan proyek dan manajer logistik korporat untuk memverifikasi kapabilitas kargo, meninjau rekam jejak proyek sejenis, dan mengajukan permintaan penawaran secara cepat.",
+          en: "Empowers corporate project heads and logistics managers to verify cargo capabilities, audit peer case studies, and submit rapid quote requests.",
+        },
+        items: [
+          {
+            id: "c-heavy",
+            iconName: "shield",
+            title: {
+              id: "Verifikasi Kapabilitas Kargo Berat (150+ Ton)",
+              en: "Heavy Cargo Capability Audit (150+ Tons)",
+            },
+            desc: {
+              id: "Meninjau kesiapan armada alat berat, kapal tongkang, dan perizinan jalan untuk muatan over-dimension dan over-weight.",
+              en: "Review heavy-haul equipment, barge readiness, and transit permits for over-dimension and over-weight loads.",
+            },
+            tag: { id: "Tervalidasi", en: "Verified" },
+          },
+          {
+            id: "c-portfolio",
+            iconName: "globe",
+            title: {
+              id: "Eksplorasi Rekam Jejak Proyek Riil",
+              en: "Authentic Project Case Study Directory",
+            },
+            desc: {
+              id: "Melihat portofolio pengiriman terdahulu berdasarkan industri (seperti sawit, pertambangan, dan manufaktur) beserta foto dokumentasi lapangan.",
+              en: "Explore historical shipments categorized by industry (palm oil, mining, manufacturing) complete with on-site photos.",
+            },
+            tag: { id: "Transparan", en: "Transparent" },
+          },
+          {
+            id: "c-quote",
+            iconName: "check-circle",
+            title: {
+              id: "Permintaan Penawaran Cepat (Get Quote)",
+              en: "Rapid Online Quote Request",
+            },
+            desc: {
+              id: "Formulir interaktif terstruktur untuk mendeskripsikan dimensi muatan, rute tujuan, dan estimasi waktu pelaksanaan proyek.",
+              en: "Structured inquiry form specifying cargo dimensions, destination routes, and project execution timelines.",
+            },
+            tag: { id: "Praktis", en: "Effortless" },
+          },
+        ],
+      },
+      {
+        roleKey: "operasional",
+        roleTitle: { id: "Untuk Manajemen Korporat & Pemasaran", en: "For Corporate Management & Marketing" },
+        roleBadge: { id: "Manajemen Logistik", en: "Logistics Management" },
+        summary: {
+          id: "Menjadikan website sebagai aset representasi bisnis utama yang memperkuat citra profesional PT. Belligat Global Logistik saat proses tender dan negosiasi kontrak korporat.",
+          en: "Establishes the website as a prime corporate asset reinforcing PT. Belligat Global Logistik's professional standing during corporate contract bidding.",
+        },
+        items: [
+          {
+            id: "m-branding",
+            iconName: "award",
+            title: {
+              id: "Branding Korporat Tingkat Tinggi",
+              en: "High-Credibility Corporate Branding",
+            },
+            desc: {
+              id: "Membangun kepercayaan klien B2B melalui desain yang kokoh, berwibawa, dan menonjolkan standar keselamatan bersertifikasi.",
+              en: "Fosters B2B client trust with robust industrial design emphasizing certified occupational safety standards.",
+            },
+            tag: { id: "Kredibel", en: "Credible" },
+          },
+          {
+            id: "m-lead",
+            iconName: "sparkles",
+            title: {
+              id: "Akuisisi Prospek Bisnis B2B",
+              en: "Inbound B2B Lead Generation",
+            },
+            desc: {
+              id: "Menyalurkan pertanyaan dan calon klien potensial langsung ke tim pemasaran melalui integrasi formulir dan kontak kantor.",
+              en: "Channels high-intent client inquiries directly to sales engineers through integrated inquiry forms and direct lines.",
+            },
+            tag: { id: "Konversi Tinggi", en: "High Conversion" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "kredibilitas-flow",
+        topic: { id: "Representasi Kredibilitas Perusahaan", en: "Corporate Credibility Presentation" },
+        before: {
+          id: "Mengandalkan profil cetak konvensional atau PDF statis yang terbatas dalam memuat dokumentasi visual armada kargo berat.",
+          en: "Relied on conventional printed company profiles or static PDFs that lacked dynamic visual proof of heavy cargo fleets.",
+        },
+        after: {
+          id: "Platform website modern dengan estetika industri elegan yang dapat diakses oleh mitra korporat di seluruh dunia selama 24/7.",
+          en: "Modern web platform with a refined industrial aesthetic accessible to corporate partners worldwide 24/7.",
+        },
+      },
+      {
+        id: "portofolio-flow",
+        topic: { id: "Visibilitas Rekam Jejak Pengiriman Kargo", en: "Shipment Track Record Visibility" },
+        before: {
+          id: "Calon klien sulit meninjau dokumentasi proyek sebelumnya karena arsip foto terpisah-pisah dan tidak terorganisir.",
+          en: "Prospective clients struggled to inspect previous project records due to fragmented and unorganized photo archives.",
+        },
+        after: {
+          id: "Direktori portofolio terstruktur dengan filter kategori, detail rute asal-tujuan, dan galeri foto penanganan kargo riil.",
+          en: "Structured portfolio directory with category filters, origin-destination route details, and genuine handling photo galleries.",
+        },
+      },
+      {
+        id: "inquiry-flow",
+        topic: { id: "Kecepatan Pengajuan Penawaran Harga", en: "Quote Inquiry Speed & Convenience" },
+        before: {
+          id: "Proses permintaan estimasi biaya pengiriman kargo lambat dan memerlukan korespondensi berulang tanpa data spesifikasi terstruktur.",
+          en: "Cargo freight estimation requests were sluggish, requiring back-and-forth correspondence lacking structured specs.",
+        },
+        after: {
+          id: "Formulir 'Get Quote' digital yang efisien, memudahkan calon klien mengirimkan parameter muatan dan rute langsung ke tim sales.",
+          en: "Streamlined digital 'Get Quote' form allowing clients to submit cargo parameters and routes directly to the sales team.",
+        },
+      },
+    ],
+  },
 ];
 
 
