@@ -73,18 +73,6 @@ const pageDescription = project.summary[locale];
       <p class="project-detail-subtitle">
         {project.subtitle[locale]}
       </p>
-
-      {/* Impact Metrics Ribbon */}
-      <div class="project-metrics-ribbon" aria-label={t.keyMetrics}>
-        {
-          project.metrics.map((metric) => (
-            <div class="metric-ribbon-item">
-              <strong class="metric-ribbon-value">{metric.value}</strong>
-              <span class="metric-ribbon-label">{metric.label[locale]}</span>
-            </div>
-          ))
-        }
-      </div>
     </header>
 
     {/* 3. Interactive Multi-Screen Showcase Stage */}
