@@ -27,7 +27,10 @@ export const siteConfig = {
       recommended: "1600 x 1000 px, WebP atau AVIF",
     },
     resume: {
-      src: null as string | null,
+      src: {
+        id: "/media/cv/cv-fatahul-ahmad-dzikri-id.pdf",
+        en: "/media/cv/cv-fatahul-ahmad-dzikri-en.pdf",
+      } as LocalizedText,
       recommended: "PDF, maksimal 5 MB",
     },
   },

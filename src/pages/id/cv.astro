@@ -1,12 +1,11 @@
 ---
-import { ArrowDownToLine } from "lucide-react";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BrutalButton from "../../components/ui/BrutalButton.astro";
-import { pageMeta, siteConfig } from "../../data/site";
+import CvViewer from "../../components/islands/CvViewer";
+import { messages, pageMeta } from "../../data/site";
 
 const locale = "id" as const;
 const meta = pageMeta.cv;
-const resumeSrc = siteConfig.media.resume.src;
+const t = messages[locale];
 ---
 
 <BaseLayout
@@ -17,46 +16,14 @@ const resumeSrc = siteConfig.media.resume.src;
   <div class="cv-page">
     <header class="cv-header">
       <div class="section-badge-title">
-        <h1 class="section-badge-title__text">Curriculum Vitae</h1>
+        <h1 class="section-badge-title__text">{t.cvTitle}</h1>
       </div>
     </header>
 
-    {
-      resumeSrc ? (
-        <section class="cv-viewer">
-          <div class="cv-viewer__toolbar">
-            <p>Dokumen CV</p>
-            <a
-              class="brutal-button brutal-button--primary"
-              href={resumeSrc}
-              download
-            >
-              Unduh CV
-              <ArrowDownToLine aria-hidden="true" size={18} />
-            </a>
-          </div>
-          <iframe
-            class="cv-viewer__frame"
-            src={`${resumeSrc}#toolbar=0`}
-            title="Pratinjau CV Fatahul Ahmad Dzikri"
-          />
-        </section>
-      ) : (
-        <section class="empty-state" aria-live="polite">
-          <div class="empty-state__index">PDF</div>
-          <div>
-            <p class="eyebrow">Siap untuk konten</p>
-            <h2>CV sedang dipersiapkan.</h2>
-            <p>
-              Area pratinjau dan tombol unduh akan aktif setelah berkas PDF final ditambahkan.
-            </p>
-            <BrutalButton aria-disabled="true" href="" tabindex={-1}>
-              Unduh CV
-              <ArrowDownToLine aria-hidden="true" size={18} />
-            </BrutalButton>
-          </div>
-        </section>
-      )
-    }
+    <p class="cv-intro-text">
+      {t.cvSubtitle}
+    </p>
+
+    <CvViewer client:load initialLocale={locale} />
   </div>
 </BaseLayout>
