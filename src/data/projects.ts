@@ -96,6 +96,388 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "pesantren-kitabina-wakaf-inventory-system",
+    type: "web",
+    acronym: "WAKAF KITABINA",
+    title: {
+      id: "Sistem Manajemen Inventaris & Transparansi Aset Wakaf Kitabina",
+      en: "Kitabina Waqf Asset Transparency & Inventory Management System",
+    },
+    subtitle: {
+      id: "Platform Tata Kelola Aset Wakaf Terpadu (Audit Fisik QR Code, Etalase Publik, Rekonsiliasi Sarpras, & Tiket Pemeliharaan)",
+      en: "Integrated Waqf Governance Platform (QR Physical Audit, Public Showcase, Facility Reconciliation, & Maintenance Ticketing)",
+    },
+    category: {
+      id: "Fullstack Web App · Sistem Tata Kelola Wakaf & Sarpras",
+      en: "Fullstack Web App · Waqf & Asset ERP",
+    },
+    summary: {
+      id: "Platform inventaris dan tata kelola aset wakaf digital yang menjembatani akuntabilitas publik dan efisiensi operasional internal Pondok Pesantren Tahfidz Kitabina: mulai dari pendataan aset tanah & sarpras, penandaan QR Code per unit, audit fisik berkala, hingga dashboard transparansi terbuka bagi wakif dan kaum muslimin.",
+      en: "Digital waqf and inventory management platform bridging public accountability and internal operational efficiency for Pondok Pesantren Tahfidz Kitabina: spanning land & facility cataloging, per-unit QR Code tagging, periodic physical audits, and an open transparency dashboard for donors and the broader community.",
+    },
+    overview: {
+      id: "Inventaris Kitabina dibangun untuk menghadirkan akuntabilitas nyata dalam pengelolaan amanah wakaf pesantren. Sistem ini memisahkan secara ketat data publik yang aman ditampilkan (total aset, lokasi cabang, progres sarpras) dengan dokumen legalitas dan data donatur yang terlindungi, didukung sistem audit QR Code mobile di lapangan untuk memastikan setiap aset terlacak dan produktif.",
+      en: "Kitabina Inventory was engineered to bring genuine accountability to pesantren waqf stewardship. The system strictly segregates safe public disclosures (asset metrics, campus locations, facility progress) from protected legal archives and donor privacy, reinforced by mobile QR Code field auditing to ensure every physical asset remains accounted for and productive.",
+    },
+    context: {
+      id: "Pondok Pesantren Tahfidz Kitabina mengelola puluhan sarana prasarana serta tanah wakaf yang tersebar di beberapa cabang kampus. Sebelumnya, pelaporan aset dilakukan secara sporadis dan minim transparansi ke publik, sehingga dibutuhkan sistem digital terverifikasi yang aman, mudah diakses masyarakat, sekaligus memudahkan petugas sarpras melakukan inventarisasi fisik di lapangan.",
+      en: "Pondok Pesantren Tahfidz Kitabina stewards substantial educational facilities and waqf lands across multiple campus branches. Previously, inventory recording was sporadic and lacked a public transparency window. The foundation required a verified digital platform that provides open accountability to donors while equipping facility staff with mobile physical audit tools.",
+    },
+    contribution: {
+      id: "Merancang arsitektur sistem dari awal: desain UI/UX bertema identitas hijau pesantren, pengembangan backend dengan validasi ketat, implementasi sistem pemindai QR Code untuk audit fisik, pemisahan hak akses multi-role (Admin Sarpras, Staf Lapangan, Publik), hingga konfigurasi proteksi Cloudflare dan deployment server.",
+      en: "Architected the full system end-to-end: crafted the Islamic-institutional UI/UX design system, engineered the backend architecture, integrated the in-browser QR Code scanner for physical audits, built strict multi-role permission boundaries (Facility Admin, Field Staff, Public), and handled server deployment with Cloudflare security.",
+    },
+    solution: {
+      id: "Menyediakan arsitektur Dual-Layer: etalase publik yang menampilkan katalog aset terverifikasi dan dashboard transparansi tanpa memerlukan autentikasi, serta portal internal aman ber-QR Code untuk mencetak label aset, menerbitkan tiket perbaikan kerusakan sarpras, dan merekam audit berkala.",
+      en: "Delivered a Dual-Layer architecture: a public-facing transparency portal displaying verified asset catalogs and foundation metrics without login hurdles, coupled with a secure internal portal with QR Code engines for label generation, maintenance ticketing, and routine physical audit logging.",
+    },
+    role: {
+      id: "Fullstack Web Developer & UI/UX Designer (Solo Project)",
+      en: "Fullstack Web Developer & UI/UX Designer (Solo Project)",
+    },
+    period: {
+      id: "2025 - Sekarang (Live)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Yayasan / Digunakan Aktif",
+      en: "Live in Foundation / Daily Active Use",
+    },
+    client: {
+      id: "Pondok Pesantren Tahfidz Kitabina",
+      en: "Kitabina Tahfidz Islamic Boarding School",
+    },
+    liveUrl: "https://wakaf.kitabina.org",
+    image: "/media/projects/wakaf-kitabina-hero.webp",
+    screenshots: [
+      {
+        id: "beranda",
+        title: {
+          id: "Beranda & Indikator Transparansi Publik",
+          en: "Public Transparency & Verified Asset Gateway",
+        },
+        caption: {
+          id: "Landing page modern dengan prinsip 'Membangun Kepercayaan Melalui Transparansi', dilengkapi statistik agregat real-time aset wakaf dan total wakif terdaftar.",
+          en: "Modern landing portal built around 'Building Trust Through Transparency', showcasing real-time aggregate waqf asset counters and verified donor metrics.",
+        },
+        image: "/media/projects/wakaf-kitabina-hero.webp",
+        category: { id: "Beranda Utama", en: "Main Landing" },
+      },
+      {
+        id: "transparansi",
+        title: {
+          id: "Matriks Transparansi vs Perlindungan Data",
+          en: "Transparency vs Data Protection Matrix",
+        },
+        caption: {
+          id: "Pemisahan tegas antara informasi aman publik (total unit, luas tanah, kondisi barang) dengan data sensitif terlindungi (arsip ikrar wakaf, nomor legalitas, kontak pribadi wakif).",
+          en: "Rigorous segregation between safe public information (asset counts, land area, condition overview) and strictly confidential internal records (original waqf pledges, legal archives, personal donor privacy).",
+        },
+        image: "/media/projects/wakaf-kitabina-transparansi.webp",
+        category: { id: "Transparansi", en: "Transparency" },
+      },
+      {
+        id: "alur",
+        title: {
+          id: "Alur Siklus 4-Tahap Tata Kelola Aset",
+          en: "4-Stage Asset Stewardship Lifecycle",
+        },
+        caption: {
+          id: "Visualisasi tata kelola sarpras: dari pencatatan kode unik, penempelan QR code fisik, audit berkala lapangan, hingga penyajian ringkasan publik terverifikasi.",
+          en: "Facility workflow visualization: from standardized unique coding, physical QR label tagging, periodic on-site audits, to verified public transparency summaries.",
+        },
+        image: "/media/projects/wakaf-kitabina-alur.webp",
+        category: { id: "Alur Sistem", en: "Workflow" },
+      },
+      {
+        id: "aset",
+        title: {
+          id: "Katalog & Pencarian Aset Wakaf Terbuka",
+          en: "Public Waqf Asset Catalog & Multi-Filter",
+        },
+        caption: {
+          id: "Etalase direktori aset yang layak dipublikasikan dengan sistem filter kategori, lokasi cabang kampus, dan kondisi sarpras guna menjaga akuntabilitas kepada umat.",
+          en: "Open public asset directory featuring category filtering, campus location breakdowns, and condition statuses to reinforce public accountability.",
+        },
+        image: "/media/projects/wakaf-kitabina-aset.webp",
+        category: { id: "Etalase Publik", en: "Asset Catalog" },
+      },
+      {
+        id: "login",
+        title: {
+          id: "Portal Akses Internal Multi-Role",
+          en: "Multi-Role Internal Governance Portal",
+        },
+        caption: {
+          id: "Gerbang autentikasi staf internal dan pengurus pesantren dengan split-screen layout bertema forest green dan tautan cepat kembali ke portal publik.",
+          en: "Authentication gateway for foundation staff and facility managers featuring a split-screen forest green aesthetic and rapid public navigation switch.",
+        },
+        image: "/media/projects/wakaf-kitabina-login.webp",
+        category: { id: "Portal Internal", en: "Internal Auth" },
+      },
+      {
+        id: "lokasi",
+        title: {
+          id: "Direktori Titik Cabang & Fasilitas Pesantren",
+          en: "Campus Branches & Facilities Directory",
+        },
+        caption: {
+          id: "Pemetaan seluruh kampus Ma'had Tahfidz Kitabina (Gaperta Medan, Setia Budi, dan Stabat) untuk verifikasi keberadaan fisik fasilitas oleh donatur.",
+          en: "Mapping of all Kitabina Tahfidz campuses (Gaperta Medan, Setia Budi, and Stabat) enabling donors and the community to verify physical campus locations.",
+        },
+        image: "/media/projects/wakaf-kitabina-lokasi.webp",
+        category: { id: "Cabang Pesantren", en: "Campuses" },
+      },
+      {
+        id: "scan-qr",
+        title: {
+          id: "Pemindai QR Code Lapangan Terintegrasi",
+          en: "Integrated Mobile QR Code Asset Scanner",
+        },
+        caption: {
+          id: "Fitur pemindai kamera instan langsung dari peramban untuk memudahkan petugas mengidentifikasi aset di tempat, mengecek riwayat, dan membuat laporan kerusakan.",
+          en: "In-browser camera QR scanner enabling field personnel to instantly identify physical assets, inspect history, and issue maintenance repair tickets.",
+        },
+        image: "/media/projects/wakaf-kitabina-scan-qr.webp",
+        category: { id: "Audit QR", en: "QR Scanner" },
+      },
+      {
+        id: "wakaf",
+        title: {
+          id: "Kanal Donasi & Program Wakaf Produktif",
+          en: "Official Waqf Program & Donation Channels",
+        },
+        caption: {
+          id: "Informasi resmi penyaluran wakaf dengan nomor rekening yayasan terverifikasi (BSI & BRI) atas nama Yayasan Fadhilatul Quran Aceh.",
+          en: "Official donation channels for waqf contributions with verified foundation bank accounts (BSI & BRI) under Yayasan Fadhilatul Quran Aceh.",
+        },
+        image: "/media/projects/wakaf-kitabina-program.webp",
+        category: { id: "Program Wakaf", en: "Donation Channels" },
+      },
+    ],
+    techStack: [
+      "Laravel",
+      "PHP",
+      "Tailwind CSS",
+      "Alpine.js",
+      "Vite",
+      "MySQL",
+      "QR Code Engine",
+      "Cloudflare",
+    ],
+    metrics: [
+      {
+        value: "3 Cabang",
+        label: { id: "Kampus Terintegrasi", en: "Connected Campuses" },
+        description: {
+          id: "Mencakup fasilitas Ma'had Tahfidz Kitabina di Gaperta, Setia Budi, dan Stabat",
+          en: "Encompasses Kitabina facilities across Gaperta, Setia Budi, and Stabat locations",
+        },
+      },
+      {
+        value: "100%",
+        label: { id: "QR Code Physical Audit", en: "QR Physical Audit" },
+        description: {
+          id: "Setiap barang dan sarana diberi kodefikasi unik untuk verifikasi lapangan",
+          en: "Every piece of equipment is tagged with unique QR codes for field verification",
+        },
+      },
+      {
+        value: "Dual-Layer",
+        label: { id: "Transparansi & Privasi", en: "Transparency & Privacy" },
+        description: {
+          id: "Pemisahan ketat agregat data publik dan arsip legalitas internal",
+          en: "Strict segregation between public transparency metrics and sensitive legal archives",
+        },
+      },
+      {
+        value: "Realtime",
+        label: { id: "Audit & Pelaporan", en: "Realtime Audit & Logs" },
+        description: {
+          id: "Laporan kerusakan dan tiket perbaikan sarpras terpantau langsung oleh pimpinan",
+          en: "Damage incident reports and repair tickets are monitored in real-time by leadership",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "pengurus",
+        roleTitle: { id: "Untuk Pengurus & Staf Sarpras", en: "For Facility Staff & Admins" },
+        roleBadge: { id: "Manajemen Internal", en: "Internal Ops" },
+        summary: {
+          id: "Mempermudah pendataan aset fisik, pencetakan label QR code, penanganan tiket kerusakan, dan pencatatan riwayat pemeliharaan secara terstruktur.",
+          en: "Streamlines physical asset registration, automated QR label generation, maintenance ticket processing, and service history tracking.",
+        },
+        items: [
+          {
+            id: "w-qr",
+            iconName: "check-circle",
+            title: {
+              id: "Labeling QR Code Fisik Otomatis",
+              en: "Automated Physical QR Code Labeling",
+            },
+            desc: {
+              id: "Generate stiker QR Code unik per unit aset yang dapat langsung dicetak dan ditempel pada inventaris sarpras.",
+              en: "Generates unique QR Code asset labels ready for direct printing and physical adhesion onto school equipment.",
+            },
+            tag: { id: "Presisi & Cepat", en: "Precise & Fast" },
+          },
+          {
+            id: "w-tiket",
+            iconName: "settings",
+            title: {
+              id: "Tiket Pelaporan & Perbaikan Kerusakan",
+              en: "Damage Incident & Repair Ticketing",
+            },
+            desc: {
+              id: "Staf dan guru dapat melaporkan kerusakan sarana prasarana dengan foto bukti dan melacak progres perbaikannya.",
+              en: "Teachers and staff can submit repair requests with photo evidence and monitor restoration progress.",
+            },
+            tag: { id: "Terjadwal", en: "Scheduled" },
+          },
+          {
+            id: "w-ekspor",
+            iconName: "file-text",
+            title: {
+              id: "Ekspor Rekap Laporan PDF & Excel",
+              en: "Automated PDF & Excel Reporting",
+            },
+            desc: {
+              id: "Mencetak buku induk inventaris sarpras dan laporan berkala aset wakaf untuk rapat pertanggungjawaban yayasan.",
+              en: "Exports master inventory ledgers and periodic asset reports for official board accountability meetings.",
+            },
+            tag: { id: "Siap Cetak", en: "Print Ready" },
+          },
+        ],
+      },
+      {
+        roleKey: "wakif",
+        roleTitle: { id: "Untuk Wakif, Donatur & Publik", en: "For Donors, Waqifs & Community" },
+        roleBadge: { id: "Akses Terbuka", en: "Open Access" },
+        summary: {
+          id: "Membuka jendela transparansi agar masyarakat dan para wakif dapat memantau keberadaan, pemanfaatan, dan kondisi sarana wakaf secara terbuka.",
+          en: "Opens a transparency window so donors and community members can review the status, utilization, and health of waqf assets openly.",
+        },
+        items: [
+          {
+            id: "w-dashboard",
+            iconName: "globe",
+            title: {
+              id: "Dashboard Akuntabilitas Publik",
+              en: "Open Public Accountability Dashboard",
+            },
+            desc: {
+              id: "Akses tanpa login untuk melihat statistik total aset wakaf, nilai sarpras, dan pemanfaatannya bagi para santri tahfidz.",
+              en: "Open dashboard accessible without credentials displaying total waqf counts and facility benefits for tahfidz students.",
+            },
+            tag: { id: "Akses Bebas", en: "Open Access" },
+          },
+          {
+            id: "w-lokasi",
+            iconName: "compass",
+            title: {
+              id: "Verifikasi Lokasi & Fasilitas Cabang",
+              en: "Branch Location & Facility Verification",
+            },
+            desc: {
+              id: "Menampilkan alamat jelas dan peta fasilitas kampus Kitabina di Gaperta, Setia Budi, dan Stabat.",
+              en: "Displays clear addresses and physical maps of Kitabina campus facilities across Gaperta, Setia Budi, and Stabat.",
+            },
+            tag: { id: "Terverifikasi", en: "Verified" },
+          },
+          {
+            id: "w-donasi",
+            iconName: "credit-card",
+            title: {
+              id: "Kanal Rekening Resmi Wakaf Yayasan",
+              en: "Verified Foundation Waqf Channels",
+            },
+            desc: {
+              id: "Penyaluran wakaf langsung ke rekening resmi yayasan yang terverifikasi (BSI & BRI) demi menjaga keamanan transaksi umat.",
+              en: "Direct waqf contributions routed exclusively to verified foundation bank accounts ensuring transactional integrity.",
+            },
+            tag: { id: "Amanah", en: "Trusted" },
+          },
+        ],
+      },
+      {
+        roleKey: "pimpinan",
+        roleTitle: { id: "Untuk Pimpinan Yayasan & Auditor", en: "For Foundation Leadership & Auditors" },
+        roleBadge: { id: "Pimpinan & Audit", en: "Executive Audit" },
+        summary: {
+          id: "Menghadirkan kendali penuh atas valuasi aset, hasil audit fisik lapangan, serta kepatuhan perlindungan data amanah wakaf.",
+          en: "Provides comprehensive oversight of asset valuations, on-site physical audit reconciliation, and compliance data governance.",
+        },
+        items: [
+          {
+            id: "w-audit",
+            iconName: "shield",
+            title: {
+              id: "Rekonsiliasi Hasil Audit Fisik Lapangan",
+              en: "Physical Field Audit Reconciliation",
+            },
+            desc: {
+              id: "Melihat aset yang terdata lengkap, barang yang berpindah ruangan, serta sarana yang memerlukan pergantian atau perbaikan.",
+              en: "Monitors verified assets, relocated equipment, and facilities earmarked for maintenance or replacement.",
+            },
+            tag: { id: "Akurat", en: "Accurate" },
+          },
+          {
+            id: "w-privasi",
+            iconName: "shield",
+            title: {
+              id: "Enkripsi & Proteksi Berkas Legalitas",
+              en: "Encrypted Legal Deed Protection",
+            },
+            desc: {
+              id: "Menyimpan akta ikrar wakaf (AIW) dan sertifikat tanah secara aman di ruang privat tanpa risiko terekspos ke publik.",
+              en: "Stores waqf pledge deeds and land title deeds securely in encrypted private tiers inaccessible to public scrapers.",
+            },
+            tag: { id: "Zero Leak", en: "Zero Leak" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "pencatatan",
+        topic: { id: "Pencatatan & Identifikasi Sarpras", en: "Inventory Tracking & Tagging" },
+        before: {
+          id: "Pencatatan manual di buku besar atau file spreadsheet terpisah tanpa penanda fisik pada barang sehingga rentan tertukar atau hilang.",
+          en: "Manual ledger notes and fragmented spreadsheets without physical labels, resulting in lost items and inaccurate inventories.",
+        },
+        after: {
+          id: "Setiap barang memiliki kode unik dan stiker QR Code fisik yang dapat dipindai langsung dengan kamera smartphone untuk inspeksi cepat.",
+          en: "Every physical asset is assigned a unique code and physical QR Code sticker scannable via smartphone camera for instant audits.",
+        },
+      },
+      {
+        id: "transparansi",
+        topic: { id: "Akuntabilitas Kepada Wakif & Umat", en: "Public & Donor Accountability" },
+        before: {
+          id: "Para wakif dan masyarakat luas kesulitan mengetahui wujud dan perkembangan sarana yang telah diwakafkan ke pesantren.",
+          en: "Donors and the broader community faced opacity regarding how their waqf contributions were physically manifested and utilized.",
+        },
+        after: {
+          id: "Dashboard transparansi terbuka 24/7 menampilkan data aset terverifikasi dan lokasi cabang pesantren secara transparan dan terpercaya.",
+          en: "A 24/7 open transparency portal exhibits verified asset summaries and campus facilities with pristine clarity.",
+        },
+      },
+      {
+        id: "perawatan",
+        topic: { id: "Penanganan Kerusakan Sarana", en: "Facility Maintenance Handling" },
+        before: {
+          id: "Keluhan fasilitas rusak disampaikan secara verbal dan sering terlambat diperbaiki karena tidak ada tracking status penanganan.",
+          en: "Damage was reported verbally and repairs frequently lagged due to nonexistent status tracking or accountability.",
+        },
+        after: {
+          id: "Sistem tiket terpusat memungkinkan pelaporan kerusakan berbasis QR Code dengan dokumentasi foto dan status perbaikan yang terpantau.",
+          en: "Centralized ticketing system enables QR-based damage submissions with photos and live status tracking until resolution.",
+        },
+      },
+    ],
+  },
+  {
     slug: "universitas-battuta-academic-system",
     type: "web",
     acronym: "SIAKAD BATTUTA",
