@@ -2593,6 +2593,338 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "protype-battuta-typing-race-platform",
+    type: "web",
+    acronym: "PROTYPE BATTUTA",
+    title: {
+      id: "Platform Balap Mengetik Realtime Multiplayer (ProType) Universitas Battuta",
+      en: "Universitas Battuta Real-Time Multiplayer Typing Race Platform (ProType)",
+    },
+    subtitle: {
+      id: "Platform Kompetisi Mengetik Daring Realtime (Sinkronisasi WebSocket Sub-Milidetik, Kamus Bahasa Indonesia, Deteksi Typo Instan & Papan Peringkat Podium)",
+      en: "Real-Time Online Typing Race Platform (Sub-Millisecond WebSocket Sync, Indonesian Corpus, Instant Typo Detection & Live Podium Standings)",
+    },
+    category: {
+      id: "Fullstack Web App · Platform Game Edukasi & Kompetisi Realtime",
+      en: "Fullstack Web App · Real-Time Educational Gaming Platform",
+    },
+    summary: {
+      id: "Platform balap mengetik daring multipemain (multiplayer typing race) yang dikembangkan untuk sivitas akademika Universitas Battuta dan komunitas teknologi Proasta. Memadukan kecepatan sinkronisasi state via WebSockets, algoritma deteksi typo instan, korpus bahasa Indonesia yang variatif, serta kalkulasi WPM (Words Per Minute) dan akurasi presisi dalam antarmuka futuristik bertema dark-tech neon.",
+      en: "Real-time multiplayer typing race platform engineered for Universitas Battuta students and the Proasta tech community. Blends sub-millisecond WebSocket state synchronization, instant typo detection algorithms, rich Indonesian language corpus streams, and precision WPM & accuracy metrics wrapped in a sleek cyberpunk dark-tech aesthetic.",
+    },
+    overview: {
+      id: "ProType Battuta merupakan arena balap mengetik cepat berbasis web yang menggabungkan kompetisi interaktif dengan teknologi sinkronisasi data real-time. Dibangun menggunakan Next.js dengan Turbopack dan Tailwind CSS, platform ini menyediakan room multiplayer instan berbasis kode 6 digit, visualisasi progress balapan langsung antar pemain, validasi keystroke karakter demi karakter, dan layar podium hasil balapan dengan statistik performa lengkap.",
+      en: "ProType Battuta is an interactive web-based speed typing arena uniting competitive gaming with real-time data synchronization. Engineered with Next.js, Turbopack, and Tailwind CSS, it offers instant 6-character room code matchmaking, live multiplayer progress tracking, strict character-by-character keystroke validation, and a championship podium screen with comprehensive performance analytics.",
+    },
+    context: {
+      id: "Pengembangan keterampilan mengetik 10 jari bagi mahasiswa teknologi seringkali terasa monoton jika hanya menggunakan tes teks statis biasa. Diperlukan platform interaktif yang memicu adrenalin kompetitif, ramah latensi, dan menggunakan teks bahasa Indonesia yang kontekstual.",
+      en: "Mastering 10-finger typing speed often feels repetitive with conventional static tests. Students and developer communities needed a fast-paced, competitive, low-latency multiplayer race platform utilizing rich contextual Indonesian texts.",
+    },
+    contribution: {
+      id: "Bertindak sebagai Lead Fullstack Developer dan UI/UX Designer secara mandiri (Solo Project). Merancang arsitektur sinkronisasi WebSocket untuk multi-peserta, mendesain antarmuka bertema gelap neon cyan/emerald dengan kontras tinggi, menyusun korpus teks bahasa Indonesia, dan mengimplementasikan engine kalkulasi WPM serta akurasi real-time.",
+      en: "Served as solo Lead Fullstack Developer and UI/UX Designer. Architected low-latency WebSocket multi-client synchronization, crafted high-contrast neon cyan/emerald dark-tech UI, curated Indonesian text corpora, and implemented real-time keystroke accuracy and WPM calculation algorithms.",
+    },
+    solution: {
+      id: "Membangun web app modern dengan Next.js yang membagi alur permainan menjadi 4 fase mulus: pembuatan/pencarian room via kode unik, lobi sinkronisasi peserta bersama Host, arena balap dengan highlight teks interaktif dan peringatan typo instan, serta selebrasi podium dengan rincian kata per menit dan akurasi.",
+      en: "Engineered a responsive Next.js application structured around 4 seamless game states: 6-character room matchmaking, synchronized lobby with host controls, live typing arena with inline typo alerts, and a podium celebration screen detailing net WPM and accuracy scores.",
+    },
+    role: {
+      id: "Lead Fullstack Developer & UI/UX Designer (Solo Project)",
+      en: "Lead Fullstack Developer & UI/UX Designer (Solo Project)",
+    },
+    period: {
+      id: "2025 - Sekarang (Aktif Digunakan)",
+      en: "2025 - Present (Live in Production)",
+    },
+    status: {
+      id: "Live di Internet / Platform Aktif",
+      en: "Live in Production / Active Platform",
+    },
+    client: {
+      id: "Universitas Battuta (Proasta)",
+      en: "Universitas Battuta (Proasta)",
+    },
+    liveUrl: "https://protype.proasta.battuta.ac.id",
+    image: "/media/projects/protype-battuta-home.webp",
+    screenshots: [
+      {
+        id: "home",
+        title: {
+          id: "Beranda Utama & Sistem Pembuatan Room Balapan",
+          en: "Main Arena Homepage & Room Creation Hub",
+        },
+        caption: {
+          id: "Halaman muka bergaya dark-tech modern dengan form bergabung instan (Join a Race) via kode unik room 6 karakter atau tombol membuat arena balap baru (Create New Room).",
+          en: "Dark-tech styled landing interface featuring instant race joining via 6-character room code or new custom lobby creation (Create New Room).",
+        },
+        image: "/media/projects/protype-battuta-home.webp",
+        category: { id: "Beranda Arena", en: "Arena Homepage" },
+      },
+      {
+        id: "lobby",
+        title: {
+          id: "Lobi Menunggu Pemain & Manajemen Host",
+          en: "Multiplayer Waiting Lobby & Host Controls",
+        },
+        caption: {
+          id: "Ruang tunggu pemain bersama (Room Lobby) dengan tampilan daftar pembalap terkoneksi, identitas Host, status kesiapan pemain, dan tombol kendali 'Start Race' untuk memulai kompetisi.",
+          en: "Synchronized multiplayer waiting room displaying connected racers, host badge, player ready status, and host 'Start Race' command button.",
+        },
+        image: "/media/projects/protype-battuta-lobby.webp",
+        category: { id: "Lobi Balapan", en: "Race Lobby" },
+      },
+      {
+        id: "arena",
+        title: {
+          id: "Arena Balap Mengetik & Teks Korpus Indonesia",
+          en: "Live Race Arena & Indonesian Corpus Stream",
+        },
+        caption: {
+          id: "Sirkuit pengetikan aktif dengan teks artikel bahasa Indonesia yang diacak, kursor pengetikan interaktif, progress bar persentase penyelesaian, penghitung karakter, dan pemantau waktu live.",
+          en: "Active typing track featuring randomized Indonesian text corpus, interactive typing cursor, live race progress bar, character counter, and real-time clock.",
+        },
+        image: "/media/projects/protype-battuta-arena.webp",
+        category: { id: "Sirkuit Mengetik", en: "Race Track" },
+      },
+      {
+        id: "racing",
+        title: {
+          id: "Umpan Balik Realtime & Deteksi Typo Instan",
+          en: "Real-Time Typing Feedback & Instant Typo Detection",
+        },
+        caption: {
+          id: "Mekanisme visual penyorotan teks: indikator garis bawah merah dan peringatan 'TYPO DETECTED' seketika ketika terjadi kesalahan ejaan karakter untuk menjaga kualitas ketikan.",
+          en: "Visual feedback engine displaying inline red underline cues and instant 'TYPO DETECTED' alerts upon keystroke inaccuracy to reinforce typing precision.",
+        },
+        image: "/media/projects/protype-battuta-racing.webp",
+        category: { id: "Deteksi Kesalahan", en: "Typo Engine" },
+      },
+      {
+        id: "results",
+        title: {
+          id: "Papan Hasil Balapan, Kecepatan WPM & Akurasi",
+          en: "Race Complete Podium, WPM Speed & Accuracy",
+        },
+        caption: {
+          id: "Layar hasil akhir perlombaan menampilkan trofi kemenangan, metrik kecepatan bersih (58 WPM), akurasi 100%, dan papan peringkat Final Standings para pembalap.",
+          en: "Race conclusion screen featuring championship trophy, net typing speed (58 WPM), 100% accuracy score, and live Final Standings podium.",
+        },
+        image: "/media/projects/protype-battuta-results.webp",
+        category: { id: "Hasil & Peringkat", en: "Podium Standings" },
+      },
+    ],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "WebSockets",
+      "Tailwind CSS",
+      "Turbopack",
+      "Real-Time State Engine",
+      "Linux VPS",
+    ],
+    metrics: [
+      {
+        value: "Sub-ms",
+        label: { id: "Sinkronisasi Balap", en: "Race Synchronization" },
+        description: {
+          id: "Engine WebSocket berlatensi rendah untuk kompetisi multipemain realtime",
+          en: "Ultra-low latency WebSocket engine powering real-time races",
+        },
+      },
+      {
+        value: "100%",
+        label: { id: "Tracking Akurasi", en: "Accuracy Tracking" },
+        description: {
+          id: "Kalkulasi WPM dan presisi keystroke karakter-per-karakter secara instan",
+          en: "Instant character-by-character keystroke precision and WPM metrics",
+        },
+      },
+      {
+        value: "Dark Tech",
+        label: { id: "Desain Antarmuka", en: "UI/UX Aesthetic" },
+        description: {
+          id: "Nuansa cyberpunk modern dengan kontras tinggi untuk fokus mengetik optimal",
+          en: "Modern high-contrast dark cyberpunk theme designed for typing focus",
+        },
+      },
+      {
+        value: "Multiplayer",
+        label: { id: "Room Interaktif", en: "Interactive Lobbies" },
+        description: {
+          id: "Sistem ruang balap bersama via 6-digit room code tanpa batasan peserta",
+          en: "6-character room codes for instant multiplayer lobby match-ups",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "racer",
+        roleTitle: { id: "Untuk Pembalap & Mahasiswa", en: "For Racers & Students" },
+        roleBadge: { id: "Pengalaman Bermain", en: "Player Experience" },
+        summary: {
+          id: "Memberikan pengalaman kompetisi mengetik yang adiktif, seru, dan memacu peningkatan kecepatan mengetik 10 jari secara natural.",
+          en: "Delivers an addictive and thrilling competitive environment that naturally sharpens 10-finger typing speed.",
+        },
+        items: [
+          {
+            id: "r-room",
+            iconName: "globe",
+            title: {
+              id: "Pembuatan & Bergabung Room Instan",
+              en: "Instant Room Creation & Joining",
+            },
+            desc: {
+              id: "Cukup bagikan kode 6 digit kepada teman untuk langsung bertanding dalam satu lintasan balap yang sama.",
+              en: "Share a concise 6-character room code with peers to instantly join the exact same race track.",
+            },
+            tag: { id: "Mudah", en: "Effortless" },
+          },
+          {
+            id: "r-typo",
+            iconName: "shield",
+            title: {
+              id: "Pemberitahuan Typo Seketika",
+              en: "Instant Keystroke Correction Guidance",
+            },
+            desc: {
+              id: "Animasi dan indikator merah langsung mengunci kesalahan pengetikan sebelum pemain dapat melangkah ke kata berikutnya.",
+              en: "Real-time red highlights pause progression until typos are rectified, encouraging clean muscle memory.",
+            },
+            tag: { id: "Presisi", en: "Precision" },
+          },
+          {
+            id: "r-metrics",
+            iconName: "check-circle",
+            title: {
+              id: "Analisis WPM & Akurasi Karakter",
+              en: "Detailed WPM & Accuracy Metrics",
+            },
+            desc: {
+              id: "Evaluasi performa komprehensif setelah garis akhir berupa kalkulasi kata per menit (WPM) dan persentase ketepatan huruf.",
+              en: "Post-race performance report providing gross/net words-per-minute and exact character precision percentages.",
+            },
+            tag: { id: "Komprehensif", en: "Detailed" },
+          },
+          {
+            id: "r-podium",
+            iconName: "award",
+            title: {
+              id: "Papan Peringkat Podium Bersama",
+              en: "Live Competitive Leaderboard",
+            },
+            desc: {
+              id: "Melihat posisi ranking pemenang secara realtime begitu seluruh peserta melewati garis finis.",
+              en: "Dynamic leaderboard revealing podium positions the moment contenders cross the finish line.",
+            },
+            tag: { id: "Kompetitif", en: "Competitive" },
+          },
+        ],
+      },
+      {
+        roleKey: "komunitas",
+        roleTitle: { id: "Untuk Komunitas Proasta & Kampus", en: "For Proasta Community & Campus Events" },
+        roleBadge: { id: "Kompetisi Kampus", en: "Campus Events" },
+        summary: {
+          id: "Menjadi sarana perlombaan teknologi informasi internal kampus Universitas Battuta yang menyenangkan dan dapat diadakan sewaktu-waktu.",
+          en: "Serves as an engaging platform for university IT tournaments, ice-breaking activities, and student community challenges.",
+        },
+        items: [
+          {
+            id: "k-tourney",
+            iconName: "sparkles",
+            title: {
+              id: "Turnamen Cepat Mengetik Cepat",
+              en: "Fast-Paced Typing Tournaments",
+            },
+            desc: {
+              id: "Dapat digunakan sebagai cabang kompetisi interaktif dalam acara pameran teknologi, ospek, atau gathering Proasta.",
+              en: "Ideal for student tech fairs, orientation events, and Proasta community tournaments.",
+            },
+            tag: { id: "Seru", en: "Engaging" },
+          },
+          {
+            id: "k-corpus",
+            iconName: "book",
+            title: {
+              id: "Korpus Bahasa Indonesia yang Kaya",
+              en: "Rich Indonesian Language Corpus",
+            },
+            desc: {
+              id: "Materi latihan mengambil kutipan ensiklopedia dan warta Indonesia yang relevan untuk memperkaya wawasan sekaligus melatih reflek jari.",
+              en: "Sentence sources utilize authentic Indonesian prose and news excerpts to train natural typing rhythms.",
+            },
+            tag: { id: "Lokal", en: "Localized" },
+          },
+          {
+            id: "k-speed",
+            iconName: "settings",
+            title: {
+              id: "Performa Cepat Tanpa Lag",
+              en: "Zero-Latency Performance",
+            },
+            desc: {
+              id: "Dioptimalkan menggunakan Turbopack dan koneksi WebSocket ringan sehingga lancar diakses dari laptop maupun lab komputer kampus.",
+              en: "Optimized with Turbopack and lightweight WebSockets for flawless operation on laptops and campus computer labs.",
+            },
+            tag: { id: "Optimal", en: "Optimized" },
+          },
+          {
+            id: "k-multi",
+            iconName: "users",
+            title: {
+              id: "Dukungan Banyak Pemain Sekaligus",
+              en: "Multi-Racer Concurrent Scalability",
+            },
+            desc: {
+              id: "Arsitektur room terisolasi memungkinkan beberapa grup balapan berlangsung secara paralel tanpa saling mengganggu.",
+              en: "Isolated room architecture enables multiple concurrent race cohorts without packet collision.",
+            },
+            tag: { id: "Skalabel", en: "Scalable" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "sync-flow",
+        topic: { id: "Metode Sinkronisasi Perlombaan", en: "Multiplayer Synchronization Method" },
+        before: {
+          id: "Aplikasi pengetikan berbasis polling HTTP konvensional yang menghasilkan jeda waktu (lag) antar peserta dan peringkat yang tidak akurat.",
+          en: "Conventional HTTP-polling apps suffered from noticeable latency jitter between competitors and out-of-sync standings.",
+        },
+        after: {
+          id: "Koneksi WebSocket real-time sub-milidetik menyiarkan progress bar dan kecepatan setiap pembalap tanpa jeda.",
+          en: "Sub-millisecond WebSocket channels broadcast competitor progress bars and typing speed without latency.",
+        },
+      },
+      {
+        id: "typo-flow",
+        topic: { id: "Umpan Balik Kesalahan Mengetik", en: "Typo Feedback & Accuracy Training" },
+        before: {
+          id: "Hanya menandai kesalahan di akhir tes sehingga peserta tidak menyadari letak typo saat sedang memacu kecepatan.",
+          en: "Only flagged typos at the end of the session, blinding racers to mistakes while in high-speed flow.",
+        },
+        after: {
+          id: "Deteksi typo instan dengan border merah tegas dan indikator dinamis yang mendidik pemain mengetik presisi sebelum melaju.",
+          en: "Instant inline error flagging with vivid red borders guiding racers to achieve pristine muscle memory.",
+        },
+      },
+      {
+        id: "theme-flow",
+        topic: { id: "Desain Visual & Pengalaman Pengguna", en: "Visual Design & Competitive Atmosphere" },
+        before: {
+          id: "Tampilan putih standar menyerupai formulir ujian yang membosankan dan melelahkan mata dalam jangka panjang.",
+          en: "Bland light interfaces reminiscent of sterile examination forms that strained eyes during extended use.",
+        },
+        after: {
+          id: "Antarmuka dark-tech neon cyan & emerald yang imersif, futuristik, dan sangat nyaman dipandang dalam sesi balap panjang.",
+          en: "Futuristic dark-tech aesthetic with neon cyan and emerald accents creating an electric, eye-friendly racing atmosphere.",
+        },
+      },
+    ],
+  },
 ];
 
 
