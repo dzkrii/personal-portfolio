@@ -59,11 +59,6 @@ export const messages = {
       "Membuka lewat smartphone/tablet? Untuk pengalaman membaca dan navigasi halaman terbaik, Anda dapat membuka dokumen langsung di tab baru atau mengunduh PDF.",
     cvSubtitle:
       "Rekam jejak profesional, keahlian software engineering, proyek unggulan, dan pencapaian akademik Fatahul Ahmad Dzikri.",
-    cvFastFactsTitle: "Ringkasan Profil Cepat",
-    cvEducationLabel: "Pendidikan",
-    cvRoleLabel: "Posisi Saat Ini",
-    cvAwardsLabel: "Penghargaan Nasional",
-    cvStackLabel: "Teknologi Utama",
     materialPending:
       "Materi final sedang disiapkan untuk tahap integrasi konten.",
     notFoundTitle: "Halaman tidak ditemukan",
@@ -130,11 +125,6 @@ export const messages = {
       "Viewing on mobile or tablet? For the optimal reading and page-browsing experience, you can open the document directly in a new tab or download the PDF.",
     cvSubtitle:
       "Professional track record, software engineering competencies, featured systems, and academic accolades of Fatahul Ahmad Dzikri.",
-    cvFastFactsTitle: "Fast Facts & Snapshot",
-    cvEducationLabel: "Education",
-    cvRoleLabel: "Current Role",
-    cvAwardsLabel: "National Accolades",
-    cvStackLabel: "Primary Stack",
     materialPending:
       "Final material is being prepared for the content integration stage.",
     notFoundTitle: "Page not found",

@@ -2633,77 +2633,7 @@ p {
   margin-inline: auto;
 }
 
-/* 1. Snapshot / Fast Facts */
-.cv-snapshot-section {
-  width: 100%;
-}
-
-.cv-snapshot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: var(--space-4);
-}
-
-.cv-fact-card {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  padding: 1rem 1.15rem;
-  background: var(--color-surface);
-  border: var(--border-thin);
-  box-shadow: var(--shadow-control);
-  transition:
-    transform var(--motion-fast) var(--ease-out),
-    box-shadow var(--motion-fast) var(--ease-out);
-}
-
-.cv-fact-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 var(--color-ink);
-}
-
-.cv-fact-card__icon {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: var(--color-moss);
-  border: var(--border-thin);
-  color: var(--color-ink);
-}
-
-.cv-fact-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  min-width: 0;
-}
-
-.cv-fact-card__label {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #636b5b;
-}
-
-.cv-fact-card__value {
-  font-size: 0.95rem;
-  font-weight: 800;
-  line-height: 1.35;
-  color: var(--color-ink);
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.cv-fact-card__detail {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #727a69;
-}
-
-/* 2. Controls & Actions Card */
+/* Controls & Actions Card */
 .cv-controls-card {
   display: flex;
   flex-direction: column;

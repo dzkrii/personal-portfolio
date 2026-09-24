@@ -4,10 +4,6 @@ import {
   ExternalLink,
   FileText,
   Languages,
-  Briefcase,
-  GraduationCap,
-  Trophy,
-  Code2,
   Info,
   Check,
 } from "lucide-react";
@@ -32,66 +28,9 @@ export function CvViewer({ initialLocale = "en" }: CvViewerProps) {
       ? "cv-fatahul-ahmad-dzikri-id.pdf"
       : "cv-fatahul-ahmad-dzikri-en.pdf";
 
-  const fastFacts = [
-    {
-      icon: Briefcase,
-      label: t.cvRoleLabel,
-      value:
-        activeLocale === "id"
-          ? "Software Developer @ Universitas Battuta"
-          : "Software Developer @ Universitas Battuta",
-      detail: activeLocale === "id" ? "Sep 2024 – Sekarang" : "Sep 2024 – Present",
-    },
-    {
-      icon: GraduationCap,
-      label: t.cvEducationLabel,
-      value:
-        activeLocale === "id"
-          ? "S1 Teknik Informatika, Universitas Battuta"
-          : "B.S. in Computer Science, Universitas Battuta",
-      detail: activeLocale === "id" ? "2023 – Sekarang" : "2023 – Present",
-    },
-    {
-      icon: Trophy,
-      label: t.cvAwardsLabel,
-      value:
-        activeLocale === "id"
-          ? "Juara 2 COMFTIK · Juara 3 CORISINDO · PKM-PI"
-          : "2nd COMFTIK · 3rd CORISINDO · PKM-PI Grant",
-      detail: activeLocale === "id" ? "Tingkat Nasional (2024–2025)" : "National Level (2024–2025)",
-    },
-    {
-      icon: Code2,
-      label: t.cvStackLabel,
-      value: "React · Next.js · TypeScript · NestJS · Flutter",
-      detail: "Full-Stack & Mobile Engineering",
-    },
-  ];
-
   return (
     <div className="cv-interactive-container">
-      {/* 1. Fast Facts & Profile Snapshot */}
-      <section className="cv-snapshot-section" aria-label={t.cvFastFactsTitle}>
-        <div className="cv-snapshot-grid">
-          {fastFacts.map((fact, idx) => {
-            const IconComponent = fact.icon;
-            return (
-              <article className="cv-fact-card" key={idx}>
-                <div className="cv-fact-card__icon" aria-hidden="true">
-                  <IconComponent size={20} />
-                </div>
-                <div className="cv-fact-card__body">
-                  <span className="cv-fact-card__label">{fact.label}</span>
-                  <strong className="cv-fact-card__value">{fact.value}</strong>
-                  <span className="cv-fact-card__detail">{fact.detail}</span>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* 2. Version Selector & Action Toolbar */}
+      {/* 1. Version Selector & Action Toolbar */}
       <div className="cv-controls-card">
         {/* Language Tabs */}
         <div className="cv-version-switcher" role="group" aria-label={t.switchCvVersion}>
@@ -159,7 +98,7 @@ export function CvViewer({ initialLocale = "en" }: CvViewerProps) {
         </div>
       </div>
 
-      {/* 3. Mobile Advisory Banner */}
+      {/* 2. Mobile Advisory Banner */}
       <div className="cv-mobile-advisory">
         <Info size={18} className="cv-mobile-advisory__icon" aria-hidden="true" />
         <p className="cv-mobile-advisory__text">{t.mobileCvNotice}</p>
@@ -174,7 +113,7 @@ export function CvViewer({ initialLocale = "en" }: CvViewerProps) {
         </a>
       </div>
 
-      {/* 4. Interactive Embedded PDF Frame */}
+      {/* 3. Interactive Embedded PDF Frame */}
       <section className="cv-frame-container" aria-label={t.cvDocTitle}>
         <iframe
           key={activePdf}
