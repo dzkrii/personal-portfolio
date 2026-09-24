@@ -858,7 +858,7 @@ export const projects: Project[] = [
   },
   {
     slug: "universitas-battuta-hris-system",
-    type: "mobile",
+    type: "web",
     acronym: "HRIS BATTUTA",
     title: {
       id: "Sistem Informasi SDM & Presensi Kepegawaian (HRIS) Universitas Battuta",
@@ -869,8 +869,8 @@ export const projects: Project[] = [
       en: "Mobile-First HR Platform (Biometric Face Verification, Geofencing Radius Validation, Leave & Overtime Management, and SSO Integration)",
     },
     category: {
-      id: "Mobile-First Web App · Sistem Informasi SDM & Presensi",
-      en: "Mobile-First Web App · HRIS & Biometric Attendance",
+      id: "Fullstack Web App · Sistem Informasi SDM & Presensi",
+      en: "Fullstack Web App · HRIS & Biometric Attendance",
     },
     summary: {
       id: "Platform layanan mandiri SDM kampus berbasis mobile-first yang mengotomasi pencatatan kehadiran pegawai dan dosen melalui validasi radius GPS (geofencing) 25 meter dan verifikasi biometrik wajah, pengajuan cuti tahunan, pelaporan sesi lembur, hingga integrasi akun terpusat dengan Portal SSO Universitas Battuta.",
@@ -2921,6 +2921,398 @@ export const projects: Project[] = [
         after: {
           id: "Antarmuka dark-tech neon cyan & emerald yang imersif, futuristik, dan sangat nyaman dipandang dalam sesi balap panjang.",
           en: "Futuristic dark-tech aesthetic with neon cyan and emerald accents creating an electric, eye-friendly racing atmosphere.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "thrifty-circular-marketplace-app",
+    type: "mobile",
+    acronym: "THRIFTY",
+    title: {
+      id: "Thrifty - Circular Marketplace & Platform Donasi Hyperlocal Medan",
+      en: "Thrifty - Circular Marketplace & Hyperlocal Donation Mobile App",
+    },
+    subtitle: {
+      id: "Aplikasi Mobile Thrifting Berkelanjutan (Donasi Gratis, Jual Beli Barang Bekas, Hyperlocal Medan, & Real-time Impact Tracker)",
+      en: "Sustainable Mobile Thrifting Platform (Free Donations, Secondhand Marketplace, Hyperlocal Medan, & Real-time Impact Tracking)",
+    },
+    category: {
+      id: "Mobile App · Circular Economy & Hyperlocal Marketplace",
+      en: "Mobile App · Circular Economy & Hyperlocal Marketplace",
+    },
+    summary: {
+      id: "Aplikasi mobile berbasis Flutter yang menginisiasi ekonomi sirkular di Kota Medan dengan memfasilitasi donasi barang layak pakai secara gratis serta jual beli barang bekas terkurasi. Mengintegrasikan pelacakan dampak lingkungan (kg sampah rumah tangga dialihkan), filter hyperlocal per kawasan Medan, dan koordinasi langsung via WhatsApp tanpa potongan komisi.",
+      en: "A Flutter-powered mobile application pioneering circular economy in Medan by facilitating free direct donations and curated thrifting transactions. Features real-time environmental impact counters (diverted household waste in kg), hyperlocal neighborhood filters, and seamless direct WhatsApp peer-to-peer coordination with zero platform fees.",
+    },
+    overview: {
+      id: "Thrifty dirancang untuk menjawab permasalahan penumpukan barang bekas layak pakai dan tingginya timbulan sampah rumah tangga di Kota Medan. Melalui antarmuka mobile yang bersih, ramah pengguna, dan berfokus pada kemudahan akses, warga dapat mendonasikan barang dalam hitungan menit, menemukan barang gratis yang siap dijemput di lokasi sekitar, serta melihat kontribusi nyata terhadap kelestarian lingkungan.",
+      en: "Thrifty was engineered to tackle household clutter and reduce urban landfill waste across Medan. Built with an intuitive, eco-conscious mobile interface in Flutter, it empowers residents to post preloved items within minutes, discover nearby free donations for pickup, and transparently track collective environmental impact.",
+    },
+    context: {
+      id: "Banyak warga memiliki barang layak pakai (buku, sepatu, pakaian, elektronik) yang menumpuk di rumah namun enggan menjualnya di marketplace konvensional karena rumitnya sistem logistik atau potongan komisi tinggi. Di sisi lain, proses donasi manual sering kali tidak tepat sasaran dan minim transparansi lokasi penjemputan.",
+      en: "Many households possess usable preloved items (books, footwear, apparel, electronics) yet hesitate to list on conventional marketplaces due to cumbersome shipping logistics or steep commissions. Conversely, conventional charity drives lack hyperlocal pickup convenience and direct transparency.",
+    },
+    contribution: {
+      id: "Bertindak sebagai Lead Mobile Developer dan UI/UX Designer secara mandiri (Solo Project). Merancang antarmuka mobile bernuansa alam yang ramah pengguna, membangun arsitektur Flutter yang modular, merancang alur listing jual/donasi terstruktur dengan klasifikasi kondisi, serta mengintegrasikan deep linking WhatsApp untuk komunikasi instan.",
+      en: "Acted as solo Lead Mobile Developer and UI/UX Designer. Designed a clean, eco-friendly mobile interface, built a modular Flutter architecture, created structured sell/donate listing workflows with condition grading, and integrated WhatsApp deep linking for instant direct communication.",
+    },
+    solution: {
+      id: "Membangun aplikasi mobile Flutter cross-platform dengan arsitektur modular yang ringan, navigasi tab bottom bar yang intuitif, sistem listing cepat dengan klasifikasi kondisi (Baru, Seperti Baru, Baik, Cukup Baik), integrasi filter hyperlocal kecamatan di Medan, serta counter dampak sirkular yang transparan.",
+      en: "Developed a lightweight, high-performance Flutter mobile application featuring intuitive bottom-bar navigation, rapid listing workflows with condition grading (New, Like New, Good, Fair), hyperlocal Medan neighborhood filtering, and transparent circular impact metrics.",
+    },
+    role: {
+      id: "Lead Mobile Developer & UI/UX Designer (Solo Project)",
+      en: "Lead Mobile Developer & UI/UX Designer (Solo Project)",
+    },
+    period: {
+      id: "2026 - Sekarang",
+      en: "2026 - Present",
+    },
+    status: {
+      id: "Mobile App Project / Portofolio Aktif",
+      en: "Mobile App Project / Active Portfolio",
+    },
+    client: {
+      id: "Inisiatif Pribadi / Circular Economy Medan",
+      en: "Personal Initiative / Circular Economy Medan",
+    },
+    image: "/media/projects/thrifty-mobile-hero.webp",
+    screenshots: [
+      {
+        id: "beranda",
+        title: {
+          id: "Beranda & Metrik Dampak Sirkular",
+          en: "Home Dashboard & Circular Impact Metrics",
+        },
+        caption: {
+          id: "Beranda utama yang menyajikan kampanye ekonomi sirkular, metrik listing aktif & donasi siap jemput, counter dampak sampah yang dialihkan (kg), serta feed donasi terbaru.",
+          en: "Main home screen showcasing circular campaign highlights, live active listings, ready-to-pickup donations, environmental impact metrics, and recent donation feed.",
+        },
+        image: "/media/projects/thrifty-mobile-beranda.webp",
+        category: { id: "Beranda", en: "Home Dashboard" },
+      },
+      {
+        id: "jelajahi",
+        title: {
+          id: "Katalog Hyperlocal & Filter Donasi",
+          en: "Hyperlocal Catalog & Donation Filters",
+        },
+        caption: {
+          id: "Eksplorasi barang bekas dan donasi gratis terdekat berdasarkan area kecamatan di Medan (Medan Petisah, Simpang Waspada, Medan Krio) lengkap dengan tag kondisi dan kategori barang.",
+          en: "Explore nearby preloved goods and free donations filtered by Medan sub-districts, categorized by item type, condition grading, and distance.",
+        },
+        image: "/media/projects/thrifty-mobile-jelajahi.webp",
+        category: { id: "Katalog Jelajahi", en: "Explore Catalog" },
+      },
+      {
+        id: "detail",
+        title: {
+          id: "Detail Barang & Hubungi via WhatsApp",
+          en: "Item Detail & Direct WhatsApp Connect",
+        },
+        caption: {
+          id: "Tampilan detail barang donasi/jual menampilkan galeri foto, status kelayakan, kalkulasi dampak donasi lokal, serta tombol aksi cepat untuk terhubung ke WhatsApp donatur.",
+          en: "Product detail screen with image gallery, condition badge, local donation impact estimation, and one-tap WhatsApp contact button for easy pickup coordination.",
+        },
+        image: "/media/projects/thrifty-mobile-detail.webp",
+        category: { id: "Detail Barang", en: "Product Detail" },
+      },
+      {
+        id: "post",
+        title: {
+          id: "Alur Posting Cepat (Jual / Donasi)",
+          en: "Fast Posting Flow (Sell / Donate)",
+        },
+        caption: {
+          id: "Formulir pasang listing yang praktis dengan opsi Jual atau Donasi Gratis, unggah hingga 3 foto, pemilihan kategori, serta kurasi kondisi barang yang transparan.",
+          en: "Frictionless listing submission flow offering Sell or Free Donate modes, multi-photo uploads (up to 3 images), category dropdowns, and transparent item condition rating.",
+        },
+        image: "/media/projects/thrifty-mobile-post.webp",
+        category: { id: "Pasang Listing", en: "Create Listing" },
+      },
+      {
+        id: "profil",
+        title: {
+          id: "Profil Pengguna & Jejak Dampak",
+          en: "User Profile & Impact Footprint",
+        },
+        caption: {
+          id: "Halaman profil pengguna yang merangkum data kontak, jumlah listing aktif, riwayat barang yang berhasil disalurkan, serta jejak kontribusi sosial warga.",
+          en: "User profile overview summarizing contact details, active listings, fulfilled donation history, and personal environmental contribution footprint.",
+        },
+        image: "/media/projects/thrifty-mobile-profil.webp",
+        category: { id: "Profil Pengguna", en: "User Profile" },
+      },
+      {
+        id: "auth",
+        title: {
+          id: "Gerbang Autentikasi Pengguna",
+          en: "User Authentication Gateway",
+        },
+        caption: {
+          id: "Portal masuk dan pendaftaran akun pengguna dengan identitas visual ramah lingkungan dan tata letak yang bersih.",
+          en: "Streamlined login and registration portal featuring eco-friendly visual branding and clutter-free mobile ergonomics.",
+        },
+        image: "/media/projects/thrifty-mobile-auth.webp",
+        category: { id: "Autentikasi", en: "Authentication" },
+      },
+    ],
+    techStack: [
+      "Flutter",
+      "Dart",
+      "Material Design 3",
+      "State Management",
+      "WhatsApp Direct API",
+      "Android",
+    ],
+    metrics: [
+      {
+        value: "100%",
+        label: { id: "Gratis Tanpa Komisi", en: "Zero Platform Fees" },
+        description: {
+          id: "Donasi dan handoff barang langsung antar warga tanpa potongan perantara",
+          en: "Direct peer-to-peer donation and handoff without middleman commissions",
+        },
+      },
+      {
+        value: "Hyperlocal",
+        label: { id: "Kawasan Medan", en: "Medan Hyperlocal" },
+        description: {
+          id: "Mempermudah jemput barang di lingkungan sekitar tanpa biaya logistik",
+          en: "Facilitates neighborhood pickups avoiding packaging and shipping fees",
+        },
+      },
+      {
+        value: "Eco Impact",
+        label: { id: "Pelacak Sampah Dialihkan", en: "Waste Diversion Metric" },
+        description: {
+          id: "Mencatat estimasi kilogram barang layak pakai yang terselamatkan dari TPA",
+          en: "Tracks estimated kilograms of usable household items saved from urban landfills",
+        },
+      },
+      {
+        value: "Solo Dev",
+        label: { id: "Mobile & UI/UX", en: "Solo Mobile Dev" },
+        description: {
+          id: "Dikerjakan mandiri dari konsep UX, desain antarmuka, hingga kode Flutter",
+          en: "Independently developed from UX concept, UI design system, to Flutter implementation",
+        },
+      },
+    ],
+    roleGroups: [
+      {
+        roleKey: "donatur",
+        roleTitle: { id: "Untuk Donatur & Penjual", en: "For Donors & Sellers" },
+        roleBadge: { id: "Pemberi Barang", en: "Item Providers" },
+        summary: {
+          id: "Memudahkan warga menyalurkan barang layak pakai yang menumpuk di rumah secara cepat, transparan, dan berdampak nyata bagi lingkungan.",
+          en: "Enables residents to declutter and repurpose usable household items quickly, transparently, and with meaningful eco-impact.",
+        },
+        items: [
+          {
+            id: "d-listing",
+            iconName: "sparkles",
+            title: {
+              id: "Posting Cepat dalam 2 Menit",
+              en: "2-Minute Rapid Listing",
+            },
+            desc: {
+              id: "Unggah foto barang dari ponsel, pilih kategori, tentukan kondisi, dan listing siap tayang dalam hitungan detik.",
+              en: "Snap and upload photos, pick category, set condition grading, and publish your listing within seconds.",
+            },
+            tag: { id: "Cepat & Praktis", en: "Fast & Simple" },
+          },
+          {
+            id: "d-pilihan",
+            iconName: "check-circle",
+            title: {
+              id: "Pilihan Donasi Gratis atau Jual Terjangkau",
+              en: "Flexible Free Donate or Thrift Pricing",
+            },
+            desc: {
+              id: "Fleksibilitas penuh menentukan apakah barang ingin dihibahkan secara cuma-cuma atau dijual dengan harga terjangkau.",
+              en: "Full flexibility to gift items completely free of charge or set an accessible secondhand price.",
+            },
+            tag: { id: "Fleksibel", en: "Flexible" },
+          },
+          {
+            id: "d-wa",
+            iconName: "users",
+            title: {
+              id: "Koordinasi Langsung via WhatsApp",
+              en: "Direct WhatsApp Coordination",
+            },
+            desc: {
+              id: "Calon penerima atau pembeli langsung terhubung ke chat WhatsApp pribadi tanpa perantara bot atau sistem tiket.",
+              en: "Prospective recipients or buyers connect directly via personal WhatsApp without bots or ticketing systems.",
+            },
+            tag: { id: "Direct Chat", en: "Direct Chat" },
+          },
+          {
+            id: "d-track",
+            iconName: "award",
+            title: {
+              id: "Pantau Jejak Kebaikan & Dampak",
+              en: "Track Personal Impact Footprint",
+            },
+            desc: {
+              id: "Lihat akumulasi barang yang telah berhasil disalurkan dan estimasi pengurangan limbah yang Anda kontribusikan.",
+              en: "Review accumulated items successfully handed over and your estimated waste diversion contribution.",
+            },
+            tag: { id: "Transparan", en: "Transparent" },
+          },
+        ],
+      },
+      {
+        roleKey: "pencari",
+        roleTitle: { id: "Untuk Pencari & Pembeli", en: "For Seekers & Thrifters" },
+        roleBadge: { id: "Pencari Barang", en: "Item Seekers" },
+        summary: {
+          id: "Membantu warga dan mahasiswa menemukan kebutuhan barang layak pakai gratis atau berbiaya hemat di dekat lingkungan tempat tinggal.",
+          en: "Helps local residents and students discover essential preloved goods for free or minimal cost within their local neighborhood.",
+        },
+        items: [
+          {
+            id: "p-hyperlocal",
+            iconName: "compass",
+            title: {
+              id: "Filter Hyperlocal Berbasis Kawasan",
+              en: "Neighborhood Hyperlocal Filter",
+            },
+            desc: {
+              id: "Telusuri barang berdasarkan area terdekat di Medan (Medan Petisah, Simpang Waspada, Medan Krio, dan sekitarnya).",
+              en: "Filter listings by nearby Medan sub-districts (Medan Petisah, Simpang Waspada, Medan Krio, and surroundings).",
+            },
+            tag: { id: "Dekat Rumah", en: "Nearby" },
+          },
+          {
+            id: "p-kondisi",
+            iconName: "shield",
+            title: {
+              id: "Transparansi Rating Kondisi Barang",
+              en: "Transparent Condition Ratings",
+            },
+            desc: {
+              id: "Informasi kondisi yang jujur (Baru, Seperti Baru, Baik, Cukup Baik) memastikan barang yang diterima sesuai ekspektasi.",
+              en: "Honest condition tags (New, Like New, Good, Fair) ensure item quality aligns with user expectations.",
+            },
+            tag: { id: "Jujur & Jelas", en: "Accurate" },
+          },
+          {
+            id: "p-gratis",
+            iconName: "sparkles",
+            title: {
+              id: "Akses Donasi Tanpa Biaya",
+              en: "Zero-Cost Free Donations",
+            },
+            desc: {
+              id: "Dapatkan perlengkapan buku, sepatu, hobi, dan peralatan rumah tangga yang masih sangat layak pakai secara gratis.",
+              en: "Obtain books, footwear, hobbies, and household essentials in great condition at zero expense.",
+            },
+            tag: { id: "Gratis 100%", en: "100% Free" },
+          },
+          {
+            id: "p-chat",
+            iconName: "users",
+            title: {
+              id: "Jemput Barang Mandiri",
+              en: "Self-Pickup Arrangement",
+            },
+            desc: {
+              id: "Sepakati waktu penjemputan barang secara fleksibel dengan pemilik barang tanpa ketergantungan jasa ekspedisi.",
+              en: "Agree on flexible pickup times directly with the item owner without courier delivery dependencies.",
+            },
+            tag: { id: "Bebas Ongkir", en: "No Shipping" },
+          },
+        ],
+      },
+      {
+        roleKey: "lingkungan",
+        roleTitle: { id: "Dampak Lingkungan & Sosial", en: "Eco & Community Impact" },
+        roleBadge: { id: "Ekonomi Sirkular", en: "Circular Economy" },
+        summary: {
+          id: "Mengubah paradigma konsumsi perkotaan menuju siklus hidup barang yang lebih panjang dan berkelanjutan bagi Kota Medan.",
+          en: "Shifting urban consumer behavior toward extended product lifecycles and sustainable communal stewardship in Medan.",
+        },
+        items: [
+          {
+            id: "e-divert",
+            iconName: "globe",
+            title: {
+              id: "Pengalihan Sampah dari TPA Kota",
+              en: "Landfill Waste Diversion",
+            },
+            desc: {
+              id: "Setiap barang yang didonasikan atau ditukar memperpanjang usia pakai dan mencegah sampah menumpuk di TPA Terjun Medan.",
+              en: "Every donated or thrifted item extends product life and prevents landfill accumulation in Medan.",
+            },
+            tag: { id: "Eco-Friendly", en: "Eco-Friendly" },
+          },
+          {
+            id: "e-reuse",
+            iconName: "sparkles",
+            title: {
+              id: "Budaya Thrifting & Sirkularitas",
+              en: "Thrifting & Circular Culture",
+            },
+            desc: {
+              id: "Membangun kesadaran generasi muda bahwa barang bekas berkualitas memiliki nilai fungsi tinggi dan kebanggaan tersendiri.",
+              en: "Cultivating awareness among youth that preloved quality goods offer high utility and conscious pride.",
+            },
+            tag: { id: "Berkelanjutan", en: "Sustainable" },
+          },
+          {
+            id: "e-komunitas",
+            iconName: "users",
+            title: {
+              id: "Solidaritas Komunitas Lokal",
+              en: "Local Community Solidarity",
+            },
+            desc: {
+              id: "Mempererat hubungan sosial antar tetangga melalui aksi saling berbagi barang yang bermakna bagi yang membutuhkan.",
+              en: "Strengthening community bonds between neighbors through meaningful item sharing for those in need.",
+            },
+            tag: { id: "Solidaritas", en: "Solidarity" },
+          },
+        ],
+      },
+    ],
+    comparisons: [
+      {
+        id: "donasi-flow",
+        topic: { id: "Penyaluran Barang Layak Pakai", en: "Preloved Goods Distribution" },
+        before: {
+          id: "Barang menumpuk di lemari atau berakhir di tempat sampah karena bingung menyalurkannya ke mana.",
+          en: "Usable items sat idle in storage closets or ended up in trash bins due to lack of accessible outlets.",
+        },
+        after: {
+          id: "Cukup foto dan pasang status donasi, warga sekitar yang membutuhkan langsung siap menjemput barang ke lokasi.",
+          en: "Snap photos and publish as a donation; nearby neighbors in need arrange self-pickup promptly.",
+        },
+      },
+      {
+        id: "transaksi-flow",
+        topic: { id: "Biaya & Skema Transaksi", en: "Fees & Packaging Friction" },
+        before: {
+          id: "Marketplace konvensional mengenakan potongan biaya admin seller dan mewajibkan ongkir serta bungkus bubble wrap plastik.",
+          en: "Conventional marketplaces charge seller admin fees and enforce paid shipping with single-use plastic bubble wraps.",
+        },
+        after: {
+          id: "100% bebas potongan komisi, handoff langsung di lokasi setempat tanpa tambahan limbah kemasan ekspedisi.",
+          en: "Zero seller commission fees, direct local handoff without single-use logistics packaging waste.",
+        },
+      },
+      {
+        id: "transparansi-flow",
+        topic: { id: "Pelacakan Dampak Lingkungan", en: "Environmental Impact Visibility" },
+        before: {
+          id: "Tidak ada pencatatan atau kesadaran terhadap seberapa besar kontribusi reuse barang dalam mengurangi sampah kota.",
+          en: "Zero metrics or visibility into how individual reuse actions actively divert waste from municipal dumps.",
+        },
+        after: {
+          id: "Tersedia pelacak dampak realtime yang menghitung estimasi kilogram sampah yang berhasil diselamatkan dari TPA.",
+          en: "Built-in real-time impact tracker calculating estimated kilograms of waste successfully saved from landfills.",
         },
       },
     ],
