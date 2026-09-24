@@ -1,15 +1,19 @@
 ---
 import { List, X } from "lucide-react";
-import { navigation, siteConfig } from "../data/site";
+import { navigation, siteConfig, type Locale } from "../data/site";
 
 interface Props {
   currentPath?: string;
+  locale?: Locale;
 }
 
-const { currentPath = "/" } = Astro.props;
-const locale = "en" as const;
+const { currentPath = "/", locale = "en" } = Astro.props;
 
 function getHref(key: string) {
+  if (locale === "id") {
+    if (key === "home") return "/id";
+    return `/id/${key}`;
+  }
   if (key === "home") return "/";
   return `/${key}`;
 }
@@ -17,8 +21,22 @@ function getHref(key: string) {
 function isActive(key: string, pathname: string) {
   const cleanPath = pathname.replace(/\/+$/, "") || "/";
   const href = getHref(key);
-  if (href === "/") return cleanPath === "/";
+  if (href === "/" || href === "/id") return cleanPath === href;
   return cleanPath === href || cleanPath.startsWith(`${href}/`);
+}
+
+// Compute language switch target URL
+const targetLocale: Locale = locale === "en" ? "id" : "en";
+let switchHref = "/";
+if (locale === "en") {
+  if (currentPath === "/" || currentPath === "") {
+    switchHref = "/id";
+  } else {
+    switchHref = `/id${currentPath.startsWith("/") ? currentPath : `/${currentPath}`}`;
+  }
+} else {
+  const stripped = currentPath.replace(/^\/id(?=\/|$)/, "") || "/";
+  switchHref = stripped;
 }
 ---
 
@@ -69,6 +87,16 @@ function isActive(key: string, pathname: string) {
         {item.label[locale]}
       </a>
     ))}
+
+    <a
+      href={switchHref}
+      class="language-switcher"
+      aria-label={locale === "en" ? "Ganti ke Bahasa Indonesia" : "Switch to English"}
+      title={locale === "en" ? "Ganti ke Bahasa Indonesia" : "Switch to English"}
+      data-target-locale={targetLocale}
+    >
+      {targetLocale.toUpperCase()}
+    </a>
   </nav>
 </header>
 
@@ -105,6 +133,21 @@ function isActive(key: string, pathname: string) {
     });
   }
 
+  function setupLanguageSwitcher() {
+    const switchers = document.querySelectorAll(".language-switcher");
+    switchers.forEach((el) => {
+      el.addEventListener("click", () => {
+        const target = el.getAttribute("data-target-locale");
+        if (target) {
+          localStorage.setItem("preferred-locale", target);
+        }
+      });
+    });
+  }
+
   // Setup on initial load and on Astro View Transitions navigation
-  document.addEventListener("astro:page-load", setupMenu);
+  document.addEventListener("astro:page-load", () => {
+    setupMenu();
+    setupLanguageSwitcher();
+  });
 </script>

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import CertificatesExplorer from "../components/islands/CertificatesExplorer";
-import { pageMeta } from "../data/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CertificatesExplorer from "../../components/islands/CertificatesExplorer";
+import { pageMeta } from "../../data/site";
 
-const locale = "en" as const;
+const locale = "id" as const;
 const meta = pageMeta.certificates;
 ---
 
@@ -15,11 +15,10 @@ const meta = pageMeta.certificates;
   <div class="certificates-page">
     <header class="certificates-header">
       <div class="section-badge-title">
-        <h1 class="section-badge-title__text">Certificates</h1>
+        <h1 class="section-badge-title__text">Sertifikat</h1>
       </div>
     </header>
 
     <CertificatesExplorer client:idle locale={locale} />
   </div>
 </BaseLayout>
-

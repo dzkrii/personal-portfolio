@@ -19,7 +19,10 @@ function ProjectCard({
   index?: number;
 }) {
   const t = messages[locale];
-  const projectHref = `/projects/${project.slug}`;
+  const projectHref =
+    locale === "id"
+      ? `/id/projects/${project.slug}`
+      : `/projects/${project.slug}`;
   const formattedIndex = String(index + 1).padStart(2, "0");
 
   return (

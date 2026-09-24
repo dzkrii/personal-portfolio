@@ -8,6 +8,10 @@ interface Props {
 const { locale = "en" } = Astro.props;
 
 function getHref(key: string) {
+  if (locale === "id") {
+    if (key === "home") return "/id";
+    return `/id/${key}`;
+  }
   if (key === "home") return "/";
   return `/${key}`;
 }

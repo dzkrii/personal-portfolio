@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ProjectsExplorer from "../../../components/islands/ProjectsExplorer";
+import { pageMeta } from "../../../data/site";
+
+const locale = "id" as const;
+const meta = pageMeta.projects;
+---
+
+<BaseLayout
+  title={meta.title[locale]}
+  description={meta.description[locale]}
+  locale={locale}
+>
+  <div class="projects-page">
+    <header class="projects-header">
+      <div class="section-badge-title">
+        <h1 class="section-badge-title__text">Proyek</h1>
+      </div>
+    </header>
+
+    <p class="projects-intro-text">
+      Koleksi sistem digital, platform web, dan aplikasi pilihan yang dibangun dengan arsitektur bersih, performa tinggi, dan pengalaman pengguna khas.
+    </p>
+
+    <ProjectsExplorer client:idle locale={locale} />
+  </div>
+</BaseLayout>

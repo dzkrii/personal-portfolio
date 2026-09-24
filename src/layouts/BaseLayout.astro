@@ -2,7 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { messages } from "../data/site";
+import { messages, type Locale } from "../data/site";
 import "../index.css";
 
 interface Props {
@@ -12,6 +12,7 @@ interface Props {
   noindex?: boolean;
   image?: string;
   preloadHeroImage?: boolean;
+  locale?: Locale;
 }
 
 const SITE_URL = "https://fatahul.my.id";
@@ -24,12 +25,12 @@ const {
   noindex = false,
   image = "https://fatahul.my.id/fatahul-hero-illustration.png",
   preloadHeroImage = false,
+  locale = "en",
 } = Astro.props;
 
 const robotsContent = noindex
   ? "noindex, follow"
   : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
-const locale = "en" as const;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -91,8 +92,19 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang={locale}>
   <head>
+    <script is:inline>
+      (function () {
+        try {
+          var pref = localStorage.getItem("preferred-locale");
+          var path = window.location.pathname;
+          if (pref === "id" && (path === "/" || path === "")) {
+            window.location.replace("/id");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
@@ -196,7 +208,7 @@ const jsonLd = {
       {messages[locale].skip}
     </a>
     <div class="site-shell">
-      <SiteHeader currentPath={currentPath} />
+      <SiteHeader currentPath={currentPath} locale={locale} />
       <main id="main-content">
         <slot />
       </main>

@@ -1,10 +1,10 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { ArrowLeft, ArrowUpRight, ExternalLink, GraduationCap } from "lucide-react";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BrutalButton from "../../components/ui/BrutalButton.astro";
-import ProjectShowcase from "../../components/islands/ProjectShowcase";
-import { messages, projects, type Project } from "../../data/site";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BrutalButton from "../../../components/ui/BrutalButton.astro";
+import ProjectShowcase from "../../../components/islands/ProjectShowcase";
+import { messages, projects, type Project } from "../../../data/site";
 
 export const getStaticPaths = (() => {
   return projects.map((project) => ({
@@ -18,7 +18,7 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const locale = "en" as const;
+const locale = "id" as const;
 const t = messages[locale];
 
 const pageTitle = `${project.title[locale]} | Fatahul Ahmad Dzikri`;
@@ -33,8 +33,8 @@ const pageDescription = project.summary[locale];
 >
   <div class="project-detail-page">
     {/* 1. Top Navigation Bar */}
-    <nav class="project-detail-nav" aria-label="Project Navigation">
-      <a class="project-back-btn" href="/projects">
+    <nav class="project-detail-nav" aria-label="Navigasi Proyek">
+      <a class="project-back-btn" href="/id/projects">
         <ArrowLeft size={16} aria-hidden="true" />
         <span>{t.backToProjects}</span>
       </a>
@@ -46,7 +46,7 @@ const pageDescription = project.summary[locale];
               target="_blank"
               rel="noreferrer"
               class="project-live-btn"
-              title={`Launch ${project.liveUrl}`}
+              title={`Buka ${project.liveUrl}`}
             >
               <ExternalLink size={14} aria-hidden="true" />
               <span>{t.visitLive}</span>
@@ -112,20 +112,19 @@ const pageDescription = project.summary[locale];
         {
           project.liveUrl && (
             <BrutalButton href={project.liveUrl} target="_blank" rel="noreferrer">
-              {project.acronym ? `Launch ${project.acronym} Live` : "Launch Website Live"}
+              {project.acronym ? `Buka ${project.acronym} Live` : "Buka Website Live"}
               <ArrowUpRight aria-hidden="true" size={18} />
             </BrutalButton>
           )
         }
-        <BrutalButton href="/contact" tone={project.liveUrl ? "secondary" : "primary"}>
+        <BrutalButton href="/id/contact" tone={project.liveUrl ? "secondary" : "primary"}>
           {t.contactMe}
           <ArrowUpRight aria-hidden="true" size={18} />
         </BrutalButton>
-        <BrutalButton href="/projects" tone="secondary">
+        <BrutalButton href="/id/projects" tone="secondary">
           {t.backToAll}
         </BrutalButton>
       </div>
     </section>
   </div>
 </BaseLayout>
-

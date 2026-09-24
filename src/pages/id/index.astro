@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import BrutalButton from "../components/ui/BrutalButton.astro";
-import RoleRotator from "../components/islands/RoleRotator";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BrutalButton from "../../components/ui/BrutalButton.astro";
+import RoleRotator from "../../components/islands/RoleRotator";
 import { ArrowUpRight, FileText } from "lucide-react";
-import { pageMeta, profile } from "../data/site";
+import { pageMeta, profile } from "../../data/site";
 
-const locale = "en" as const;
+const locale = "id" as const;
 const meta = pageMeta.home;
 ---
 
@@ -17,23 +17,23 @@ const meta = pageMeta.home;
 >
   <section class="hero hero--intro">
     <div class="hero__content">
-      <p class="hero-kicker">Hi, I am</p>
+      <p class="hero-kicker">Halo, saya</p>
       <h1>
         Fatahul
         <br />
         Ahmad Dzikri.
       </h1>
       <p class="hero-role">
-        I am a <RoleRotator client:load />
+        Saya seorang <RoleRotator client:load locale={locale} />
       </p>
       <p class="hero-copy">{profile.intro[locale]}</p>
       <div class="hero-actions">
-        <BrutalButton href="/cv">
-          View CV
+        <BrutalButton href="/id/cv">
+          Lihat CV
           <FileText aria-hidden="true" size={18} />
         </BrutalButton>
-        <BrutalButton href="/about" tone="secondary">
-          About me
+        <BrutalButton href="/id/about" tone="secondary">
+          Tentang saya
           <ArrowUpRight aria-hidden="true" size={18} />
         </BrutalButton>
       </div>
@@ -45,7 +45,7 @@ const meta = pageMeta.home;
         sizes="(max-width: 47.99rem) min(100vw, 22.5rem), clamp(21.5rem, 28vw, 29rem)"
         width="1003"
         height="1568"
-        alt="Neo-brutalist illustration of Fatahul Ahmad Dzikri"
+        alt="Ilustrasi neo-brutalisme Fatahul Ahmad Dzikri"
         fetchpriority="high"
         decoding="async"
       />
@@ -53,4 +53,3 @@ const meta = pageMeta.home;
     </div>
   </section>
 </BaseLayout>
-

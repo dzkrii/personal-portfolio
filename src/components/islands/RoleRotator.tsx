@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-export function RoleRotator() {
-  const roles = ["Software Developer", "Creative Developer", "Problem Solver"];
+export function RoleRotator({ locale = "en" }: { locale?: "id" | "en" }) {
+  const roles =
+    locale === "id"
+      ? ["Software Developer", "Creative Developer", "Problem Solver"]
+      : ["Software Developer", "Creative Developer", "Problem Solver"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

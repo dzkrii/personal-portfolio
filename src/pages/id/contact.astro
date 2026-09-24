@@ -1,9 +1,9 @@
 ---
 import { ArrowUpRight } from "lucide-react";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { pageMeta, siteConfig } from "../data/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageMeta, siteConfig } from "../../data/site";
 
-const locale = "en" as const;
+const locale = "id" as const;
 const meta = pageMeta.contact;
 
 const contactItems = [
@@ -67,12 +67,12 @@ const contactItems = [
   <div class="contact-page">
     <header class="contact-header">
       <div class="section-badge-title">
-        <h1 class="section-badge-title__text">Contact</h1>
+        <h1 class="section-badge-title__text">Kontak</h1>
       </div>
     </header>
 
     <p class="contact-intro-text">
-      Open for project discussions, collaborations, or simply sharing ideas. Reach out to me through any channel below.
+      Terbuka untuk diskusi proyek, kolaborasi, atau sekadar bertukar pikiran. Hubungi saya melalui salah satu kanal di bawah ini.
     </p>
 
     <div class="contact-grid">

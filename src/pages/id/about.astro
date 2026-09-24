@@ -1,14 +1,14 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { experiences, pageMeta, profile, technologies } from "../data/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { experiences, pageMeta, profile, technologies } from "../../data/site";
 
-const locale = "en" as const;
+const locale = "id" as const;
 const meta = pageMeta.about;
 
 const copy = {
-  aboutTitle: "About me",
-  experienceTitle: "My Experience",
-  skillsTitle: "Technology I Use",
+  aboutTitle: "Tentang Saya",
+  experienceTitle: "Pengalaman Kerja",
+  skillsTitle: "Teknologi yang Digunakan",
 };
 ---
 
@@ -32,7 +32,7 @@ const copy = {
           sizes="(max-width: 47.99rem) min(100vw, 22.5rem), 400px"
           width="1003"
           height="1568"
-          alt="Neo-brutalist illustration of Fatahul Ahmad Dzikri"
+          alt="Ilustrasi neo-brutalisme Fatahul Ahmad Dzikri"
           loading="lazy"
           decoding="async"
         />
